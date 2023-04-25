@@ -1,0 +1,34 @@
+@use 'abstracts/variables';
+
+@mixin set-font($ffamily, $fweight, $fsize, $fcolor:variables.$clr-black){
+
+    font-family: $ffamily;
+    font-weight: $fweight;
+    font-size: $fsize;
+    color: $fcolor;
+
+}
+
+@mixin set-nav-font($fcolor:variables.$clr-gray, $fweight:variables.$fw-regular){
+
+    font-family: variables.$ff-arimo;
+    font-weight: $fweight;
+    font-size: variables.$fs-xsm;
+    color: $fcolor;
+
+    display: block;
+    text-decoration:none;
+    list-style-type: none;
+
+}
+
+@mixin btn($fweight, $fsize, $border, $bg, $color:variables.$clr-white){
+
+    font-family: variables.$ff-sans;
+    font-weight: $fweight;
+    font-size: $fsize;
+    color: $color;
+    background-color: $bg;
+    border: $border;
+
+}

@@ -1,0 +1,28 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.card{
+
+    --bs-card-border-color: variables.$clr-white;
+
+}
+
+.rounded-circle{
+
+    width: 80%;
+
+    height: 20vw;
+
+    object-fit: cover;
+
+    margin: auto;
+
+}
+
+.shadow{
+
+    box-shadow: 1.563rem 6.563rem 6.563rem 6.563rem variables.$clr-black;
+    opacity: 1;
+
+}
+

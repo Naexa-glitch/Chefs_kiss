@@ -1,0 +1,12 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+
+.btn-danger{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-red, variables.$clr-red);
+
+    display: block;
+    width: 100%;  
+
+}

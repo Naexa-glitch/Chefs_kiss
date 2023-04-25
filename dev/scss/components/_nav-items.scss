@@ -1,0 +1,65 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.form-control{
+
+    width: 60%;
+    height: 80%;
+
+    padding-right: 0%;
+
+    border-width:2px;
+    border-color: variables.$clr-seablue;
+    
+
+    @include mixins.set-font(variables.$ff-arimo, variables.$fw-regular, variables.$fs-xsm, variables.$clr-seablue);
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+}
+
+.form-control:focus{
+
+    border-color: variables.$clr-seablue;
+    
+
+}
+
+input::placeholder{
+
+    color: variables.$clr-seablue;
+
+}
+
+.top-nav-item{
+    
+    @include mixins.set-nav-font();
+    
+}
+
+.top-nav-link{
+
+    
+    @include mixins.set-nav-font();
+
+}
+
+.top-nav-link:hover{
+    opacity: 1;
+    @include mixins.set-nav-font(variables.$clr-seablue);
+}
+
+.top-nav-link:hover::after{
+
+    opacity: 100;
+
+}
+
+.top-nav-select{
+    
+    @include mixins.set-nav-font(variables.$clr-red, variables.$fw-bold);
+
+}

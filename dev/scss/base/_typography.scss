@@ -1,0 +1,63 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.title{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-bold, variables.$fs-xlg, variables.$clr-orange);
+
+
+}
+
+.title-blue{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-bold, variables.$fs-xlg, variables.$clr-seablue);
+
+    
+
+}
+
+.page-description{
+
+    @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
+
+
+}
+
+.subtitle{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-orange);
+    
+
+}
+
+.subtitle-categories{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-green);
+    
+
+}
+
+.card-title{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);
+
+}
+
+.card-news{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm);
+
+}
+
+.card-detail{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xxsm);
+
+}
+
+.category-name{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-white);
+    
+
+}
