@@ -26,3 +26,23 @@
 
 }
 
+.card-img-top{
+    
+    height: 15vw;
+    object-fit: cover;
+
+}
+
+.category-img{
+    
+    height: 15vw;
+    object-fit: cover;
+
+    width: 100%;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+
+}

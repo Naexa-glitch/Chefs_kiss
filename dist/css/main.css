@@ -13404,6 +13404,23 @@ textarea.form-control-lg {
   opacity: 1;
 }
 
+.card-img-top {
+  height: 15vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.category-img {
+  height: 15vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
 .title {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
@@ -13425,14 +13442,14 @@ textarea.form-control-lg {
   color: hsl(0deg, 0%, 0%);
 }
 
-.subtitle {
+.subtitle-orange {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 2.125rem;
   color: hsl(28deg, 96%, 56%);
 }
 
-.subtitle-categories {
+.subtitle-green {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 2.125rem;
@@ -13460,13 +13477,6 @@ textarea.form-control-lg {
   color: hsl(0deg, 0%, 0%);
 }
 
-.category-name {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 2.125rem;
-  color: hsl(0deg, 0%, 100%);
-}
-
 .btn-danger {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -13475,6 +13485,20 @@ textarea.form-control-lg {
   background-color: hsl(0deg, 97%, 66%);
   border: hsl(0deg, 97%, 66%);
   display: block;
+  width: 100%;
+}
+
+.btn-categories {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(28deg, 96%, 56%);
+  border: hsl(28deg, 96%, 56%);
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   width: 100%;
 }
 
@@ -13572,55 +13596,26 @@ input::placeholder {
 }
 
 .container {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0%;
+  padding-right: 0%;
+  max-width: 1370px;
+}
+
+.container-sm {
   max-width: 1140px;
 }
 
-.card-img-top {
-  height: 15vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .card-body {
-  padding-left: 0%;
-  padding-right: 0%;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
 }
 
 /*FOOTER*/
 .footer {
-  position: relative;
-  height: auto;
+  margin-bottom: 0;
   background-color: hsl(192deg, 67%, 57%);
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.footer .col {
-  width: 190px;
-  height: auto;
-  float: left;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0px 20px 20px 20px;
-}
-
-.footer .col ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer .col ul li {
-  color: var(--clr-white);
-  padding: 5px 0px 5px 0px;
-  cursor: pointer;
-}
-
-.social ul li {
-  display: inline-block;
-  padding-right: 5px !important;
 }
 
 .navbar {

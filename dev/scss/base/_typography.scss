@@ -23,14 +23,14 @@
 
 }
 
-.subtitle{
+.subtitle-orange{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-orange);
     
 
 }
 
-.subtitle-categories{
+.subtitle-green{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-green);
     
@@ -55,9 +55,3 @@
 
 }
 
-.category-name{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-white);
-    
-
-}

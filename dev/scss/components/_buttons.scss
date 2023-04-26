@@ -10,3 +10,17 @@
     width: 100%;  
 
 }
+
+.btn-categories{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-mdx, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
+
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    width: 100%;
+
+
+}
