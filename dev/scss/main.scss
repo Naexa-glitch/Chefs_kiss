@@ -6,8 +6,12 @@
 @use './base/typography';
 
 @use './components/buttons';
-@use './components/nav-items';
+@use './components/cards';
 
 @use './layout/body';
 @use './layout/footer';
+@use './layout/forms';
 @use './layout/header';
+
+@use './pages/categories';
+@use './pages/inforecipe';

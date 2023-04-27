@@ -1,3 +1,57 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.form-control-nav{
+
+    width: 60%;
+    height: 80%;
+
+    padding-right: 0%;
+
+    border-width:2px;
+
+    @include mixins.form-control(variables.$clr-white, variables.$clr-seablue, variables.$ff-arimo);
+
+    @include mixins.borders(1rem, 1rem, 1rem, 1rem);
+
+}
+
+.place-style::placeholder{
+
+    color: variables.$clr-seablue;
+
+}
+
+.top-nav-item{
+    
+    @include mixins.set-nav-font();
+    
+}
+
+.top-nav-link{
+
+    
+    @include mixins.set-nav-font();
+
+}
+
+.top-nav-link:hover{
+    opacity: 1;
+    @include mixins.set-nav-font(variables.$clr-seablue);
+}
+
+.top-nav-link:hover::after{
+
+    opacity: 100;
+
+}
+
+.top-nav-select{
+    
+    @include mixins.set-nav-font(variables.$clr-red, variables.$fw-bold);
+
+}
+
 .navbar{
 
     width: 100%;

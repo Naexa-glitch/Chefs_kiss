@@ -1,7 +1,8 @@
-<!-- Para el tercer commit se realizó inforecipe, html que muestra la información de recetas. Se añadieron todos sus elementos correspondientes, se creó un nuevo botón, se cambió el color del input placeholder,
-se añadieron dos nuevas clases en body.scss, una de ellas es un container de imagen para lograr incrustar el botón me gusta en la imagen de la receta y la otra list-group para acomodar la lista de características de receta.
-se añadió una nueva variable de color y un nuevo mixin para definir el radio de los bordes, se crearon más clases en base.scss siendo dos clases de imagenes, un background para las instrucciones y dos clases 
-que definen los bordes de características de recetas. Se incluyeron nuevas clases en typography.scss para definir los estilos de texto de inforecipe-->
+<!-- Para el cuarto commit se creó createrecipe.html encargado de crear las recetas, dentro se ubicó una imagen para seleccionar la imagen deseada, también
+se agregaron forms con la información necesaria para crear la receta, se dividieron a la mitad de la pantalla utilizando row y col excepto los formularios más 
+grandes. Se crearon nuevas clases para estillizar los forms así como un mixin para estos mismos y se creó un nuevo botón dark para cancelar la creación de la receta.
+De igual manera se reubicaron las clases en sass para la correcta organización, esto llevó a crear nuevos archivos: cards.scss, forms.scss, categories.scss, inforecipe.scss
+Estas dos últimas se ubicaron en una nueva carpeta llamada pages.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +62,7 @@ que definen los bordes de características de recetas. Se incluyeron nuevas clas
                             </ul>
 
                             <form class="d-flex ps-5 pt-3" role="search">
-                                <input class="form-control me-2 place-style" type="search" placeholder="Search" aria-label="Search">
+                                <input class="form-control form-control-nav me-2 place-style" type="search" placeholder="Search" aria-label="Search">
                                 <img class="img-fluid mb-1" src="./imgs/lupa.png" alt="">
                                             <!--<button class="btn btn-outline-success" type="submit">Search</button>-->
                             </form>

@@ -30,6 +30,8 @@
     color: $color;
     background-color: $bg;
     border: $border;
+    display: block;
+    margin: auto;
 
 }
 
@@ -39,5 +41,16 @@
     border-top-right-radius: $tright;
     border-bottom-left-radius: $bleft;
     border-bottom-right-radius: $bright;
+
+}
+
+@mixin form-control($backcolor, $bordercolor, $ffamily:variables.$ff-sans){
+
+    background-color:$backcolor;
+    border-color:$bordercolor;
+    font-family: $ffamily;
+    font-weight: variables.$fw-regular;
+    font-size: variables.$fs-xsm;
+    
 
 }

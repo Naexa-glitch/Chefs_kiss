@@ -1,0 +1,54 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.img-info-recipe{
+
+    width: 92%;
+
+    @include mixins.borders(1.5rem, 1.5rem, 1.5rem, 1.5rem);
+
+}
+
+.img-like{ 
+
+    position: absolute;
+    top: 11%;
+    left: 12%;
+    transform:translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 75%;
+    width: 12%;
+
+}
+
+.bg-ingredients{
+
+    width: 100%;
+    height: 30rem;
+    background-color: variables.$clr-orange-light;
+    padding-left: 8%;
+    padding-top: 6%;
+    padding-right: 8%;
+    padding-bottom: 4%;
+    margin: auto;
+
+}
+
+.round-details-recipe-left{
+
+    @include mixins.borders(0.3rem, 0rem, 0.3rem, 0rem);
+
+}
+
+.round-details-recipe-right{
+
+    @include mixins.borders(0rem, 0.3rem, 0rem, 0.3rem);
+
+}
+
+.list-group{
+
+    padding-left: 20%;
+    width: 100%;
+
+}

@@ -1,0 +1,19 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.form-create-recipe-sm{
+
+    border-width:2px;
+
+    @include mixins.form-control(variables.$clr-seablue, variables.$clr-seablue);
+
+}
+
+.form-create-recipe-lg{
+
+    height: 10rem;
+    padding-left: 0.9rem;
+
+    @include mixins.form-control(variables.$clr-seablue, variables.$clr-seablue);
+
+}
