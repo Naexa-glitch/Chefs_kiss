@@ -12,23 +12,13 @@
     border-color: variables.$clr-seablue;
     
 
-    @include mixins.set-font(variables.$ff-arimo, variables.$fw-regular, variables.$fs-xsm, variables.$clr-seablue);
+    @include mixins.set-font(variables.$ff-arimo, variables.$fw-regular, variables.$fs-xsm);
 
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    @include mixins.borders(1rem, 1rem, 1rem, 1rem);
 
 }
 
-.form-control:focus{
-
-    border-color: variables.$clr-seablue;
-    
-
-}
-
-input::placeholder{
+.place-style::placeholder{
 
     color: variables.$clr-seablue;
 

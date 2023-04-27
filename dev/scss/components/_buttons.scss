@@ -11,16 +11,32 @@
 
 }
 
+.btn-save{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-red, variables.$clr-red);
+
+    display: block; 
+    width: 20%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    margin: auto;
+
+}
+
 .btn-categories{
 
     @include mixins.btn(variables.$fw-semibold, variables.$fs-mdx, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
 
-    border-top-left-radius: 0rem;
-    border-top-right-radius: 0rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    @include mixins.borders(0rem, 0rem, 1rem, 1rem);
 
     width: 100%;
 
+
+}
+
+.btn-transparent{
+
+    background-color: transparent;
+    border-color: transparent;
 
 }

@@ -32,3 +32,12 @@
     border: $border;
 
 }
+
+@mixin borders($tleft, $tright, $bleft, $bright){
+
+    border-top-left-radius: $tleft;
+    border-top-right-radius: $tright;
+    border-bottom-left-radius: $bleft;
+    border-bottom-right-radius: $bright;
+
+}

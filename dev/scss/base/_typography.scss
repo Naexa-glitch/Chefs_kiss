@@ -20,6 +20,24 @@
 
     @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
 
+}
+
+.page-ingredients{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-mdx);
+    
+
+    line-height: 4.875rem;
+
+}
+
+.page-steps{
+
+    @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
+
+    line-height: 4.875rem;
+
+    text-align: justify
 
 }
 
@@ -52,6 +70,25 @@
 .card-detail{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xxsm);
+
+}
+
+.recipe-info-title{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);
+
+}
+
+.recipe-info-detail{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm);
+
+}
+
+.likes-info{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdx, variables.$clr-green);
+    
 
 }
 

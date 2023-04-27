@@ -24,11 +24,12 @@ $fs-xlg: 4rem;
 
 
 //colors
-$clr-black: hsl(0, 0, 0);
-$clr-white: hsl(0, 0, 100);
-$clr-gray: hsl(0, 0, 45); 
+$clr-black: hsl(0, 0%, 0%);
+$clr-white: hsl(0, 0%, 100%);
+$clr-gray: hsl(0, 0%, 45%); 
 
-$clr-green: hsl(166, 29, 50);
-$clr-seablue: hsl(192, 67, 57);
-$clr-orange: hsl(28, 96, 56);
-$clr-red: hsl(0, 97, 66);
+$clr-green: hsl(166, 29%, 50%);
+$clr-seablue: hsl(192, 67%, 57%);
+$clr-orange: hsl(28, 96%, 56%);
+$clr-orange-light: hsl(28, 96%, 56%, 0.2);
+$clr-red: hsl(0, 97%, 66%);
