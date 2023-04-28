@@ -1,0 +1,22 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.size-img-table{
+
+    width: 57%;
+    height: 7vw;
+    object-fit: cover;
+
+}
+
+.table > thead > tr > th{
+
+    background-color: variables.$clr-orange;
+
+}
+
+.thead, tbody, tfoot, tr, td, th {
+    border-color: variables.$clr-orange;
+
+
+}

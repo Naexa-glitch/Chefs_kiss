@@ -31,6 +31,12 @@
 
 }
 
+.btn-green{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-green, variables.$clr-green);
+
+}
+
 .btn-categories{
 
     @include mixins.btn(variables.$fw-semibold, variables.$fs-mdx, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
@@ -47,4 +53,21 @@
     background-color: transparent;
     border-color: transparent;
 
+}
+
+.btn-edit{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-seablue, variables.$clr-seablue);
+
+    width: 62%;
+
+}
+
+.btn-delete{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-red, variables.$clr-red);
+
+    padding-left: 5%;
+    width: 62%;
+    
 }

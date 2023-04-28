@@ -1,4 +1,5 @@
 @use './vendors/bootstrap/bootstrap.scss';
+@use './vendors/normalize/normalize.scss';
 
 @use './abstracts/variables';
 
@@ -7,6 +8,7 @@
 
 @use './components/buttons';
 @use './components/cards';
+@use './components/tables';
 
 @use './layout/body';
 @use './layout/footer';

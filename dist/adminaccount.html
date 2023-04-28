@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Google Fonts source sans pro-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <!--Google Fonts source sans pro-->
+        <!--Google Fonts source serif pro-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+        <!--Google Fonts source serif pro-->
+        <!--Google Fonts arimo-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Source+Sans+Pro&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+        <!--Google Fonts arimo-->
+        <!--css-->
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Chef's Kiss</title>
+    
+    </head>
+<body>
+    
+    <section class="container">
+
+        <section class="container-sm">
+
+            <header>
+
+                <div class="navbar mt-5 pb-5">
+    
+                    <img class="img-full navbar-brand" src="./imgs/logo.webp" alt="Logo">
+    
+                    <nav class=" navbar-expand-lg ">
+    
+                        <div class="container-fluid">
+                    
+                            <div class=" navbar-collapse pt-3">
+                                <ul class="navbar-nav me-auto gap-5 mb-2 mb-lg-0">
+                                    <li class="top-nav-item">
+                                        <a class="top-nav-link mt-2" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="top-nav-item">
+                                        <a class="top-nav-link mt-2" href="categories.html">Categories</a>
+                                    </li>
+                                    <li class="top-nav-item">
+                                        <a class="top-nav-link disabled mt-2" href="#" aria-disabled="true">About us</a>
+                                    </li>
+                                    <li class="top-nav-item">
+                                        <a class="top-nav-link mt-2" href="#">Login</a>
+                                    </li> 
+                                </ul>
+    
+                                <form class="d-flex ps-5 pt-3" role="search">
+                                    <input class="form-control form-control-nav me-2 place-style" type="search" placeholder="Search" aria-label="Search">
+                                    <img class="img-fluid mb-1" src="./imgs/lupa.png" alt="">
+                                                <!--<button class="btn btn-outline-success" type="submit">Search</button>-->
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                
+    
+            </header>
+
+            <section class="pt-5 text-center">
+
+                <img class="img-fluid pb-4" src="./imgs/user-negro.png" alt="">
+
+                <h1 class="title-green pt-5">Username</h1>
+
+            </section>
+
+            <section class="pt-5 pb-5">
+
+                <h2 class="subtitle-orange mb-4">Created recipes</h2>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-dark table-warning">
+                        <tr>
+                            <th scope="col recipe-info-title">Image</th>
+                            <th scope="col recipe-info-title">Recipe name</th>
+                            <th scope="col recipe-info-title">Type</th>
+                            <th scope="col recipe-info-title">Preparation time</th>
+                            <th scope="col recipe-info-title">Cook time</th>
+                            <th scope="col recipe-info-title">Total time</th>
+                            <th scope="col "></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><img class="size-img-table" src="./imgs/placeholder.png" alt="" width="200"></td>
+                            <td class="recipe-info-detail space-table">Salmon</td>
+                            <td>Lunch</td>
+                            <td>20 min</td>
+                            <td>1 h</td>
+                            <td>1h 20min</td>
+                            <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td><img class="size-img-table" src="./imgs/placeholder.png" alt="" width="200"></td>
+                            <td class="recipe-info-detail">Eggs and bacon</td>
+                            <td>Breakfast</td>
+                            <td>5 min</td>
+                            <td>10 min</td>
+                            <td>15min</td>
+                            <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td><img class="size-img-table" src="./imgs/placeholder.png" alt="" width="200"></td>
+                            <td class="recipe-info-detail">Mac & Cheese</td>
+                            <td>Lunch</td>
+                            <td>20 min</td>
+                            <td>30 min</td>
+                            <td>50min</td>
+                            <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td><img class="size-img-table" src="./imgs/placeholder.png" alt="" width="200"></td>
+                            <td class="recipe-info-detail">Pumpking pie</td>
+                            <td>Dessert</td>
+                            <td>20 min</td>
+                            <td>1 h 30 min</td>
+                            <td>1h 50min</td>
+                            <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td><img class="size-img-table" src="./imgs/placeholder.png" alt="" width="200"></td>
+                            <td class="recipe-info-detail">Pizza</td>
+                            <td>Lunch</td>
+                            <td>10 min</td>
+                            <td>30 min</td>
+                            <td>40min</td>
+                            <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td><img class="size-img-table" src="./imgs/placeholder.png" alt="" width="200"></td>
+                            <td class="recipe-info-detail">Strawberry smoothie</td>
+                            <td>Beverages</td>
+                            <td>5 min</td>
+                            <td>5 min</td>
+                            <td>10min</td>
+                            <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td><img class="size-img-table" src="./imgs/placeholder.png" alt="" width="200"></td>
+                            <td class="recipe-info-detail">Guacamole</td>
+                            <td>Appetizer</td>
+                            <td>10 min</td>
+                            <td>5 min</td>
+                            <td>15 min</td>
+                            <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td><img class="size-img-table" src="./imgs/placeholder.png" alt="" width="200"></td>
+                            <td class="recipe-info-detail">Chicken Sandwich</td>
+                            <td>Breakfast</td>
+                            <td>20 min</td>
+                            <td>5 min</td>
+                            <td>25min</td>
+                            <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>    
+
+                  <button class="btn btn-green mt-5">Create Recipe</button>
+
+            </section>
+
+            <section class="pt-5">
+
+                <h3 class="subtitle-orange mb-4">Users list</h3>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="row recipe-info-title">#</th>
+                            <th scope="col recipe-info-title">Name</th>
+                            <th scope="col recipe-info-title">Username</th>
+                            <th scope="col recipe-info-title">Email</th>
+                            
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">1</th>
+                            <td class="recipe-info-detail">Josh Williams</td>
+                            <td class="recipe-info-detail">cooking_time</td>
+                            <td class="recipe-info-detail">JoshW@email.com</td>
+                            
+                        </tr>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">2</th>
+                            <td class="recipe-info-detail">Ericka Blade</td>
+                            <td class="recipe-info-detail">Spoonful</td>
+                            <td class="recipe-info-detail">ERblade@email.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">3</th>
+                            <td class="recipe-info-detail">Stephan Cordoba</td>
+                            <td class="recipe-info-detail">petitchef</td>
+                            <td class="recipe-info-detail">Steph89@email.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">4</th>
+                            <td class="recipe-info-detail">Thomas Clond</td>
+                            <td class="recipe-info-detail">duck</td>
+                            <td class="recipe-info-detail">thomasclond@email.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">5</th>
+                            <td class="recipe-info-detail">Terry Black</td>
+                            <td class="recipe-info-detail">deliciousrecipies</td>
+                            <td class="recipe-info-detail">Te43Bla21@email.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">6</th>
+                            <td class="recipe-info-detail">Janet Thomson</td>
+                            <td class="recipe-info-detail">sparkles</td>
+                            <td class="recipe-info-detail">JayThom@email.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">7</th>
+                            <td class="recipe-info-detail">Henry</td>
+                            <td class="recipe-info-detail">ilikepizza</td>
+                            <td class="recipe-info-detail">H4e7n1r0y@email.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">8</th>
+                            <td class="recipe-info-detail">Luna Bogantes</td>
+                            <td class="recipe-info-detail">hungryperson</td>
+                            <td class="recipe-info-detail">Lunita@email.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="recipe-info-title">9</th>
+                            <td class="recipe-info-detail">Kay Blerry</td>
+                            <td class="recipe-info-detail">washingdishes</td>
+                            <td class="recipe-info-detail">KayBlerry@email.com</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div> 
+                
+                <button class="btn btn-dark mt-5 mb-5">log out</button>
+
+            </section>
+
+        </section>
+
+        <!-- FOOTER START -->
+            <footer class=" text-center footer mt-5">
+                <div class=" justify-content-center pt-3">
+                    <div class="">
+                            
+                        <ul class="nav justify-content-center pt-3 gap-4">
+                            <li><img src="./imgs/facebook.png" width="32" style="width: 32px;"></li>
+                            <li><img src="./imgs/insta-logo.png" width="32" style="width: 32px;"></li>
+                            <li><img src="./imgs/youtube.png" width="32" style="width: 32px;"></li>
+                        </ul>
+
+                        <p class="title-rg text-white mt-4 mb-0 pb-3">©Chef's Kiss 2022</p>
+
+                    </div>    
+
+                </div>
+                    
+            </footer>
+        <!-- END OF FOOTER -->
+
+    </section>
+    
+</body>
+</html>

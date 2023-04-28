@@ -15,6 +15,13 @@
 
 }
 
+.title-green{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-bold, variables.$fs-xlg, variables.$clr-green);
+
+
+}
+
 .page-description{
 
     @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
@@ -74,7 +81,7 @@
 
 .recipe-info-title{
 
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);   
 
 }
 
