@@ -1,8 +1,6 @@
-<!-- Para este quinto commit se creó adminaccount.html página dirigida a admin para administrar recetas y ver la lista de usuarios. Se posicionó una imagen como foto
-de perfil y el nombre de usuario, seguidamente se hizo un table para la organización de los datos de las recetas y se aplicaron reglas de estilo para que se mostrara de la manera deseada,
-seguidamente se creó otro table encargado de mostrar el listado de usuarios, con las mismas reglas de estilo, se colocaron varios botones: edit, delete, create recipe y log out. Se creó
-un archivo llamado tables.scss con las reglas de estilo de los tables y sus imágenes, se añadieron tres botones de los cuales se habló anteriormente sin contar el de log out ya que su clase fue creada en el commit anterior,
-se creó in title-green para aplicar sus reglas de estilo al nombre de usuario admin y en vendors se insertó una carpeta normalize con el archivo normalize.scss-->
+<!-- Para este sexto commit se creó useraccount.html que es el perfil del usuario con sus recetas guardadas y disponibles. Para la foto y nombre de perfil se 
+realizó similar a adminaccount.html, con la diferencia del color de nombre de usuario. Para el resto de secciones se indicó la sección con los subtítulos
+correspondientes y se implementaron las cards. También se añadieron nuevas imágenes a la carpeta en dist/img y se modificaron las imágenes de algunas cards. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -172,20 +170,20 @@ se creó in title-green para aplicar sus reglas de estilo al nombre de usuario a
                 </div>
                 <div class="pt-4 row col">
                     <div class="card shadow">
-                    <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <img src="./imgs/breakfast.jpg" class="card-img-top rounded mt-2" alt="...">
                     <div class="card-body"> 
-                        <p class="card-title">Sopa Azteca</p>
-                        <p class="card-detail mb-0">Soup</p>
+                        <p class="card-title">Banana pancakes</p>
+                        <p class="card-detail mb-0">Breakfast</p>
                         <p class="card-detail">Total time: 1h</p>
                         <button class="btn btn-danger ps-2">View more</button>
                     </div>
                     </div>
-                </div>   
+                </div>    
                 <div class="pt-4 row col"> 
                     <div class="card shadow">
-                    <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <img src="./imgs/Beef-in-Mushroom-Gravy_EXPS_HSCBZ19_7967_E07_12_5b-1.jpg" class="card-img-top rounded mt-2" alt="...">
                     <div class="card-body">
-                        <p class="card-title ">Fetuccini</p>
+                        <p class="card-title ">Beef in Mushroom </p>
                         <p class="card-detail mb-0">Lunch</p>
                         <p class="card-detail">Total time: 1h 30 min</p>
                         <button class="btn btn-danger ps-2">View more</button>
@@ -194,54 +192,54 @@ se creó in title-green para aplicar sus reglas de estilo al nombre de usuario a
                 </div> 
                 <div class="pt-4 row col">  
                     <div class="card shadow">
-                    <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <img src="./imgs/Blueberry-Dump-Cake_EXPS_FT22_270945_ST_10_12_1-1.jpg" class="card-img-top rounded mt-2" alt="...">
                     <div class="card-body">
-                        <p class="card-title">Omelette</p>
-                        <p class="card-detail mb-0">Breakfast</p>
-                        <p class="card-detail">Total time: 1h</p>
+                        <p class="card-title">Blueberry Dump Cake</p>
+                        <p class="card-detail mb-0">Dessert</p>
+                        <p class="card-detail">Total time: 3h</p>
                         <button class="btn btn-danger ps-2">View more</button>
                     </div>
                     </div>
                 </div>
                 <div class="pt-4 row col">
                     <div class="card shadow">
-                    <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <img src="./imgs/Tasty Onion Chicken.png" class="card-img-top rounded mt-2" alt="...">
                     <div class="card-body"> 
-                        <p class="card-title">Sopa Azteca</p>
-                        <p class="card-detail mb-0">Soup</p>
-                        <p class="card-detail">Total time: 1h</p>
+                        <p class="card-title">Tasty Onion Chicken</p>
+                        <p class="card-detail mb-0">Lunch</p>
+                        <p class="card-detail">Total time: 2h 30min</p>
                         <button class="btn btn-danger ps-2">View more</button>
                     </div>
                     </div>
                 </div>   
                 <div class="pt-4 row col"> 
                     <div class="card shadow">
-                    <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <img src="./imgs/Coffee-Cheesecake_EXPS_FT22_270662_ST_10_19_1.jpg" class="card-img-top rounded mt-2" alt="...">
                     <div class="card-body">
-                        <p class="card-title ">Fetuccini</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 1h 30 min</p>
+                        <p class="card-title ">Coffee Cheesecake</p>
+                        <p class="card-detail mb-0">Dessert</p>
+                        <p class="card-detail">Total time: 3h 30 min</p>
                         <button class="btn btn-danger ps-2">View more</button>
                     </div>
                     </div>
                 </div> 
                 <div class="pt-4 row col">  
                     <div class="card shadow">
-                    <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <img src="./imgs/mac.jpg" class="card-img-top rounded mt-2" alt="...">
                     <div class="card-body">
-                        <p class="card-title">Omelette</p>
-                        <p class="card-detail mb-0">Breakfast</p>
-                        <p class="card-detail">Total time: 1h</p>
+                        <p class="card-title">Mac & Cheese</p>
+                        <p class="card-detail mb-0">Lunch</p>
+                        <p class="card-detail">Total time: 50min</p>
                         <button class="btn btn-danger ps-2">View more</button>
                     </div>
                     </div>
                 </div>
                 <div class="pt-4 row col">  
                     <div class="card shadow">
-                    <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <img src="./imgs/bitterballen.jpg" class="card-img-top rounded mt-2" alt="...">
                     <div class="card-body">
-                        <p class="card-title">Omelette</p>
-                        <p class="card-detail mb-0">Breakfast</p>
+                        <p class="card-title">Bitter Ballen</p>
+                        <p class="card-detail mb-0">Entrees</p>
                         <p class="card-detail">Total time: 1h</p>
                         <button class="btn btn-danger ps-2">View more</button>
                     </div>
@@ -267,7 +265,7 @@ se creó in title-green para aplicar sus reglas de estilo al nombre de usuario a
                     <div class="card-body">
                         <p class="card-title">Fried chicken</p>
                         <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 2h</p>
+                        <p class="card-detail">Total time: 45min</p>
                         <button class="btn btn-danger ps-2">View more</button>
                     </div>
                     </div>
@@ -278,7 +276,7 @@ se creó in title-green para aplicar sus reglas de estilo al nombre de usuario a
                     <div class="card-body">
                         <p class="card-title">Salmon</p>
                         <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 2h</p>
+                        <p class="card-detail">Total time: 1h 20min</p>
                         <button class="btn btn-danger ps-2">View more</button>
                     </div>
                     </div>
