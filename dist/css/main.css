@@ -13758,6 +13758,13 @@ template {
   color: hsl(166deg, 29%, 50%);
 }
 
+.subtitle-account {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: hsl(192deg, 67%, 57%);
+}
+
 .card-title {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -13786,18 +13793,26 @@ template {
   color: hsl(0deg, 0%, 0%);
 }
 
-.recipe-info-detail {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 0%);
-}
-
 .likes-info {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 1.4rem;
   color: hsl(166deg, 29%, 50%);
+}
+
+.link-account {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: hsl(166deg, 29%, 50%);
+  font-style: italic;
+}
+
+.detail-text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 0%);
 }
 
 .btn-danger {
@@ -13952,13 +13967,17 @@ template {
 .container {
   margin-left: 0;
   margin-right: 0;
-  padding-left: 0%;
-  padding-right: 0%;
+  padding-left: 0;
+  padding-right: 0;
   max-width: 1370px;
 }
 
-.container-sm {
+.container-md {
   max-width: 1140px;
+}
+
+.container-sm {
+  max-width: 452px;
 }
 
 .container-img-category {
@@ -13985,6 +14004,19 @@ template {
   height: 10rem;
   padding-left: 0.9rem;
   background-color: hsl(192deg, 67%, 57%);
+  border-color: hsl(192deg, 67%, 57%);
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+
+.form-check .form-check-input {
+  float: none;
+}
+
+.form-user-login {
+  margin: auto;
+  background-color: hsl(0deg, 0%, 100%);
   border-color: hsl(192deg, 67%, 57%);
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
@@ -14135,4 +14167,8 @@ template {
 .list-group {
   padding-left: 20%;
   width: 100%;
+}
+
+.space-link-account {
+  padding-left: 3.5rem;
 }

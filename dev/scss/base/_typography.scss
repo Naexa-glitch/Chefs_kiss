@@ -61,6 +61,12 @@
 
 }
 
+.subtitle-account{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdx, variables.$clr-seablue);
+
+}
+
 .card-title{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);
@@ -85,16 +91,23 @@
 
 }
 
-.recipe-info-detail{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm);
-
-}
-
 .likes-info{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdx, variables.$clr-green);
     
+
+}
+
+.link-account{
+
+    @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-xsm, variables.$clr-green);
+    font-style: italic;
+
+}
+
+.detail-text{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm);
 
 }
 

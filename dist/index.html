@@ -1,6 +1,8 @@
-<!-- Para este sexto commit se creó useraccount.html que es el perfil del usuario con sus recetas guardadas y disponibles. Para la foto y nombre de perfil se 
-realizó similar a adminaccount.html, con la diferencia del color de nombre de usuario. Para el resto de secciones se indicó la sección con los subtítulos
-correspondientes y se implementaron las cards. También se añadieron nuevas imágenes a la carpeta en dist/img y se modificaron las imágenes de algunas cards. -->
+<!-- Para este séptimo commit se creó userlogin.html, dentro de este se puso un título para guiar al usuario y saber que aquí se hace login,
+se pusieron dos formularios con la información necesaria para iniciar sesión y los links para navegar a otra página para recuperar contraseña o registrarse,
+además se añadió un botón para que el usuario entre, se creó una nueva clase en el archivo forms y se personalizó para dar una mejor impresión al usuario,
+se creó un archivo llamado userlogin, dentro de él una clase exclusiva para userlogin.html encargada de hacer el texto forgot password a un lado. Se modificaron
+los valores del container-sm y se transladaron a container-md, container-sm contiene nuevos valores utilizados para hacer esta página.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +37,7 @@ correspondientes y se implementaron las cards. También se añadieron nuevas im�
 
         <header>
 
-            <div class="container-sm navbar mt-5">
+            <div class="container-md navbar mt-5">
 
                 <img class="img-full navbar-brand" src="./imgs/logo.webp" alt="Logo">
 
@@ -55,7 +57,7 @@ correspondientes y se implementaron las cards. También se añadieron nuevas im�
                                     <a class="top-nav-link disabled mt-2" href="#" aria-disabled="true">About us</a>
                                 </li>
                                 <li class="top-nav-item">
-                                    <a class="top-nav-link mt-2" href="#">Login</a>
+                                    <a class="top-nav-link mt-2" href="userlogin.html">Login</a>
                                 </li> 
                             </ul>
 
@@ -78,257 +80,257 @@ correspondientes y se implementaron las cards. También se añadieron nuevas im�
 
         </section>
 
-        <section class="container-sm">
+        <section class="container-md">
 
-        <section class="mt-4 pb-5">
+            <section class="mt-4 pb-5">
 
 
 
-            <section class="text-center container-fluid pt-4">
+                <section class="text-center container-fluid pt-4">
 
-                <h1 class="mt-5 title">Exciting recipies to <br> cook like a <span class="title-blue">chef</span><br></h1>
-                <p class="pt-5 mb-5 px-5 page-description">Here you'll find any possible recipe to your heart contents, from desserts, to dinners and even apperitives. If you want to keep a recipe just sign up with us and save it in your account so you can see it everytime you want to.</p>
+                    <h1 class="mt-5 title">Exciting recipies to <br> cook like a <span class="title-blue">chef</span><br></h1>
+                    <p class="pt-5 mb-5 px-5 page-description">Here you'll find any possible recipe to your heart contents, from desserts, to dinners and even apperitives. If you want to keep a recipe just sign up with us and save it in your account so you can see it everytime you want to.</p>
+
+                </section>
 
             </section>
 
-        </section>
+            <section class="mb-5 pt-3 text-center row">
 
-        <section class="mb-5 pt-3 text-center row">
+                <h2 class="mt-5 mb-5 subtitle-orange">Check out the latest news</h2>
 
-            <h2 class="mt-5 mb-5 subtitle-orange">Check out the latest news</h2>
+                <section class="row">
 
-            <section class="row">
-
-                <div class=" row pt-5 col-sm">
-                    <div class="card">
-                    <img src="./imgs/burger.jpg" class="rounded-circle" alt="...">
-                    <div class="card-body">
-                        <p class="card-text card-news px-4">Chef's kiss will be hosting a competition</p>
-                    </div>
-                    </div>
-                </div>  
-                <div class=" row pt-5 col-sm"> 
-                    <div class="card ">
-                    <img src="./imgs/pancake.jpg" class="rounded-circle" alt="...">
+                    <div class=" row pt-5 col-sm">
+                        <div class="card">
+                        <img src="./imgs/burger.jpg" class="rounded-circle" alt="...">
                         <div class="card-body">
-                            <p class="card-text card-news px-4">Amanda has new tips for people that want to eat healty</p>
+                            <p class="card-text card-news px-4">Chef's kiss will be hosting a competition</p>
+                        </div>
+                        </div>
+                    </div>  
+                    <div class=" row pt-5 col-sm"> 
+                        <div class="card ">
+                        <img src="./imgs/pancake.jpg" class="rounded-circle" alt="...">
+                            <div class="card-body">
+                                <p class="card-text card-news px-4">Amanda has new tips for people that want to eat healty</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class=" row pt-5 col-sm">   
+                        <div class="card">
+                        <img src="./imgs/fries.jpg" class="rounded-circle" alt="...">
+                        <div class="card-body">
+                            <p class="card-text card-news px-4">Is your cooking a mess? Then we have the perfect guide for you</p>
+                        </div>
                         </div>
                     </div>
-                </div> 
-                <div class=" row pt-5 col-sm">   
-                    <div class="card">
-                    <img src="./imgs/fries.jpg" class="rounded-circle" alt="...">
-                    <div class="card-body">
-                        <p class="card-text card-news px-4">Is your cooking a mess? Then we have the perfect guide for you</p>
-                    </div>
-                    </div>
-                </div>
-               
-            </section>    
+                
+                </section>    
 
-        </section>
+            </section>
 
 
-        <section class="pt-2 pb-5 row">
+            <section class="pt-2 pb-5 row">
 
-            <h3 class="pb-5 subtitle-orange">Trending</h3>
+                <h3 class="pb-5 subtitle-orange">Trending</h3>
 
-          <section class="row row-cols-1 row-cols-md-3 gap-4">
+            <section class="row row-cols-1 row-cols-md-3 gap-4">
 
-                <div class="pt-4 row col">
-                    <div class="card shadow">
-                    <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body"> 
-                        <p class="card-title">Sopa Azteca</p>
-                        <p class="card-detail mb-0">Soup</p>
-                        <p class="card-detail">Total time: 1h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
+                    <div class="pt-4 row col">
+                        <div class="card shadow">
+                        <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body"> 
+                            <p class="card-title">Sopa Azteca</p>
+                            <p class="card-detail mb-0">Soup</p>
+                            <p class="card-detail">Total time: 1h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div>   
+                    <div class=" pt-4 row col"> 
+                        <div class="card shadow">
+                        <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title ">Fetuccini</p>
+                            <p class="card-detail mb-0">Lunch</p>
+                            <p class="card-detail">Total time: 1h 30 min</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div> 
+                    <div class=" pt-4 row col">  
+                        <div class="card shadow">
+                        <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Omelette</p>
+                            <p class="card-detail mb-0">Breakfast</p>
+                            <p class="card-detail">Total time: 1h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
                     </div>
+                    <div class="pt-4 row col">
+                        <div class="card shadow">
+                        <img src="./imgs/breakfast.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body"> 
+                            <p class="card-title">Banana pancakes</p>
+                            <p class="card-detail mb-0">Breakfast</p>
+                            <p class="card-detail">Total time: 1h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div>    
+                    <div class="pt-4 row col"> 
+                        <div class="card shadow">
+                        <img src="./imgs/Beef-in-Mushroom-Gravy_EXPS_HSCBZ19_7967_E07_12_5b-1.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title ">Beef in Mushroom </p>
+                            <p class="card-detail mb-0">Lunch</p>
+                            <p class="card-detail">Total time: 1h 30 min</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div> 
+                    <div class="pt-4 row col">  
+                        <div class="card shadow">
+                        <img src="./imgs/Blueberry-Dump-Cake_EXPS_FT22_270945_ST_10_12_1-1.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Blueberry Dump Cake</p>
+                            <p class="card-detail mb-0">Dessert</p>
+                            <p class="card-detail">Total time: 3h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
                     </div>
-                </div>   
-                <div class=" pt-4 row col"> 
-                    <div class="card shadow">
-                    <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title ">Fetuccini</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 1h 30 min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
+                    <div class="pt-4 row col">
+                        <div class="card shadow">
+                        <img src="./imgs/Tasty Onion Chicken.png" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body"> 
+                            <p class="card-title">Tasty Onion Chicken</p>
+                            <p class="card-detail mb-0">Lunch</p>
+                            <p class="card-detail">Total time: 2h 30min</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div>   
+                    <div class="pt-4 row col"> 
+                        <div class="card shadow">
+                        <img src="./imgs/Coffee-Cheesecake_EXPS_FT22_270662_ST_10_19_1.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title ">Coffee Cheesecake</p>
+                            <p class="card-detail mb-0">Dessert</p>
+                            <p class="card-detail">Total time: 3h 30 min</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div> 
+                    <div class="pt-4 row col">  
+                        <div class="card shadow">
+                        <img src="./imgs/mac.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Mac & Cheese</p>
+                            <p class="card-detail mb-0">Lunch</p>
+                            <p class="card-detail">Total time: 50min</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
                     </div>
+                    <div class="pt-4 row col">  
+                        <div class="card shadow">
+                        <img src="./imgs/bitterballen.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Bitter Ballen</p>
+                            <p class="card-detail mb-0">Entrees</p>
+                            <p class="card-detail">Total time: 1h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
                     </div>
-                </div> 
-                <div class=" pt-4 row col">  
-                    <div class="card shadow">
-                    <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Omelette</p>
-                        <p class="card-detail mb-0">Breakfast</p>
-                        <p class="card-detail">Total time: 1h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="pt-4 row col">
-                    <div class="card shadow">
-                    <img src="./imgs/breakfast.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body"> 
-                        <p class="card-title">Banana pancakes</p>
-                        <p class="card-detail mb-0">Breakfast</p>
-                        <p class="card-detail">Total time: 1h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>    
-                <div class="pt-4 row col"> 
-                    <div class="card shadow">
-                    <img src="./imgs/Beef-in-Mushroom-Gravy_EXPS_HSCBZ19_7967_E07_12_5b-1.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title ">Beef in Mushroom </p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 1h 30 min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div> 
-                <div class="pt-4 row col">  
-                    <div class="card shadow">
-                    <img src="./imgs/Blueberry-Dump-Cake_EXPS_FT22_270945_ST_10_12_1-1.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Blueberry Dump Cake</p>
-                        <p class="card-detail mb-0">Dessert</p>
-                        <p class="card-detail">Total time: 3h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="pt-4 row col">
-                    <div class="card shadow">
-                    <img src="./imgs/Tasty Onion Chicken.png" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body"> 
-                        <p class="card-title">Tasty Onion Chicken</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 2h 30min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>   
-                <div class="pt-4 row col"> 
-                    <div class="card shadow">
-                    <img src="./imgs/Coffee-Cheesecake_EXPS_FT22_270662_ST_10_19_1.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title ">Coffee Cheesecake</p>
-                        <p class="card-detail mb-0">Dessert</p>
-                        <p class="card-detail">Total time: 3h 30 min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div> 
-                <div class="pt-4 row col">  
-                    <div class="card shadow">
-                    <img src="./imgs/mac.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Mac & Cheese</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 50min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="pt-4 row col">  
-                    <div class="card shadow">
-                    <img src="./imgs/bitterballen.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Bitter Ballen</p>
-                        <p class="card-detail mb-0">Entrees</p>
-                        <p class="card-detail">Total time: 1h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>
 
-         </section>        
+            </section>        
 
-        </section>
+            </section>
 
 
  
 
-        <section class="pt-5 pb-5">
+            <section class="pt-5 pb-5">
 
-            <h3 class="pb-5 subtitle-orange">Every recipe to <br> your heart's content <br></h3>
+                <h3 class="pb-5 subtitle-orange">Every recipe to <br> your heart's content <br></h3>
 
-            <section class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
+                <section class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
 
-                <div class="mt-4 col row">
-                    <div class="card shadow">
-                    <img src="./imgs/fried-chicken1.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Fried chicken</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 45min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
+                    <div class="mt-4 col row">
+                        <div class="card shadow">
+                        <img src="./imgs/fried-chicken1.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Fried chicken</p>
+                            <p class="card-detail mb-0">Lunch</p>
+                            <p class="card-detail">Total time: 45min</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div>    
+                    <div class="mt-4 col row">
+                        <div class="card shadow">
+                        <img src="./imgs/LUNCH-salmon.jpeg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Salmon</p>
+                            <p class="card-detail mb-0">Lunch</p>
+                            <p class="card-detail">Total time: 1h 20min</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
                     </div>
+                    <div class="mt-4 col row">   
+                        <div class="card shadow">
+                        <img src="./imgs/steak-meat.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Steak meat</p>
+                            <p class="card-detail mb-0">Lunch</p>
+                            <p class="card-detail">Total time: 1h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div>        
+                    <div class="mt-4 row col">
+                        <div class="card shadow">
+                        <img src="./imgs/macarones.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Macaroons</p>
+                            <p class="card-detail mb-0">Dessert</p>
+                            <p class="card-detail">Total time: 4h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div>    
+                    <div class="mt-4 row col">
+                        <div class="card shadow">
+                        <img src="./imgs/french-food-1920x1080.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Beef soup </p>
+                            <p class="card-detail mb-0">Soup</p>
+                            <p class="card-detail">Total time: 3h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
                     </div>
-                </div>    
-                <div class="mt-4 col row">
-                    <div class="card shadow">
-                    <img src="./imgs/LUNCH-salmon.jpeg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Salmon</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 1h 20min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="mt-4 col row">   
-                    <div class="card shadow">
-                    <img src="./imgs/steak-meat.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Steak meat</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 1h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>        
-                <div class="mt-4 row col">
-                    <div class="card shadow">
-                    <img src="./imgs/macarones.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Macaroons</p>
-                        <p class="card-detail mb-0">Dessert</p>
-                        <p class="card-detail">Total time: 4h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>    
-                <div class="mt-4 row col">
-                    <div class="card shadow">
-                    <img src="./imgs/french-food-1920x1080.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Beef soup </p>
-                        <p class="card-detail mb-0">Soup</p>
-                        <p class="card-detail">Total time: 3h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="mt-4 row col">   
-                    <div class="card shadow">
-                    <img src="./imgs/FRESH_PA_i1140.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Chicken with sesame</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 2h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>   
-                
+                    <div class="mt-4 row col">   
+                        <div class="card shadow">
+                        <img src="./imgs/FRESH_PA_i1140.jpg" class="card-img-top rounded mt-2" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">Chicken with sesame</p>
+                            <p class="card-detail mb-0">Lunch</p>
+                            <p class="card-detail">Total time: 2h</p>
+                            <button class="btn btn-danger ps-2">View more</button>
+                        </div>
+                        </div>
+                    </div>   
+                    
+                </section>
+
             </section>
-
-        </section>
 
         </section>
 

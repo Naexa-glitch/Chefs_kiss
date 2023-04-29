@@ -11,16 +11,22 @@
 
     margin-left: 0;
     margin-right: 0;
-    padding-left: 0%;
-    padding-right: 0%;
+    padding-left: 0;
+    padding-right: 0;
     max-width: 1370px;
 
 }
 
-.container-sm {
+.container-md {
 
     max-width: 1140px;
     
+}
+
+.container-sm{
+
+    max-width: 452px;
+
 }
 
 .container-img-category{

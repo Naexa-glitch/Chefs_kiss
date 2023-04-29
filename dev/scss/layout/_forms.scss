@@ -17,3 +17,16 @@
     @include mixins.form-control(variables.$clr-seablue, variables.$clr-seablue);
 
 }
+
+.form-check .form-check-input {
+
+    float: none;
+
+}
+
+.form-user-login{
+
+    margin: auto;
+    @include mixins.form-control(variables.$clr-white, variables.$clr-seablue);
+
+}
