@@ -13815,6 +13815,13 @@ template {
   color: hsl(0deg, 0%, 0%);
 }
 
+.detail-text-gray {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 45%);
+}
+
 .btn-danger {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;

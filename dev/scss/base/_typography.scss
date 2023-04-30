@@ -111,3 +111,9 @@
 
 }
 
+.detail-text-gray{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm, variables.$clr-gray);
+
+}
+

@@ -1,8 +1,7 @@
-<!-- Para este séptimo commit se creó userlogin.html, dentro de este se puso un título para guiar al usuario y saber que aquí se hace login,
-se pusieron dos formularios con la información necesaria para iniciar sesión y los links para navegar a otra página para recuperar contraseña o registrarse,
-además se añadió un botón para que el usuario entre, se creó una nueva clase en el archivo forms y se personalizó para dar una mejor impresión al usuario,
-se creó un archivo llamado userlogin, dentro de él una clase exclusiva para userlogin.html encargada de hacer el texto forgot password a un lado. Se modificaron
-los valores del container-sm y se transladaron a container-md, container-sm contiene nuevos valores utilizados para hacer esta página.-->
+<!-- Para este octavo commit se creó usersignup.html, se colocó el título para identificar mejor que es un sign up, se colocaron los forms para obtener la información
+necesaria, y se pusieron mensajes de aviso para el usuario, así como un anchor con link para guiar al usuario a userlogin.html en caso de que ya tenga una cuenta. 
+Se creó una nueva clase en typography para textos que detallen algo con color gris. En el navbar se hicieron algunos cambios, About us pasó a llamarse admin con el 
+propósito de que los admins hagan login ahí, la imagen lupa ahora es un botón, para interactuar a futuro con este cuando se busque una receta-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +53,7 @@ los valores del container-sm y se transladaron a container-md, container-sm cont
                                     <a class="top-nav-link mt-2" href="categories.html">Categories</a>
                                 </li>
                                 <li class="top-nav-item">
-                                    <a class="top-nav-link disabled mt-2" href="#" aria-disabled="true">About us</a>
+                                    <a class="top-nav-link disabled mt-2" href="#" aria-disabled="true">Admin</a>
                                 </li>
                                 <li class="top-nav-item">
                                     <a class="top-nav-link mt-2" href="userlogin.html">Login</a>
@@ -63,8 +62,7 @@ los valores del container-sm y se transladaron a container-md, container-sm cont
 
                             <form class="d-flex ps-5 pt-3" role="search">
                                 <input class="form-control form-control-nav me-2 place-style" type="search" placeholder="Search" aria-label="Search">
-                                <img class="img-fluid mb-1" src="./imgs/lupa.png" alt="">
-                                            <!--<button class="btn btn-outline-success" type="submit">Search</button>-->
+                                <button class="btn-transparent"><img class="img-fluid mb-1" src="./imgs/lupa.png" alt=""></button>
                             </form>
                         </div>
                     </div>
