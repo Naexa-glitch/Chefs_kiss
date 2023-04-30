@@ -1,5 +1,6 @@
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
+@use 'components/media-queries';
 
 .form-control-nav{
 
@@ -13,6 +14,14 @@
     @include mixins.form-control(variables.$clr-white, variables.$clr-seablue, variables.$ff-arimo);
 
     @include mixins.borders(1rem, 1rem, 1rem, 1rem);
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        margin-left: 16%;
+
+        width: 49%;
+
+    }
 
 }
 
@@ -52,9 +61,116 @@
 
 }
 
+.img-logo{
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        width: 90%;
+        padding-left: 1rem;
+
+    }
+    
+}
+
 .navbar{
 
     width: 100%;
     overflow: auto;
 
+    @include media-queries.respond-to(media-queries.$phone){
+
+        overflow: hidden;
+
+    }
+
 }
+
+.navbar-nav{
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        text-align: center;
+        padding-top: 15%;
+
+    }
+
+}
+
+.mobile-bar{
+    
+    display: none;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+            display: block;
+            position: static;
+            width: 100%;
+
+
+    }    
+
+}
+
+.offcanvas-header{
+
+    display: none;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+            display: block;
+            margin-top: 5%;
+
+    }    
+
+}
+
+.mobile-icon{
+
+    display: none;
+
+    @include media-queries.respond-to(media-queries.$phone){
+    
+            width: 10%;
+
+            float: right;
+            display: block;
+            margin-right: 10%;
+        	margin-top: 15%;
+    
+    }
+
+}
+
+.mobile-offcanvas{
+
+    @include media-queries.respond-to(media-queries.$phone){
+    
+    display: block;
+    visibility: hidden;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width:80%;
+    height:100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: white;
+    transform: translateX(-100%);
+    transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+
+    }
+
+}
+
+.show-nav{
+
+    @include media-queries.respond-to(media-queries.$phone){
+        
+    visibility: visible;
+    transform: translateX(0); 
+
+    }
+
+} 

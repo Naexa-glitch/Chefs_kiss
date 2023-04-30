@@ -13919,6 +13919,12 @@ template {
   width: 70%;
 }
 
+@media only screen and (max-width: 480px) {
+  .btn-close {
+    margin-left: 5%;
+  }
+}
+
 .card {
   border-color: hsl(0deg, 0%, 100%);
 }
@@ -14045,6 +14051,12 @@ template {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+@media only screen and (max-width: 480px) {
+  .form-control-nav {
+    margin-left: 16%;
+    width: 49%;
+  }
+}
 
 .place-style::-webkit-input-placeholder {
   color: hsl(192deg, 67%, 57%);
@@ -14111,9 +14123,93 @@ template {
   list-style-type: none;
 }
 
+@media only screen and (max-width: 480px) {
+  .img-logo {
+    width: 90%;
+    padding-left: 1rem;
+  }
+}
+
 .navbar {
   width: 100%;
   overflow: auto;
+}
+@media only screen and (max-width: 480px) {
+  .navbar {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar-nav {
+    text-align: center;
+    padding-top: 15%;
+  }
+}
+
+.mobile-bar {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-bar {
+    display: block;
+    position: static;
+    width: 100%;
+  }
+}
+
+.offcanvas-header {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .offcanvas-header {
+    display: block;
+    margin-top: 5%;
+  }
+}
+
+.mobile-icon {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-icon {
+    width: 10%;
+    float: right;
+    display: block;
+    margin-right: 10%;
+    margin-top: 15%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mobile-offcanvas {
+    display: block;
+    visibility: hidden;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 80%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: white;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .show-nav {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .category-img {

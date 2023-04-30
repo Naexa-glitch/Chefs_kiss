@@ -1,5 +1,6 @@
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
+@use 'components/media-queries';
 
 
 .btn-danger{
@@ -70,4 +71,14 @@
     padding-left: 7%;
     width: 70%;
     
+}
+
+.btn-close{
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        margin-left: 5%;
+    
+    }
+
 }

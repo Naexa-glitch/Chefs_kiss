@@ -1,7 +1,8 @@
-<!-- Para este noveno commit se creó recoverpassword.html y changepassword.html, el primero se encarga de recibir el correo del usuario para verificar que sea él
-quien quiere cambiar la contraseña, el segundo se encarga de cambiar la contraseña de manera definitiva. Para recoverpassword se creó un form para ingresar un correo email,
-y debajo, texto como guía para que el usuario sepa que hacer, por otro lado en changepassword se crearon dos forms los cuales se encargan de cambiar la contraseña.
-Seguidamente en adminaccount se pusieron reglas de estilo al texto informativo en el tablero de las recetas-->
+<!-- Para este decimo commit se empezó con el responsive en navbar, se crearon varias clases colocadas en header.scss para lograr la función responsive, estos son:
+mobile-icon, mobile-bar, mobile-offcanvas, show-nav, navbar-nav y offcanvas-header. Debajo de varios html se colocó un script para dar funcionalidad a mobile-icon y btnclose, con el
+objetivo de que se enseñe y desaparezca la ventana con opciones. Se acomodó el logo del navbar en conjunto a las barras de menú por medio del uso de row y col y los valores puestos en sus clases responsive:
+en img-logo un width para acomodarse al tamaño de la página, en mobilebar clases para mantener las barras en posición y a mobileicon un float: right, definición de sus margenes y un width de 10% para mostrarse al otro extremo de la página. Se creó un 
+nuevo archivo en components llamado media-queries, para lograr implementar el responsive en otras clases. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,9 +39,27 @@ Seguidamente en adminaccount se pusieron reglas de estilo al texto informativo e
 
             <div class="container-md navbar mt-5">
 
-                <img class="img-full navbar-brand" src="./imgs/logo.webp" alt="Logo">
+                <div>
 
-                <nav class=" navbar-expand-lg ">
+                    <div class="row">
+                        <div class="col">
+                            <img class="img-logo navbar-brand" src="./imgs/logo.webp" alt="Logo">
+                        </div>
+                        <div class="mobile-bar col">
+                            <img src="imgs/bars.svg" alt="mobile bar" class="mobile-icon">
+                        </div>
+                      </div>
+
+
+                </div>
+
+                <nav id="main-nav" class="mobile-offcanvas navbar-expand-lg ">
+
+                    <div class="offcanvas-header">
+
+                        <button class="btn-close"></button>
+
+                    </div>
 
                     <div class="container-fluid">
                 
@@ -65,6 +84,9 @@ Seguidamente en adminaccount se pusieron reglas de estilo al texto informativo e
                                 <button class="btn-transparent"><img class="img-fluid mb-1" src="./imgs/lupa.png" alt=""></button>
                             </form>
                         </div>
+
+                        <img class="img-fluid offcanvas-header" src="./imgs/responsive-img.webp" alt="">
+
                     </div>
                 </nav>
             </div>
@@ -350,10 +372,33 @@ Seguidamente en adminaccount se pusieron reglas de estilo al texto informativo e
             </div>
                 
         </footer>
-    <!-- END OF FOOTER -->
+        <!-- END OF FOOTER -->
 
 
-    </section>    
+    </section> 
+    
+    <!-- responsive navbar-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            AOS.init();
+
+            document.querySelector('.mobile-icon').addEventListener('click', function(event){
+                console.log('click');
+                document.getElementById('main-nav').classList.add('show-nav');
+            });
+
+            document.querySelector('.btn-close').addEventListener('click', function(event){
+                console.log('click');
+                document.getElementById('main-nav').classList.remove('show-nav');
+            });
+        });
+    </script>
+    <!-- responsive navbar-->
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS -->
     
 </body>
 </html>
