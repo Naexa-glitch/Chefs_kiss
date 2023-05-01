@@ -20,6 +20,12 @@
     padding-top: 1.5%;
     padding-bottom: 1.5%;
 
+    @include media-queries.respond-to(media-queries.$phone){
+
+        width: 30%;
+    
+    }
+
 }
 
 .btn-dark{

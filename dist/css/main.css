@@ -13737,7 +13737,7 @@ template {
   font-weight: 400;
   font-size: 1.8rem;
   color: hsl(0deg, 0%, 0%);
-  line-height: 4.875rem;
+  line-height: 2.875rem;
 }
 
 .page-steps {
@@ -13747,6 +13747,11 @@ template {
   color: hsl(0deg, 0%, 0%);
   line-height: 4.875rem;
   text-align: justify;
+}
+@media only screen and (max-width: 480px) {
+  .page-steps {
+    line-height: 4.105rem;
+  }
 }
 
 .subtitle-orange {
@@ -13804,6 +13809,12 @@ template {
   font-size: 1.8rem;
   color: hsl(166deg, 29%, 50%);
 }
+@media only screen and (max-width: 480px) {
+  .likes-info {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 .link-account {
   font-family: "Source Serif Pro", serif;
@@ -13851,6 +13862,11 @@ template {
   width: 20%;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
+}
+@media only screen and (max-width: 480px) {
+  .btn-save {
+    width: 30%;
+  }
 }
 
 .btn-dark {
@@ -14250,6 +14266,11 @@ template {
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }
+@media only screen and (max-width: 480px) {
+  .img-info-recipe {
+    width: 96%;
+  }
+}
 
 .img-like {
   position: absolute;
@@ -14264,13 +14285,19 @@ template {
 
 .bg-ingredients {
   width: 100%;
-  height: 30rem;
   background-color: hsla(28deg, 96%, 56%, 0.2);
   padding-left: 8%;
   padding-top: 6%;
   padding-right: 8%;
   padding-bottom: 4%;
   margin: auto;
+}
+@media only screen and (max-width: 480px) {
+  .bg-ingredients {
+    height: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }
 
 .round-details-recipe-left {

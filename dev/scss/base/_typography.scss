@@ -41,7 +41,7 @@
     @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-mdx);
     
 
-    line-height: 4.875rem;
+    line-height: 2.875rem;
 
 }
 
@@ -51,7 +51,13 @@
 
     line-height: 4.875rem;
 
-    text-align: justify
+    text-align: justify;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        line-height: 4.105rem;
+    
+    }
 
 }
 
@@ -103,6 +109,12 @@
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdx, variables.$clr-green);
     
+    @include media-queries.respond-to(media-queries.$phone){
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+    
+    }
 
 }
 
