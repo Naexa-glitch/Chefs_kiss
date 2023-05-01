@@ -12,6 +12,12 @@
     
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        margin-left: 5%;
+    
+    }
+
 }
 
 .card-img-top{
@@ -22,6 +28,12 @@
     @include media-queries.respond-to(media-queries.$phone){
 
         height: 47vw;
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        height: 56vw;
     
     }
 
@@ -40,6 +52,13 @@
     @include media-queries.respond-to(media-queries.$phone){
 
         height: 65vw;
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        width: 54%;
+        height: 45vw;
     
     }
 

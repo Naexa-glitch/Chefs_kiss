@@ -1,9 +1,16 @@
 @use 'abstracts/variables';
+@use 'components/media-queries';
     
     /*FOOTER*/
 
     .footer { 
 
         background-color: variables.$clr-seablue;
+
+        @include media-queries.respond-to(media-queries.$phone){
+
+            margin-top: auto;
+        
+        }
  
     }

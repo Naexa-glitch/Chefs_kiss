@@ -13731,6 +13731,11 @@ template {
     text-align: justify;
   }
 }
+@media only screen and (max-width: 767px) {
+  .page-description {
+    text-align: justify;
+  }
+}
 
 .page-ingredients {
   font-family: "Source Sans Pro", sans-serif;
@@ -13865,7 +13870,12 @@ template {
 }
 @media only screen and (max-width: 480px) {
   .btn-save {
-    width: 30%;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .btn-save {
+    width: 40%;
   }
 }
 
@@ -13945,6 +13955,11 @@ template {
     margin-left: 5%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .btn-close {
+    margin-left: 5%;
+  }
+}
 
 .card {
   border-color: hsl(0deg, 0%, 100%);
@@ -13952,6 +13967,11 @@ template {
 @media only screen and (max-width: 480px) {
   .card {
     margin-left: 7%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .card {
+    margin-left: 5%;
   }
 }
 
@@ -13965,6 +13985,11 @@ template {
     height: 47vw;
   }
 }
+@media only screen and (max-width: 767px) {
+  .card-img-top {
+    height: 56vw;
+  }
+}
 
 .rounded-circle {
   width: 80%;
@@ -13976,6 +14001,12 @@ template {
 @media only screen and (max-width: 480px) {
   .rounded-circle {
     height: 65vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .rounded-circle {
+    width: 54%;
+    height: 45vw;
   }
 }
 
@@ -14039,6 +14070,11 @@ template {
 .footer {
   background-color: hsl(192deg, 67%, 57%);
 }
+@media only screen and (max-width: 480px) {
+  .footer {
+    margin-top: auto;
+  }
+}
 
 .form-create-recipe-sm {
   border-width: 2px;
@@ -14088,6 +14124,12 @@ template {
   border-bottom-right-radius: 1rem;
 }
 @media only screen and (max-width: 480px) {
+  .form-control-nav {
+    margin-left: 16%;
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 767px) {
   .form-control-nav {
     margin-left: 16%;
     width: 49%;
@@ -14165,6 +14207,12 @@ template {
     padding-left: 1rem;
   }
 }
+@media only screen and (max-width: 767px) {
+  .img-logo {
+    width: 90%;
+    padding-left: 1rem;
+  }
+}
 
 .navbar {
   width: 100%;
@@ -14175,8 +14223,19 @@ template {
     overflow: hidden;
   }
 }
+@media only screen and (max-width: 767px) {
+  .navbar {
+    overflow: hidden;
+  }
+}
 
 @media only screen and (max-width: 480px) {
+  .navbar-nav {
+    text-align: center;
+    padding-top: 15%;
+  }
+}
+@media only screen and (max-width: 767px) {
   .navbar-nav {
     text-align: center;
     padding-top: 15%;
@@ -14193,11 +14252,24 @@ template {
     width: 100%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .mobile-bar {
+    width: 100%;
+    display: block;
+    position: static;
+  }
+}
 
 .offcanvas-header {
   display: none;
 }
 @media only screen and (max-width: 480px) {
+  .offcanvas-header {
+    display: block;
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 767px) {
   .offcanvas-header {
     display: block;
     margin-top: 5%;
@@ -14213,11 +14285,42 @@ template {
     float: right;
     display: block;
     margin-right: 10%;
-    margin-top: 15%;
+    margin-top: 13%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mobile-icon {
+    width: 10%;
+    float: right;
+    display: block;
+    margin-right: 10%;
+    margin-top: 13%;
   }
 }
 
 @media only screen and (max-width: 480px) {
+  .mobile-offcanvas {
+    display: block;
+    visibility: hidden;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 80%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: white;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+}
+@media only screen and (max-width: 767px) {
   .mobile-offcanvas {
     display: block;
     visibility: hidden;
@@ -14247,6 +14350,13 @@ template {
             transform: translateX(0);
   }
 }
+@media only screen and (max-width: 767px) {
+  .show-nav {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 
 .category-img {
   height: 15vw;
@@ -14269,6 +14379,12 @@ template {
 @media only screen and (max-width: 480px) {
   .img-info-recipe {
     width: 96%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .img-info-recipe {
+    width: 91%;
+    margin-left: 4%;
   }
 }
 
@@ -14318,7 +14434,29 @@ template {
   padding-left: 20%;
   width: 100%;
 }
+@media only screen and (max-width: 767px) {
+  .list-group {
+    padding-left: 13%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .img-account {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .img-account {
+    width: 50%;
+  }
+}
 
 .space-link-account {
   padding-left: 3.5rem;
+}
+@media only screen and (max-width: 480px) {
+  .space-link-account {
+    padding-left: 0;
+  }
 }

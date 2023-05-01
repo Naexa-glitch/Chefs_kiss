@@ -33,6 +33,12 @@
     
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        text-align: justify;
+    
+    }
+
 
 }
 
@@ -122,6 +128,8 @@
 
     @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-xsm, variables.$clr-green);
     font-style: italic;
+
+
 
 }
 

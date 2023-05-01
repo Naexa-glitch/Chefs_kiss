@@ -2,14 +2,20 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
-.space-link-account{
+.img-account{
 
-    padding-left: 3.5rem;
 
     @include media-queries.respond-to(media-queries.$phone){
 
-        padding-left: 0;
+        width: 50%;
     
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        width: 50%;
+    
+    }
+
 
 }
