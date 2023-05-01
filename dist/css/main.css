@@ -13702,35 +13702,40 @@ template {
 .title {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: hsl(28deg, 96%, 56%);
 }
 
 .title-blue {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: hsl(192deg, 67%, 57%);
 }
 
 .title-green {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: hsl(166deg, 29%, 50%);
 }
 
 .page-description {
   font-family: "Source Serif Pro", serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: hsl(0deg, 0%, 0%);
+}
+@media only screen and (max-width: 480px) {
+  .page-description {
+    text-align: justify;
+  }
 }
 
 .page-ingredients {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: hsl(0deg, 0%, 0%);
   line-height: 4.875rem;
 }
@@ -13738,7 +13743,7 @@ template {
 .page-steps {
   font-family: "Source Serif Pro", serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: hsl(0deg, 0%, 0%);
   line-height: 4.875rem;
   text-align: justify;
@@ -13761,7 +13766,7 @@ template {
 .subtitle-account {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: hsl(192deg, 67%, 57%);
 }
 
@@ -13775,7 +13780,7 @@ template {
 .card-news {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: hsl(0deg, 0%, 0%);
 }
 
@@ -13796,7 +13801,7 @@ template {
 .likes-info {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: hsl(166deg, 29%, 50%);
 }
 
@@ -13876,7 +13881,7 @@ template {
 .btn-categories {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(28deg, 96%, 56%);
   border: hsl(28deg, 96%, 56%);
@@ -13928,11 +13933,21 @@ template {
 .card {
   border-color: hsl(0deg, 0%, 100%);
 }
+@media only screen and (max-width: 480px) {
+  .card {
+    margin-left: 7%;
+  }
+}
 
 .card-img-top {
   height: 15vw;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 480px) {
+  .card-img-top {
+    height: 47vw;
+  }
 }
 
 .rounded-circle {
@@ -13941,6 +13956,11 @@ template {
   -o-object-fit: cover;
      object-fit: cover;
   margin: auto;
+}
+@media only screen and (max-width: 480px) {
+  .rounded-circle {
+    height: 65vw;
+  }
 }
 
 .shadow {

@@ -1,9 +1,16 @@
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
+@use 'components/media-queries';
 
 .card{
 
     border-color: variables.$clr-white;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        margin-left: 7%;
+    
+    }
 
 }
 
@@ -11,6 +18,12 @@
     
     height: 15vw;
     object-fit: cover;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        height: 47vw;
+    
+    }
 
 }
 
@@ -23,6 +36,12 @@
     object-fit: cover;
 
     margin: auto;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        height: 65vw;
+    
+    }
 
 }
 

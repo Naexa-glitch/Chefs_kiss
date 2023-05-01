@@ -1,8 +1,6 @@
-<!-- Para este decimo commit se empezó con el responsive en navbar, se crearon varias clases colocadas en header.scss para lograr la función responsive, estos son:
-mobile-icon, mobile-bar, mobile-offcanvas, show-nav, navbar-nav y offcanvas-header. Debajo de varios html se colocó un script para dar funcionalidad a mobile-icon y btnclose, con el
-objetivo de que se enseñe y desaparezca la ventana con opciones. Se acomodó el logo del navbar en conjunto a las barras de menú por medio del uso de row y col y los valores puestos en sus clases responsive:
-en img-logo un width para acomodarse al tamaño de la página, en mobilebar clases para mantener las barras en posición y a mobileicon un float: right, definición de sus margenes y un width de 10% para mostrarse al otro extremo de la página. Se creó un 
-nuevo archivo en components llamado media-queries, para lograr implementar el responsive en otras clases. -->
+<!-- En este undecimo commit se realizó el responsive de index.html, se colocaron nuevos valores en los responsives de las clases utilizadas para la página principal.
+los cards se centraron en la pantalla movil y se modificó el valor de height de las imagenes de las cards. En variables se modificaron dos valores de los tamaños de
+letra y el texto de la descripción de la página se justificó-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -155,129 +153,130 @@ nuevo archivo en components llamado media-queries, para lograr implementar el re
 
                 <h3 class="pb-5 subtitle-orange">Trending</h3>
 
-            <section class="row row-cols-1 row-cols-md-3 gap-4">
+                <section class="row row-cols-1 row-cols-md-3 gap-4">
 
-                    <div class="pt-4 row col">
-                        <div class="card shadow">
-                        <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body"> 
-                            <p class="card-title">Sopa Azteca</p>
-                            <p class="card-detail mb-0">Soup</p>
-                            <p class="card-detail">Total time: 1h</p>
-                            <button class="btn btn-danger ps-2">View more</button>
+                        <div class="pt-4 row col">
+                            <div class="card shadow">
+                            <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body"> 
+                                <p class="card-title">Sopa Azteca</p>
+                                <p class="card-detail mb-0">Soup</p>
+                                <p class="card-detail">Total time: 1h</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
+                        </div>   
+                        <div class=" pt-4 row col"> 
+                            <div class="card shadow">
+                            <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body">
+                                <p class="card-title ">Fetuccini</p>
+                                <p class="card-detail mb-0">Lunch</p>
+                                <p class="card-detail">Total time: 1h 30 min</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
+                        </div> 
+                        <div class=" pt-4 row col">  
+                            <div class="card shadow">
+                            <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">Omelette</p>
+                                <p class="card-detail mb-0">Breakfast</p>
+                                <p class="card-detail">Total time: 1h</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
                         </div>
+                        <div class="pt-4 row col">
+                            <div class="card shadow">
+                            <img src="./imgs/breakfast.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body"> 
+                                <p class="card-title">Banana pancakes</p>
+                                <p class="card-detail mb-0">Breakfast</p>
+                                <p class="card-detail">Total time: 1h</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
+                        </div>    
+                        <div class="pt-4 row col"> 
+                            <div class="card shadow">
+                            <img src="./imgs/Beef-in-Mushroom-Gravy_EXPS_HSCBZ19_7967_E07_12_5b-1.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body">
+                                <p class="card-title ">Beef in Mushroom </p>
+                                <p class="card-detail mb-0">Lunch</p>
+                                <p class="card-detail">Total time: 1h 30 min</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
+                        </div> 
+                        <div class="pt-4 row col">  
+                            <div class="card shadow">
+                            <img src="./imgs/Blueberry-Dump-Cake_EXPS_FT22_270945_ST_10_12_1-1.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">Blueberry Dump Cake</p>
+                                <p class="card-detail mb-0">Dessert</p>
+                                <p class="card-detail">Total time: 3h</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
                         </div>
-                    </div>   
-                    <div class=" pt-4 row col"> 
-                        <div class="card shadow">
-                        <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body">
-                            <p class="card-title ">Fetuccini</p>
-                            <p class="card-detail mb-0">Lunch</p>
-                            <p class="card-detail">Total time: 1h 30 min</p>
-                            <button class="btn btn-danger ps-2">View more</button>
+                        <div class="pt-4 row col">
+                            <div class="card shadow">
+                            <img src="./imgs/Tasty Onion Chicken.png" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body"> 
+                                <p class="card-title">Tasty Onion Chicken</p>
+                                <p class="card-detail mb-0">Lunch</p>
+                                <p class="card-detail">Total time: 2h 30min</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
+                        </div>   
+                        <div class="pt-4 row col"> 
+                            <div class="card shadow">
+                            <img src="./imgs/Coffee-Cheesecake_EXPS_FT22_270662_ST_10_19_1.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body">
+                                <p class="card-title ">Coffee Cheesecake</p>
+                                <p class="card-detail mb-0">Dessert</p>
+                                <p class="card-detail">Total time: 3h 30 min</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
+                        </div> 
+                        <div class="pt-4 row col">  
+                            <div class="card shadow">
+                            <img src="./imgs/mac.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">Mac & Cheese</p>
+                                <p class="card-detail mb-0">Lunch</p>
+                                <p class="card-detail">Total time: 50min</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
                         </div>
+                        <div class="pt-4 row col">  
+                            <div class="card shadow">
+                            <img src="./imgs/bitterballen.jpg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">Bitter Ballen</p>
+                                <p class="card-detail mb-0">Entrees</p>
+                                <p class="card-detail">Total time: 1h</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
                         </div>
-                    </div> 
-                    <div class=" pt-4 row col">  
-                        <div class="card shadow">
-                        <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body">
-                            <p class="card-title">Omelette</p>
-                            <p class="card-detail mb-0">Breakfast</p>
-                            <p class="card-detail">Total time: 1h</p>
-                            <button class="btn btn-danger ps-2">View more</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="pt-4 row col">
-                        <div class="card shadow">
-                        <img src="./imgs/breakfast.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body"> 
-                            <p class="card-title">Banana pancakes</p>
-                            <p class="card-detail mb-0">Breakfast</p>
-                            <p class="card-detail">Total time: 1h</p>
-                            <button class="btn btn-danger ps-2">View more</button>
-                        </div>
-                        </div>
-                    </div>    
-                    <div class="pt-4 row col"> 
-                        <div class="card shadow">
-                        <img src="./imgs/Beef-in-Mushroom-Gravy_EXPS_HSCBZ19_7967_E07_12_5b-1.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body">
-                            <p class="card-title ">Beef in Mushroom </p>
-                            <p class="card-detail mb-0">Lunch</p>
-                            <p class="card-detail">Total time: 1h 30 min</p>
-                            <button class="btn btn-danger ps-2">View more</button>
-                        </div>
-                        </div>
-                    </div> 
-                    <div class="pt-4 row col">  
-                        <div class="card shadow">
-                        <img src="./imgs/Blueberry-Dump-Cake_EXPS_FT22_270945_ST_10_12_1-1.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body">
-                            <p class="card-title">Blueberry Dump Cake</p>
-                            <p class="card-detail mb-0">Dessert</p>
-                            <p class="card-detail">Total time: 3h</p>
-                            <button class="btn btn-danger ps-2">View more</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="pt-4 row col">
-                        <div class="card shadow">
-                        <img src="./imgs/Tasty Onion Chicken.png" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body"> 
-                            <p class="card-title">Tasty Onion Chicken</p>
-                            <p class="card-detail mb-0">Lunch</p>
-                            <p class="card-detail">Total time: 2h 30min</p>
-                            <button class="btn btn-danger ps-2">View more</button>
-                        </div>
-                        </div>
-                    </div>   
-                    <div class="pt-4 row col"> 
-                        <div class="card shadow">
-                        <img src="./imgs/Coffee-Cheesecake_EXPS_FT22_270662_ST_10_19_1.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body">
-                            <p class="card-title ">Coffee Cheesecake</p>
-                            <p class="card-detail mb-0">Dessert</p>
-                            <p class="card-detail">Total time: 3h 30 min</p>
-                            <button class="btn btn-danger ps-2">View more</button>
-                        </div>
-                        </div>
-                    </div> 
-                    <div class="pt-4 row col">  
-                        <div class="card shadow">
-                        <img src="./imgs/mac.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body">
-                            <p class="card-title">Mac & Cheese</p>
-                            <p class="card-detail mb-0">Lunch</p>
-                            <p class="card-detail">Total time: 50min</p>
-                            <button class="btn btn-danger ps-2">View more</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="pt-4 row col">  
-                        <div class="card shadow">
-                        <img src="./imgs/bitterballen.jpg" class="card-img-top rounded mt-2" alt="...">
-                        <div class="card-body">
-                            <p class="card-title">Bitter Ballen</p>
-                            <p class="card-detail mb-0">Entrees</p>
-                            <p class="card-detail">Total time: 1h</p>
-                            <button class="btn btn-danger ps-2">View more</button>
-                        </div>
-                        </div>
-                    </div>
 
-            </section>        
+                </section>        
 
             </section>
 
 
  
 
-            <section class="pt-5 pb-5">
+            <section class="pt-5 pb-5 row">
 
                 <h3 class="pb-5 subtitle-orange">Every recipe to <br> your heart's content <br></h3>
+                
 
                 <section class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
 

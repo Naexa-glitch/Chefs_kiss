@@ -1,5 +1,6 @@
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
+@use 'components/media-queries';
 
 .title{
 
@@ -25,6 +26,13 @@
 .page-description{
 
     @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        text-align: justify;
+    
+    }
+
 
 }
 
@@ -75,7 +83,7 @@
 
 .card-news{
 
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm);
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-reg);
 
 }
 
