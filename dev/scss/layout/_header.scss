@@ -31,6 +31,14 @@
 
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        margin-left: 31%;
+
+        width: 30%;
+
+    }
+
 }
 
 .place-style::placeholder{
@@ -84,6 +92,15 @@
         padding-left: 1rem;
 
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        width: 90%;
+        padding-left: 1rem;
+
+    }
+
+    
     
 }
 
@@ -104,6 +121,13 @@
 
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        overflow: hidden;
+        padding-left: 10%;
+
+    }
+
 }
 
 .navbar-nav{
@@ -116,6 +140,13 @@
     }
 
     @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        text-align: center;
+        padding-top: 15%;
+
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
 
         text-align: center;
         padding-top: 15%;
@@ -145,6 +176,14 @@
 
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        width: 100%;
+        display: block;
+        position: static;
+
+    }
+
 }
 
 .offcanvas-header{
@@ -159,6 +198,13 @@
     }  
     
     @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        display: block;
+        margin-top: 5%;
+
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
 
         display: block;
         margin-top: 5%;
@@ -189,6 +235,16 @@
         float: right;
         display: block;
         margin-right: 10%;
+        margin-top: 13%;
+
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        width: 10%;
+
+        float: right;
+        display: block;
         margin-top: 13%;
 
     }
@@ -235,6 +291,25 @@
 
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        display: block;
+        visibility: hidden;
+        border-radius: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width:80%;
+        height:100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        background: white;
+        transform: translateX(-100%);
+        transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+
+    }
+
 }
 
 .show-nav{
@@ -247,6 +322,13 @@
     }
 
     @include media-queries.respond-to(media-queries.$tablet-portrait){
+        
+        visibility: visible;
+        transform: translateX(0); 
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
         
         visibility: visible;
         transform: translateX(0); 

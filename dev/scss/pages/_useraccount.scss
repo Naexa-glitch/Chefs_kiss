@@ -17,5 +17,11 @@
     
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        width: 40%;
+    
+    }
+
 
 }

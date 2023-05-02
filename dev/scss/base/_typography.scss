@@ -30,6 +30,7 @@
     @include media-queries.respond-to(media-queries.$phone){
 
         text-align: justify;
+        @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
     
     }
 

@@ -13729,9 +13729,13 @@ template {
 @media only screen and (max-width: 480px) {
   .page-description {
     text-align: justify;
+    font-family: "Source Serif Pro", serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: hsl(0deg, 0%, 0%);
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .page-description {
     text-align: justify;
   }
@@ -13873,7 +13877,7 @@ template {
     width: 40%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .btn-save {
     width: 40%;
   }
@@ -13955,7 +13959,12 @@ template {
     margin-left: 5%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .btn-close {
+    margin-left: 5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   .btn-close {
     margin-left: 5%;
   }
@@ -13969,9 +13978,19 @@ template {
     margin-left: 7%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .card {
     margin-left: 5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .card {
+    margin-left: 9%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card {
+    margin-left: 6%;
   }
 }
 
@@ -13985,7 +14004,7 @@ template {
     height: 47vw;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .card-img-top {
     height: 56vw;
   }
@@ -14003,10 +14022,17 @@ template {
     height: 65vw;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .rounded-circle {
     width: 54%;
     height: 45vw;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .rounded-circle {
+    width: 70%;
+    height: 20vw;
+    margin-right: 10%;
   }
 }
 
@@ -14129,10 +14155,16 @@ template {
     width: 49%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .form-control-nav {
     margin-left: 16%;
     width: 49%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .form-control-nav {
+    margin-left: 31%;
+    width: 30%;
   }
 }
 
@@ -14165,6 +14197,11 @@ template {
   text-decoration: none;
   list-style-type: none;
 }
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .top-nav-item {
+    font-size: 1.8rem;
+  }
+}
 
 .top-nav-link {
   font-family: "Arimo", sans-serif;
@@ -14174,6 +14211,11 @@ template {
   display: block;
   text-decoration: none;
   list-style-type: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .top-nav-link {
+    font-size: 1.8rem;
+  }
 }
 
 .top-nav-link:hover {
@@ -14185,6 +14227,11 @@ template {
   display: block;
   text-decoration: none;
   list-style-type: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .top-nav-link:hover {
+    font-size: 1.8rem;
+  }
 }
 
 .top-nav-link:hover::after {
@@ -14200,6 +14247,11 @@ template {
   text-decoration: none;
   list-style-type: none;
 }
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .top-nav-select {
+    font-size: 1.8rem;
+  }
+}
 
 @media only screen and (max-width: 480px) {
   .img-logo {
@@ -14207,7 +14259,13 @@ template {
     padding-left: 1rem;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .img-logo {
+    width: 90%;
+    padding-left: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   .img-logo {
     width: 90%;
     padding-left: 1rem;
@@ -14223,9 +14281,15 @@ template {
     overflow: hidden;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .navbar {
     overflow: hidden;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .navbar {
+    overflow: hidden;
+    padding-left: 10%;
   }
 }
 
@@ -14235,7 +14299,13 @@ template {
     padding-top: 15%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+    padding-top: 15%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   .navbar-nav {
     text-align: center;
     padding-top: 15%;
@@ -14252,7 +14322,14 @@ template {
     width: 100%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .mobile-bar {
+    width: 100%;
+    display: block;
+    position: static;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   .mobile-bar {
     width: 100%;
     display: block;
@@ -14269,7 +14346,13 @@ template {
     margin-top: 5%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .offcanvas-header {
+    display: block;
+    margin-top: 5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   .offcanvas-header {
     display: block;
     margin-top: 5%;
@@ -14288,12 +14371,20 @@ template {
     margin-top: 13%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .mobile-icon {
     width: 10%;
     float: right;
     display: block;
     margin-right: 10%;
+    margin-top: 13%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .mobile-icon {
+    width: 10%;
+    float: right;
+    display: block;
     margin-top: 13%;
   }
 }
@@ -14320,7 +14411,29 @@ template {
     transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .mobile-offcanvas {
+    display: block;
+    visibility: hidden;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 80%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: white;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   .mobile-offcanvas {
     display: block;
     visibility: hidden;
@@ -14350,7 +14463,14 @@ template {
             transform: translateX(0);
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .show-nav {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   .show-nav {
     visibility: visible;
     -webkit-transform: translateX(0);
@@ -14381,10 +14501,16 @@ template {
     width: 96%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .img-info-recipe {
     width: 91%;
     margin-left: 4%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .img-info-recipe {
+    width: 91%;
+    margin-left: 3%;
   }
 }
 
@@ -14398,6 +14524,21 @@ template {
   opacity: 75%;
   width: 12%;
 }
+@media only screen and (max-width: 480px) {
+  .img-like {
+    margin-left: 1%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .img-like {
+    margin-left: 2%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .img-like {
+    margin-left: 2%;
+  }
+}
 
 .bg-ingredients {
   width: 100%;
@@ -14410,7 +14551,6 @@ template {
 }
 @media only screen and (max-width: 480px) {
   .bg-ingredients {
-    height: 100%;
     padding-left: 20%;
     padding-right: 20%;
   }
@@ -14434,10 +14574,9 @@ template {
   padding-left: 20%;
   width: 100%;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .list-group {
     padding-left: 13%;
-    width: 100%;
   }
 }
 
@@ -14446,9 +14585,14 @@ template {
     width: 50%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .img-account {
     width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .img-account {
+    width: 40%;
   }
 }
 

@@ -21,6 +21,13 @@
     
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        width: 91%;
+        margin-left: 3%;
+    
+    }
+
 }
 
 .img-like{ 
@@ -32,6 +39,24 @@
     -ms-transform: translate(-50%, -50%);
     opacity: 75%;
     width: 12%;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        margin-left: 1%;
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        margin-left: 2%;
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        margin-left: 2%;
+    
+    }
 
 }
 
@@ -47,7 +72,6 @@
 
     @include media-queries.respond-to(media-queries.$phone){
 
-        height: 100%;
         padding-left: 20%;
         padding-right: 20%;
     
@@ -75,8 +99,7 @@
     @include media-queries.respond-to(media-queries.$tablet-portrait){
 
         padding-left: 13%;
-        width: 100%;
-    
+     
     }
 
 }

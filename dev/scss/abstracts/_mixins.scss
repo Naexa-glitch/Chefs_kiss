@@ -1,4 +1,5 @@
 @use 'abstracts/variables';
+@use 'components/media-queries';
 
 @mixin set-font($ffamily, $fweight, $fsize, $fcolor:variables.$clr-black){
 
@@ -19,6 +20,12 @@
     display: block;
     text-decoration:none;
     list-style-type: none;
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        font-size: variables.$fs-mdx;
+
+    }
 
 }
 
