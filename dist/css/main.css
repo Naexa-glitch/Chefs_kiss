@@ -13720,11 +13720,32 @@ template {
   color: hsl(166deg, 29%, 50%);
 }
 
+.subtitle-orange {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 2.125rem;
+  color: hsl(28deg, 96%, 56%);
+}
+
+.subtitle-green {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 2.125rem;
+  color: hsl(166deg, 29%, 50%);
+}
+
+.subtitle-account {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: hsl(192deg, 67%, 57%);
+}
+
 .page-description {
   font-family: "Source Serif Pro", serif;
   font-weight: 400;
   font-size: 1.8rem;
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 45%);
 }
 @media only screen and (max-width: 480px) {
   .page-description {
@@ -13732,7 +13753,7 @@ template {
     font-family: "Source Serif Pro", serif;
     font-weight: 400;
     font-size: 1.8rem;
-    color: hsl(0deg, 0%, 0%);
+    color: hsl(0deg, 0%, 45%);
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
@@ -13763,25 +13784,24 @@ template {
   }
 }
 
-.subtitle-orange {
+.recipe-info-title {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-size: 2.125rem;
-  color: hsl(28deg, 96%, 56%);
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 0%);
 }
 
-.subtitle-green {
+.likes-info {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 2.125rem;
   color: hsl(166deg, 29%, 50%);
 }
-
-.subtitle-account {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1.8rem;
-  color: hsl(192deg, 67%, 57%);
+@media only screen and (max-width: 480px) {
+  .likes-info {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .card-title {
@@ -13803,26 +13823,6 @@ template {
   font-weight: 400;
   font-size: 0.75rem;
   color: hsl(0deg, 0%, 0%);
-}
-
-.recipe-info-title {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 0%);
-}
-
-.likes-info {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1.8rem;
-  color: hsl(166deg, 29%, 50%);
-}
-@media only screen and (max-width: 480px) {
-  .likes-info {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 .link-account {
@@ -13853,7 +13853,7 @@ template {
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(0deg, 97%, 66%);
-  border: hsl(0deg, 97%, 66%);
+  border-color: hsl(0deg, 97%, 66%);
   display: block;
   margin: auto;
   width: 100%;
@@ -13865,7 +13865,7 @@ template {
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(0deg, 97%, 66%);
-  border: hsl(0deg, 97%, 66%);
+  border-color: hsl(0deg, 97%, 66%);
   display: block;
   margin: auto;
   width: 20%;
@@ -13883,18 +13883,44 @@ template {
   }
 }
 
+.btn-user {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 97%, 66%);
+  border-color: hsl(0deg, 97%, 66%);
+  display: block;
+  margin: auto;
+  width: 100%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
 .btn-dark {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(0deg, 0%, 0%);
-  border: hsl(0deg, 0%, 0%);
+  border-color: hsl(0deg, 0%, 0%);
   display: block;
   margin: auto;
   width: 20%;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
+}
+
+.btn-logout {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 0%);
+  background-color: hsl(0deg, 0%, 100%);
+  border-color: hsl(0deg, 0%, 0%);
+  display: block;
+  margin: auto;
+  width: 12%;
 }
 
 .btn-green {
@@ -13903,25 +13929,9 @@ template {
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(166deg, 29%, 50%);
-  border: hsl(166deg, 29%, 50%);
+  border-color: hsl(166deg, 29%, 50%);
   display: block;
   margin: auto;
-}
-
-.btn-categories {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1.8rem;
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(28deg, 96%, 56%);
-  border: hsl(28deg, 96%, 56%);
-  display: block;
-  margin: auto;
-  border-top-left-radius: 0rem;
-  border-top-right-radius: 0rem;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  width: 100%;
 }
 
 .btn-transparent {
@@ -13935,7 +13945,7 @@ template {
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(192deg, 67%, 57%);
-  border: hsl(192deg, 67%, 57%);
+  border-color: hsl(192deg, 67%, 57%);
   display: block;
   margin: auto;
   width: 62%;
@@ -13947,7 +13957,7 @@ template {
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(0deg, 97%, 66%);
-  border: hsl(0deg, 97%, 66%);
+  border-color: hsl(0deg, 97%, 66%);
   display: block;
   margin: auto;
   padding-left: 7%;
@@ -13971,7 +13981,7 @@ template {
 }
 
 .card {
-  border-color: hsl(0deg, 0%, 100%);
+  border-color: hsla(0deg, 0%, 45%, 0.2);
 }
 @media only screen and (max-width: 480px) {
   .card {
@@ -13992,6 +14002,10 @@ template {
   .card {
     margin-left: 6%;
   }
+}
+
+.card-news {
+  border-color: hsl(0deg, 0%, 100%);
 }
 
 .card-img-top {
@@ -14034,12 +14048,6 @@ template {
     height: 20vw;
     margin-right: 10%;
   }
-}
-
-.shadow {
-  -webkit-box-shadow: 1.563rem 6.563rem 6.563rem 6.563rem hsl(0deg, 0%, 0%);
-          box-shadow: 1.563rem 6.563rem 6.563rem 6.563rem hsl(0deg, 0%, 0%);
-  opacity: 1;
 }
 
 .card-body {
@@ -14095,11 +14103,21 @@ template {
 /*FOOTER*/
 .footer {
   background-color: hsl(192deg, 67%, 57%);
+  margin-top: 5%;
 }
 @media only screen and (max-width: 480px) {
   .footer {
     margin-top: auto;
   }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .footer {
+    margin-top: 45%;
+  }
+}
+
+.img-footer {
+  width: 2rem;
 }
 
 .form-create-recipe-sm {
@@ -14217,6 +14235,11 @@ template {
     font-size: 1.8rem;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .top-nav-link {
+    padding-bottom: 10%;
+  }
+}
 
 .top-nav-link:hover {
   opacity: 1;
@@ -14250,6 +14273,11 @@ template {
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .top-nav-select {
     font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .top-nav-select {
+    padding-bottom: 10%;
   }
 }
 
@@ -14476,17 +14504,6 @@ template {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-}
-
-.category-img {
-  height: 15vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 0rem;
-  border-bottom-right-radius: 0rem;
 }
 
 .img-info-recipe {

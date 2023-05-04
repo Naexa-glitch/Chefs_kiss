@@ -26,17 +26,37 @@
     </head>
 <body>
     
-    <section class="container">
+    <div class="container">
 
-        <section class="container-md">
+        <div class="container-md">
+
+            <!--Header start-->
 
             <header>
 
-                <div class="navbar mt-5 pb-5">
+                <div class="container-md navbar mt-5">
     
-                    <img class="img-full navbar-brand" src="./imgs/logo.webp" alt="Logo">
+                    <div>
     
-                    <nav class=" navbar-expand-lg ">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-logo navbar-brand" src="./imgs/logo.webp" alt="Logo">
+                            </div>
+                            <div class="mobile-bar col">
+                                <img src="imgs/bars.svg" alt="mobile bar" class="mobile-icon">
+                            </div>
+                          </div>
+    
+    
+                    </div>
+    
+                    <nav id="main-nav" class="mobile-offcanvas navbar-expand-lg ">
+    
+                        <div class="offcanvas-header">
+    
+                            <button class="btn-close"></button>
+    
+                        </div>
     
                         <div class="container-fluid">
                     
@@ -46,10 +66,10 @@
                                         <a class="top-nav-link mt-2" aria-current="page" href="index.html">Home</a>
                                     </li>
                                     <li class="top-nav-item">
-                                        <a class="top-nav-link mt-2" href="categories.html">Categories</a>
+                                        <a class="top-nav-link mt-2" href="#">About us</a>
                                     </li>
                                     <li class="top-nav-item">
-                                        <a class="top-nav-link disabled mt-2" href="#" aria-disabled="true">Admin</a>
+                                        <a class="top-nav-link disabled mt-2" href="usersignup.html">Sign up</a>
                                     </li>
                                     <li class="top-nav-item">
                                         <a class="top-nav-link mt-2" href="userlogin.html">Login</a>
@@ -59,15 +79,21 @@
                                 <form class="d-flex ps-5 pt-3" role="search">
                                     <input class="form-control form-control-nav me-2 place-style" type="search" placeholder="Search" aria-label="Search">
                                     <button class="btn-transparent"><img class="img-fluid mb-1" src="./imgs/lupa.png" alt=""></button>
-                                    
                                 </form>
                             </div>
+    
+                            <img class="img-fluid offcanvas-header" src="./imgs/responsive-img.webp" alt="">
+    
                         </div>
                     </nav>
                 </div>
                 
     
             </header>
+
+            <!--Header end-->
+
+            <!-- Profile information -->
 
             <section class="pt-5 text-center">
 
@@ -77,7 +103,11 @@
 
             </section>
 
-            <section class="pt-5 pb-5">
+            <!-- Profile information -->
+
+            <!-- Created recipes -->
+
+            <div class="pt-5 pb-5">
 
                 <h2 class="subtitle-orange mb-4">Created recipes</h2>
 
@@ -85,13 +115,13 @@
                     <table class="table">
                         <thead class="thead-dark table-warning">
                         <tr>
-                            <th scope="col recipe-info-title">Image</th>
-                            <th scope="col recipe-info-title">Recipe name</th>
-                            <th scope="col recipe-info-title">Type</th>
-                            <th scope="col recipe-info-title">Preparation time</th>
-                            <th scope="col recipe-info-title">Cook time</th>
-                            <th scope="col recipe-info-title">Total time</th>
-                            <th scope="col "></th>
+                            <th class="col recipe-info-title">Image</th>
+                            <th class="col recipe-info-title">Recipe name</th>
+                            <th class="col recipe-info-title">Type</th>
+                            <th class="col recipe-info-title">Preparation time</th>
+                            <th class="col recipe-info-title">Cook time</th>
+                            <th class="col recipe-info-title">Total time</th>
+                            <th class="col "></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -175,9 +205,13 @@
 
                   <button class="btn btn-green mt-5">Create Recipe</button>
 
-            </section>
+            </div>
 
-            <section class="pt-5">
+             <!-- Created recipes -->
+
+             <!-- User list -->
+
+            <div class="pt-5">
 
                 <h3 class="subtitle-orange mb-4">Users list</h3>
 
@@ -185,65 +219,65 @@
                     <table class="table">
                         <thead class="thead-light">
                         <tr>
-                            <th scope="row recipe-info-title">#</th>
-                            <th scope="col recipe-info-title">Name</th>
-                            <th scope="col recipe-info-title">Username</th>
-                            <th scope="col recipe-info-title">Email</th>
+                            <th class="row recipe-info-title">#</th>
+                            <th class="col recipe-info-title">Name</th>
+                            <th class="col recipe-info-title">Username</th>
+                            <th class="col recipe-info-title">Email</th>
                             
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <th scope="row" class="recipe-info-title">1</th>
+                            <th class="row recipe-info-title">1</th>
                             <td class="detail-text">Josh Williams</td>
                             <td class="detail-text">cooking_time</td>
                             <td class="detail-text">JoshW@email.com</td>
                             
                         </tr>
                         <tr>
-                            <th scope="row" class="recipe-info-title">2</th>
+                            <th class="row recipe-info-title">2</th>
                             <td class="detail-text">Ericka Blade</td>
                             <td class="detail-text">Spoonful</td>
                             <td class="detail-text">ERblade@email.com</td>
                         </tr>
                         <tr>
-                            <th scope="row" class="recipe-info-title">3</th>
+                            <th class="row recipe-info-title">3</th>
                             <td class="detail-text">Stephan Cordoba</td>
                             <td class="detail-text">petitchef</td>
                             <td class="detail-text">Steph89@email.com</td>
                         </tr>
                         <tr>
-                            <th scope="row" class="recipe-info-title">4</th>
+                            <th class="row recipe-info-title">4</th>
                             <td class="detail-text">Thomas Clond</td>
                             <td class="detail-text">duck</td>
                             <td class="detail-text">thomasclond@email.com</td>
                         </tr>
                         <tr>
-                            <th scope="row" class="recipe-info-title">5</th>
+                            <th class="row recipe-info-title">5</th>
                             <td class="detail-text">Terry Black</td>
                             <td class="detail-text">deliciousrecipies</td>
                             <td class="detail-text">Te43Bla21@email.com</td>
                         </tr>
                         <tr>
-                            <th scope="row" class="recipe-info-title">6</th>
+                            <th class="row recipe-info-title">6</th>
                             <td class="detail-text">Janet Thomson</td>
                             <td class="detail-text">sparkles</td>
                             <td class="detail-text">JayThom@email.com</td>
                         </tr>
                         <tr>
-                            <th scope="row" class="recipe-info-title">7</th>
+                            <th class="row recipe-info-title">7</th>
                             <td class="detail-text">Henry</td>
                             <td class="detail-text">ilikepizza</td>
                             <td class="detail-text">H4e7n1r0y@email.com</td>
                         </tr>
                         <tr>
-                            <th scope="row" class="recipe-info-title">8</th>
+                            <th class="row recipe-info-title">8</th>
                             <td class="detail-text">Luna Bogantes</td>
                             <td class="detail-text">hungryperson</td>
                             <td class="detail-text">Lunita@email.com</td>
                         </tr>
                         <tr>
-                            <th scope="row" class="recipe-info-title">9</th>
+                            <th class="row recipe-info-title">9</th>
                             <td class="detail-text">Kay Blerry</td>
                             <td class="detail-text">washingdishes</td>
                             <td class="detail-text">KayBlerry@email.com</td>
@@ -254,31 +288,33 @@
                 
                 <button class="btn btn-dark mt-5 mb-5">log out</button>
 
-            </section>
+            </div>
 
-        </section>
+            <!-- User list -->
+
+        </div>
 
         <!-- FOOTER START -->
-            <footer class=" text-center footer mt-5">
-                <div class=" justify-content-center pt-3">
-                    <div class="">
-                            
-                        <ul class="nav justify-content-center pt-3 gap-4">
-                            <li><img src="./imgs/facebook.png" width="32" style="width: 32px;"></li>
-                            <li><img src="./imgs/insta-logo.png" width="32" style="width: 32px;"></li>
-                            <li><img src="./imgs/youtube.png" width="32" style="width: 32px;"></li>
-                        </ul>
+        <footer class=" text-center footer mt-5">
+            <div class=" justify-content-center pt-3">
+                <div class="">
+                        
+                    <ul class="nav justify-content-center pt-3 gap-4">
+                        <li><img class="img-footer" src="./imgs/facebook.png" alt="..."></li>
+                        <li><img class="img-footer" src="./imgs/insta-logo.png" alt="..."></li>
+                        <li><img class="img-footer" src="./imgs/youtube.png" alt="..."></li>
+                    </ul>
 
-                        <p class="title-rg text-white mt-4 mb-0 pb-3">©Chef's Kiss 2022</p>
+                    <p class="title-rg text-white mt-4 mb-0 pb-3">©Chef's Kiss 2022</p>
 
-                    </div>    
+                </div>    
 
-                </div>
-                    
-            </footer>
+            </div>
+                
+        </footer>
         <!-- END OF FOOTER -->
 
-    </section>
+    </div>
     
 </body>
 </html>

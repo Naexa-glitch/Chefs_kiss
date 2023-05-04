@@ -4,7 +4,7 @@
 
 .card{
 
-    border-color: variables.$clr-white;
+    border-color: variables.$clr-light-gray;
 
     @include media-queries.respond-to(media-queries.$phone){
 
@@ -29,6 +29,12 @@
         margin-left: 6%;
     
     }
+
+}
+
+.card-news{
+
+    border-color: variables.$clr-white;
 
 }
 
@@ -81,13 +87,6 @@
         margin-right: 10%;
     
     }
-
-}
-
-.shadow{
-
-    box-shadow: 1.563rem 6.563rem 6.563rem 6.563rem variables.$clr-black;
-    opacity: 1;
 
 }
 

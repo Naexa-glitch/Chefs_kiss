@@ -29,14 +29,14 @@
 
 }
 
-@mixin btn($fweight, $fsize, $border, $bg, $color:variables.$clr-white){
+@mixin btn($fweight, $fsize, $cborder, $bg, $color:variables.$clr-white){
 
     font-family: variables.$ff-sans;
     font-weight: $fweight;
     font-size: $fsize;
     color: $color;
     background-color: $bg;
-    border: $border;
+    border-color: $cborder;
     display: block;
     margin: auto;
 

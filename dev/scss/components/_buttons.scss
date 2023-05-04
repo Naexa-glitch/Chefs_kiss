@@ -34,6 +34,17 @@
 
 }
 
+.btn-user{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-red, variables.$clr-red);
+ 
+    
+    width: 100%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+
+}
+
 .btn-dark{
 
     @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-black, variables.$clr-black);
@@ -44,20 +55,16 @@
 
 }
 
-.btn-green{
+.btn-logout{
 
-    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-green, variables.$clr-green);
+    @include mixins.btn(variables.$fw-bold, variables.$fs-xsm, variables.$clr-black, variables.$clr-white, variables.$clr-black);
+    width: 12%;
 
 }
 
-.btn-categories{
+.btn-green{
 
-    @include mixins.btn(variables.$fw-semibold, variables.$fs-mdx, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
-
-    @include mixins.borders(0rem, 0rem, 1rem, 1rem);
-
-    width: 100%;
-
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-green, variables.$clr-green);
 
 }
 

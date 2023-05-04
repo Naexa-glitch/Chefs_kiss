@@ -58,6 +58,12 @@
     
     @include mixins.set-nav-font();
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        padding-bottom: 10%;
+
+    }
+
 }
 
 .top-nav-link:hover{
@@ -75,6 +81,11 @@
     
     @include mixins.set-nav-font(variables.$clr-red, variables.$fw-bold);
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        padding-bottom: 10%;
+
+    }
 }
 
 .img-logo{

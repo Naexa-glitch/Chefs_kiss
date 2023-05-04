@@ -26,10 +26,11 @@
     </head>
 <body>
     
-    <section class="container">
+    <div class="container">
 
-        <section class="container-md">
+        <div class="container-md">
 
+            <!-- header start -->
             <header>
 
                 <div class="container-md navbar mt-5">
@@ -64,10 +65,10 @@
                                         <a class="top-nav-link mt-2" aria-current="page" href="index.html">Home</a>
                                     </li>
                                     <li class="top-nav-item">
-                                        <a class="top-nav-link mt-2" href="categories.html">Categories</a>
+                                        <a class="top-nav-link mt-2" href="#">About us</a>
                                     </li>
                                     <li class="top-nav-item">
-                                        <a class="top-nav-link disabled mt-2" href="#" aria-disabled="true">Admin</a>
+                                        <a class="top-nav-link disabled mt-2" href="usersignup.html">Sign up</a>
                                     </li>
                                     <li class="top-nav-item">
                                         <a class="top-nav-select mt-2" href="userlogin.html">Login</a>
@@ -88,58 +89,64 @@
                 
     
             </header>
+            <!-- header end -->
 
-            <section class="pt-4 pb-3">
+            <!-- Login best page -->
+            <div class="pt-4 pb-3">
 
                 <h1 class="mt-5 title text-center">Time to login the <span class="title-blue">best </span>page</h1>
 
-                    <section class="container-sm pt-5">
+                    <div class="container-sm">
 
-                        <form>
-                            <div class="mb-4">
-                            <label for="exampleInputEmail1" class="form-label subtitle-account">Username</label>
-                            <input type="email" class="form-control form-user-login" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label subtitle-account">Password</label>
-                            <input type="password" class="form-control form-user-login" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-5 form-check">
-                            <div class="row">
-                                <div class="col">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label detail-text" for="exampleCheck1">Remember me</label>
+                        <div class=" pt-5">
+
+                            <form>
+                                <div class="mb-4">
+                                <label for="username" class="form-label subtitle-account mb-0">Username</label>
+                                <input type="email" class="form-control form-user-login" id="username" aria-describedby="emailHelp">
                                 </div>
-                                <div class="col">
-                                    <a class="link-account space-link-account" href="recoverpassword.html">Forgot password?</a>
+                                <div class="mb-3">
+                                <label for="password" class="form-label subtitle-account mb-0">Password</label>
+                                <input type="password" class="form-control form-user-login" id="password">
                                 </div>
-                            </div>
-                            </div>
-                        </form>
+                                <div class="mb-5 form-check">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="checkbox" class="form-check-input" id="check">
+                                        <label class="form-check-label detail-text" for="check">Remember me</label>
+                                    </div>
+                                    <div class="col">
+                                        <a class="link-account space-link-account" href="recoverpassword.html">Forgot password?</a>
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
 
-                    </section>  
+                        </div>  
 
-            </section>
+                        <div class="text-center pb-5">
 
-            <section class="text-center pb-5">
+                            <button class="btn btn-user mt-5">Login</button>
+                            <div id="emailHelp" class="form-text mt-3 detail-text">Dont have an account? <a class="link-account" href="usersignup.html">Sign in</a></div>
+            
+                        </div>
+                    
+                </div>    
 
-                <button class="btn btn-save mt-5">Login</button>
-                <div id="emailHelp" class="form-text mt-3 detail-text">Dont have an account? <a class="link-account" href="usersignup.html">Sign in</a></div>
+            </div>
+            <!-- Login best page -->
 
-            </section>
-
-
-        </section>
+        </div>
 
         <!-- FOOTER START -->
-        <footer class=" text-center footer mt-5">
+        <footer class=" text-center footer">
             <div class=" justify-content-center pt-3">
                 <div class="">
                         
                     <ul class="nav justify-content-center pt-3 gap-4">
-                        <li><img src="./imgs/facebook.png" width="32" style="width: 32px;"></li>
-                        <li><img src="./imgs/insta-logo.png" width="32" style="width: 32px;"></li>
-                        <li><img src="./imgs/youtube.png" width="32" style="width: 32px;"></li>
+                        <li><img class="img-footer" src="./imgs/facebook.png" alt="..."></li>
+                        <li><img class="img-footer" src="./imgs/insta-logo.png" alt="..."></li>
+                        <li><img class="img-footer" src="./imgs/youtube.png" alt="..."></li>
                     </ul>
 
                     <p class="title-rg text-white mt-4 mb-0 pb-3">©Chef's Kiss 2022</p>
@@ -149,9 +156,9 @@
             </div>
                 
         </footer>
-    <!-- END OF FOOTER -->
+        <!-- END OF FOOTER -->
 
-    </section>
+    </div>
 
         <!-- responsive navbar-->
         <script>

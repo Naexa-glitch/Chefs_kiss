@@ -1,6 +1,11 @@
-<!-- En este decimocuarto commit se hizo la parte responsive de tablet-landscape y a la clase card se le aplicó large-desktop, este último responsive solo se aplicó en esta clase ya que 
-no era necesario aplicarlo al resto. Se acomodaron imágenes, cards, btn-close y en mixins se agregó un nuevo tamaño responsive de landscape para los textos del navbar. Se implementó el menú navbar de responsive 
-phone y tablet-portrait, con la excepción de que este se centró ligeramente. En index.html se eliminó la clase px-5 y en useraccount se agregó un pb-5 en un div del header.-->
+<!-- Decimoquinto commit, se revisó con la página de validación html para detectar errores y corregirlos, se eliminaron elementos que no tenían función alguna, se cambiaron los 
+nombres id de algunos html y los for. Se agregó alt a las etiquetas img que no lo ten{ian y a una imagen se le cambio el nombre, se sustituyeron varios de los containers 
+por divs. Se creó un archivo main.js para futuro. Se hicieron varios cambios según lo señalado por el profesor de diseño de sitios web: los cards ya no tienen sombra y sus bordes
+son de color gris, se creó un card-news para los bordes de la sección de noticias manteniéndolos blancos, cambió el icono de lupa por otro. page-description tiene su texto de color gris, 
+pt-5 de page-description en index ya no está, se colocó un mb-0 en el texto arriba de los forms, y se modificaron los paddings y margins de elementos, en user account se agregó una descripción 
+del usuario y debajo un botón log out llamado en buttons.scss btn-logout, en inforecipe el texto que indica los likes se hizo más grande y en login, signup, changepassword y recoverpassword html 
+se insertó un nuevo botón llamado btn-user que se extiende al mismo largo que los forms. Se colocó un padding-bottom para las opciones navbar en su responsive tablet-landscape, en el footer también 
+se modificó su margin-top, en las variables se añadió un nuevo color para las cards. Se corrigió en el mixin de botones el border por un border-color y se acomodó mejor las clases de typography.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +36,9 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
 
 <body>
 
-    <section class="container">
+    <div class="container">
+
+        <!-- header start -->
 
         <header>
 
@@ -64,13 +71,13 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         <div class=" navbar-collapse pt-3">
                             <ul class="navbar-nav me-auto gap-5 mb-2 mb-lg-0">
                                 <li class="top-nav-item">
-                                    <a class="top-nav-select mt-2" aria-current="page" href="#">Home</a>
+                                    <a class="top-nav-select mt-2" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="top-nav-item">
-                                    <a class="top-nav-link mt-2" href="categories.html">Categories</a>
+                                    <a class="top-nav-link mt-2" href="#">About us</a>
                                 </li>
                                 <li class="top-nav-item">
-                                    <a class="top-nav-link disabled mt-2" href="#" aria-disabled="true">Admin</a>
+                                    <a class="top-nav-link disabled mt-2" href="usersignup.html">Sign up</a>
                                 </li>
                                 <li class="top-nav-item">
                                     <a class="top-nav-link mt-2" href="userlogin.html">Login</a>
@@ -78,7 +85,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </ul>
 
                             <form class="d-flex ps-5 pt-3" role="search">
-                                <input class="form-control form-control-nav me-2 place-style" type="search" placeholder="Search" aria-label="Search">
+                                <input class="form-control form-control-nav place-style" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn-transparent"><img class="img-fluid mb-1" src="./imgs/lupa.png" alt=""></button>
                             </form>
                         </div>
@@ -92,35 +99,42 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
 
         </header>
 
-        <section class="pt-4">
+        <!-- header start -->
+
+        <!-- img-start -->
+
+        <div class="pt-4">
 
             <img class="img-fluid img-principal" src="./imgs/what-is-protein-guide-alt-1440x810.webp" alt="">
 
-        </section>
+        </div>
 
-        <section class="container-md">
-
-            <section class="mt-4 pb-5">
+        <!-- img-start -->
 
 
+        <div class="container-md">
 
-                <section class="text-center container-fluid pt-4">
+            <!-- introduction text -->
+
+                <section class="mt-4 pb-5 text-center container-fluid pt-4">
 
                     <h1 class="mt-5 title">Exciting recipies to <br> cook like a <span class="title-blue">chef</span><br></h1>
-                    <p class="pt-5 mb-5 page-description">Here you'll find any possible recipe to your heart contents, from desserts, to dinners and even apperitives. If you want to keep a recipe just sign up with us and save it in your account so you can see it everytime you want to.</p>
+                    <p class="mb-5 page-description">Here you'll find any possible recipe to your heart contents, from desserts, to dinners and even apperitives. If you want to keep a recipe just sign up with us and save it in your account so you can see it everytime you want to.</p>
 
                 </section>
 
-            </section>
+            <!-- introduction text -->
 
-            <section class="mb-5 pt-3 text-center row">
+            <!-- Latest news -->
+
+            <div class="mb-5 pt-3 text-center row">
 
                 <h2 class="mt-5 mb-5 subtitle-orange">Check out the latest news</h2>
 
-                <section class="row">
+                <div class="row">
 
                     <div class=" row pt-5 col-sm">
-                        <div class="card">
+                        <div class="card card-news">
                         <img src="./imgs/burger.jpg" class="rounded-circle" alt="...">
                         <div class="card-body">
                             <p class="card-text card-news px-4">Chef's kiss will be hosting a competition</p>
@@ -128,7 +142,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div>  
                     <div class=" row pt-5 col-sm"> 
-                        <div class="card ">
+                        <div class="card card-news">
                         <img src="./imgs/pancake.jpg" class="rounded-circle" alt="...">
                             <div class="card-body">
                                 <p class="card-text card-news px-4">Amanda has new tips for people that want to eat healty</p>
@@ -136,7 +150,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div> 
                     <div class=" row pt-5 col-sm">   
-                        <div class="card">
+                        <div class="card card-news">
                         <img src="./imgs/fries.jpg" class="rounded-circle" alt="...">
                         <div class="card-body">
                             <p class="card-text card-news px-4">Is your cooking a mess? Then we have the perfect guide for you</p>
@@ -144,19 +158,22 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div>
                 
-                </section>    
+                </div>    
 
-            </section>
+            </div>
 
+            <!-- Latest news -->
 
-            <section class="pt-2 pb-5 row">
+            <!-- Trending -->
 
-                <h3 class="pb-5 subtitle-orange">Trending</h3>
+            <div class="pt-2 pb-5 row">
 
-                <section class="row row-cols-1 row-cols-md-3 gap-4">
+                <h3 class="subtitle-orange">Trending</h3>
 
-                        <div class="pt-4 row col">
-                            <div class="card shadow">
+                <div class="row row-cols-1 row-cols-md-3 gap-4">
+
+                        <div class="pt-3 row col">
+                            <div class="card ">
                             <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body"> 
                                 <p class="card-title">Sopa Azteca</p>
@@ -166,8 +183,8 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                             </div>
                         </div>   
-                        <div class=" pt-4 row col"> 
-                            <div class="card shadow">
+                        <div class=" pt-3 row col"> 
+                            <div class="card ">
                             <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body">
                                 <p class="card-title ">Fetuccini</p>
@@ -177,8 +194,8 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                             </div>
                         </div> 
-                        <div class=" pt-4 row col">  
-                            <div class="card shadow">
+                        <div class=" pt-3 row col">  
+                            <div class="card ">
                             <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body">
                                 <p class="card-title">Omelette</p>
@@ -189,7 +206,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                         </div>
                         <div class="pt-4 row col">
-                            <div class="card shadow">
+                            <div class="card ">
                             <img src="./imgs/breakfast.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body"> 
                                 <p class="card-title">Banana pancakes</p>
@@ -200,7 +217,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                         </div>    
                         <div class="pt-4 row col"> 
-                            <div class="card shadow">
+                            <div class="card ">
                             <img src="./imgs/Beef-in-Mushroom-Gravy_EXPS_HSCBZ19_7967_E07_12_5b-1.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body">
                                 <p class="card-title ">Beef in Mushroom </p>
@@ -211,7 +228,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                         </div> 
                         <div class="pt-4 row col">  
-                            <div class="card shadow">
+                            <div class="card ">
                             <img src="./imgs/Blueberry-Dump-Cake_EXPS_FT22_270945_ST_10_12_1-1.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body">
                                 <p class="card-title">Blueberry Dump Cake</p>
@@ -222,8 +239,8 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                         </div>
                         <div class="pt-4 row col">
-                            <div class="card shadow">
-                            <img src="./imgs/Tasty Onion Chicken.png" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card ">
+                            <img src="./imgs/TastyOnionChicken.png" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body"> 
                                 <p class="card-title">Tasty Onion Chicken</p>
                                 <p class="card-detail mb-0">Lunch</p>
@@ -233,7 +250,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                         </div>   
                         <div class="pt-4 row col"> 
-                            <div class="card shadow">
+                            <div class="card ">
                             <img src="./imgs/Coffee-Cheesecake_EXPS_FT22_270662_ST_10_19_1.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body">
                                 <p class="card-title ">Coffee Cheesecake</p>
@@ -244,7 +261,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                         </div> 
                         <div class="pt-4 row col">  
-                            <div class="card shadow">
+                            <div class="card ">
                             <img src="./imgs/mac.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body">
                                 <p class="card-title">Mac & Cheese</p>
@@ -255,7 +272,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                         </div>
                         <div class="pt-4 row col">  
-                            <div class="card shadow">
+                            <div class="card ">
                             <img src="./imgs/bitterballen.jpg" class="card-img-top rounded mt-2" alt="...">
                             <div class="card-body">
                                 <p class="card-title">Bitter Ballen</p>
@@ -266,22 +283,23 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                             </div>
                         </div>
 
-                </section>        
+                    </div>        
 
-            </section>
+            </div>
 
-
+            <!-- Trending -->
  
+            <!-- Every recipe to your heart's content -->
 
-            <section class="pt-5 pb-5 row">
+            <div class="pt-5 pb-5 row">
 
-                <h3 class="pb-5 subtitle-orange">Every recipe to <br> your heart's content <br></h3>
+                <h3 class="subtitle-orange">Every recipe to <br> your heart's content <br></h3>
                 
 
-                <section class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
+                <div class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
 
-                    <div class="mt-4 col row">
-                        <div class="card shadow">
+                    <div class="pt-3 col row">
+                        <div class="card ">
                         <img src="./imgs/fried-chicken1.jpg" class="card-img-top rounded mt-2" alt="...">
                         <div class="card-body">
                             <p class="card-title">Fried chicken</p>
@@ -292,7 +310,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div>    
                     <div class="mt-4 col row">
-                        <div class="card shadow">
+                        <div class="card ">
                         <img src="./imgs/LUNCH-salmon.jpeg" class="card-img-top rounded mt-2" alt="...">
                         <div class="card-body">
                             <p class="card-title">Salmon</p>
@@ -303,7 +321,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div>
                     <div class="mt-4 col row">   
-                        <div class="card shadow">
+                        <div class="card ">
                         <img src="./imgs/steak-meat.jpg" class="card-img-top rounded mt-2" alt="...">
                         <div class="card-body">
                             <p class="card-title">Steak meat</p>
@@ -314,7 +332,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div>        
                     <div class="mt-4 row col">
-                        <div class="card shadow">
+                        <div class="card ">
                         <img src="./imgs/macarones.jpg" class="card-img-top rounded mt-2" alt="...">
                         <div class="card-body">
                             <p class="card-title">Macaroons</p>
@@ -325,7 +343,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div>    
                     <div class="mt-4 row col">
-                        <div class="card shadow">
+                        <div class="card ">
                         <img src="./imgs/french-food-1920x1080.jpg" class="card-img-top rounded mt-2" alt="...">
                         <div class="card-body">
                             <p class="card-title">Beef soup </p>
@@ -336,7 +354,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div>
                     <div class="mt-4 row col">   
-                        <div class="card shadow">
+                        <div class="card ">
                         <img src="./imgs/FRESH_PA_i1140.jpg" class="card-img-top rounded mt-2" alt="...">
                         <div class="card-body">
                             <p class="card-title">Chicken with sesame</p>
@@ -347,11 +365,13 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                         </div>
                     </div>   
                     
-                </section>
+                </div>
 
-            </section>
+            </div>
 
-        </section>
+            <!-- Every recipe to your heart's content -->
+
+        </div>
 
         <!-- FOOTER START -->
         <footer class=" text-center footer mt-5">
@@ -359,12 +379,12 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
                 <div class="">
                         
                     <ul class="nav justify-content-center pt-3 gap-4">
-                        <li><img src="./imgs/facebook.png" width="32" style="width: 32px;"></li>
-                        <li><img src="./imgs/insta-logo.png" width="32" style="width: 32px;"></li>
-                        <li><img src="./imgs/youtube.png" width="32" style="width: 32px;"></li>
+                        <li><img class="img-footer" src="./imgs/facebook.png" alt="..."></li>
+                        <li><img class="img-footer" src="./imgs/insta-logo.png" alt="..."></li>
+                        <li><img class="img-footer" src="./imgs/youtube.png" alt="..."></li>
                     </ul>
 
-                    <p class="title-rg text-white mt-4 mb-0 pb-3">©Chef's Kiss 2022</p>
+                    <p class="title-rg text-white mt-4 mb-0 pb-3">©2023 Chef's Kiss</p>
 
                 </div>    
 
@@ -374,7 +394,7 @@ phone y tablet-portrait, con la excepción de que este se centró ligeramente. E
         <!-- END OF FOOTER -->
 
 
-    </section> 
+    </div> 
     
     <!-- responsive navbar-->
     <script>

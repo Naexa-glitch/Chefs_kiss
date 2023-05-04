@@ -6,11 +6,24 @@
     .footer { 
 
         background-color: variables.$clr-seablue;
+        margin-top: 5%;
 
         @include media-queries.respond-to(media-queries.$phone){
 
             margin-top: auto;
         
         }
+
+        @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+            margin-top: 45%;
+        
+        }
  
+    }
+
+    .img-footer{
+
+        width: 2rem;
+
     }

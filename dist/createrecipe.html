@@ -27,18 +27,38 @@
 <body>
     
 
-    <section class="container">
+    <div class="container">
 
-        <section class="container-md">
+        <div class="container-md">
+
+            <!-- Header start-->
 
             <header>
 
-                <div class=" navbar mt-5">
-
-                    <img class="img-full navbar-brand" src="./imgs/logo.webp" alt="Logo">
-
-                    <nav class=" navbar-expand-lg ">
-
+                <div class="container-md navbar mt-5">
+    
+                    <div>
+    
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-logo navbar-brand" src="./imgs/logo.webp" alt="Logo">
+                            </div>
+                            <div class="mobile-bar col">
+                                <img src="imgs/bars.svg" alt="mobile bar" class="mobile-icon">
+                            </div>
+                          </div>
+    
+    
+                    </div>
+    
+                    <nav id="main-nav" class="mobile-offcanvas navbar-expand-lg ">
+    
+                        <div class="offcanvas-header">
+    
+                            <button class="btn-close"></button>
+    
+                        </div>
+    
                         <div class="container-fluid">
                     
                             <div class=" navbar-collapse pt-3">
@@ -47,90 +67,106 @@
                                         <a class="top-nav-link mt-2" aria-current="page" href="index.html">Home</a>
                                     </li>
                                     <li class="top-nav-item">
-                                        <a class="top-nav-link mt-2" href="categories.html">Categories</a>
+                                        <a class="top-nav-link mt-2" href="#">About us</a>
                                     </li>
                                     <li class="top-nav-item">
-                                        <a class="top-nav-link disabled mt-2" href="#" aria-disabled="true">Admin</a>
+                                        <a class="top-nav-link disabled mt-2" href="usersignup.html">Sign up</a>
                                     </li>
                                     <li class="top-nav-item">
                                         <a class="top-nav-link mt-2" href="userlogin.html">Login</a>
                                     </li> 
                                 </ul>
-
+    
                                 <form class="d-flex ps-5 pt-3" role="search">
                                     <input class="form-control form-control-nav me-2 place-style" type="search" placeholder="Search" aria-label="Search">
                                     <button class="btn-transparent"><img class="img-fluid mb-1" src="./imgs/lupa.png" alt=""></button>
                                 </form>
                             </div>
+    
+                            <img class="img-fluid offcanvas-header" src="./imgs/responsive-img.webp" alt="">
+    
                         </div>
                     </nav>
                 </div>
                 
+    
             </header>
+
+            <!-- Header end-->
+
+            <!-- Title page-->
 
             <section class="pt-5 text-center">
 
                 <h1 class="title pb-5">Create a recipe</h1>
-
-                <img class="pb-5 pt-5 img-fluid" src="./imgs/placeholder.png" alt="">
  
             
             </section>
+
+            <!-- Title page-->
+
+            <!-- Create recipe -->
                       
-            <section class="pt-2">
+            <div class="pt-2">
+
+                
+                <img class="pb-5 pt-5 img-fluid" src="./imgs/placeholder.png" alt="">
 
                 <div class="row">
                     <div class="col mt-5">
-                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Name recipe" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Name recipe" aria-label="Username">
                     </div>
                     <div class="col mt-5">
-                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Complexity" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Complexity" aria-label="Username">
                     </div>
                     <div class="w-100"></div>
                     <div class="col mt-5">
-                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Category" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Category" aria-label="Username">
                     </div>
                     <div class="col mt-5">
-                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Occasion" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Occasion" aria-label="Username">
                     </div>
                     <div class="mt-5">
-                        <input type="text" class="form-control form-create-recipe-lg" placeholder="Description" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-lg" placeholder="Description" aria-label="Username">
                     </div>
                     <div class="w-100"></div>
                     <div class="col mt-5">
-                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Preparation time" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Preparation time" aria-label="Username">
                     </div>
                     <div class="col mt-5">
-                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Cook time" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Cook time" aria-label="Username">
                     </div>
                     <div class="w-100"></div>
                     <div class="col mt-5">
-                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Total time" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Total time" aria-label="Username">
                     </div>
                     <div class="col mt-5">
-                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Portions" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-sm" placeholder="Portions" aria-label="Username">
                     </div>
                     <div class="mt-5">
-                        <input type="text" class="form-control form-create-recipe-lg" placeholder="Ingredients" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-lg" placeholder="Ingredients" aria-label="Username">
                     </div>
                     <div class="mt-5">
-                        <input type="text" class="form-control form-create-recipe-lg" placeholder="Cook instructions" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-create-recipe-lg" placeholder="Cook instructions" aria-label="Username">
                     </div>
                 </div>
 
-            </section>
+            </div>
 
+            <!-- Create recipe -->
 
-            <section class="row pb-5 pt-4">
+            <!-- Create recipe buttons -->
+
+            <div class="row pb-5 pt-4">
 
                 <button class="btn btn-save mt-5">Upload</button>
                 <button class="btn btn-dark mt-5">Cancel</button>
 
-            </section>
+            </div>
 
-            
+            <!-- Create recipe buttons -->
 
-        </section>
+        </div>
 
         <!-- FOOTER START -->
         <footer class=" text-center footer mt-5">
@@ -138,9 +174,9 @@
                 <div class="">
                         
                     <ul class="nav justify-content-center pt-3 gap-4">
-                        <li><img src="./imgs/facebook.png" width="32" style="width: 32px;"></li>
-                        <li><img src="./imgs/insta-logo.png" width="32" style="width: 32px;"></li>
-                        <li><img src="./imgs/youtube.png" width="32" style="width: 32px;"></li>
+                        <li><img class="img-footer" src="./imgs/facebook.png" alt="..."></li>
+                        <li><img class="img-footer" src="./imgs/insta-logo.png" alt="..."></li>
+                        <li><img class="img-footer" src="./imgs/youtube.png" alt="..."></li>
                     </ul>
 
                     <p class="title-rg text-white mt-4 mb-0 pb-3">©Chef's Kiss 2022</p>
@@ -152,7 +188,7 @@
         </footer>
         <!-- END OF FOOTER -->
 
-    </section>
+    </div>
 
 </body>
 </html>

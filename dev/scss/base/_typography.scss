@@ -23,14 +23,34 @@
 
 }
 
+.subtitle-orange{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-orange);
+    
+
+}
+
+.subtitle-green{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-green);
+    
+
+}
+
+.subtitle-account{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-md, variables.$clr-seablue);
+
+}
+
 .page-description{
 
-    @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
+    @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx, variables.$clr-gray);
 
     @include media-queries.respond-to(media-queries.$phone){
 
         text-align: justify;
-        @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
+        @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx, variables.$clr-gray);
     
     }
 
@@ -68,23 +88,22 @@
 
 }
 
-.subtitle-orange{
+.recipe-info-title{
 
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-orange);
-    
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);   
 
 }
 
-.subtitle-green{
+.likes-info{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-green);
     
+    @include media-queries.respond-to(media-queries.$phone){
 
-}
-
-.subtitle-account{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdx, variables.$clr-seablue);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    
+    }
 
 }
 
@@ -103,25 +122,6 @@
 .card-detail{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xxsm);
-
-}
-
-.recipe-info-title{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);   
-
-}
-
-.likes-info{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdx, variables.$clr-green);
-    
-    @include media-queries.respond-to(media-queries.$phone){
-
-        padding-left: 1rem;
-        padding-right: 1rem;
-    
-    }
 
 }
 
@@ -145,4 +145,3 @@
     @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm, variables.$clr-gray);
 
 }
-
