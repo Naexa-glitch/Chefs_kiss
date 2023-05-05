@@ -1,0 +1,22 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'components/media-queries';
+
+
+.category-img{
+    
+    height: 15vw;
+    object-fit: cover;
+
+    width: 100%;
+
+    @include mixins.borders(1rem, 1rem, 0rem, 0rem);
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        height: 18vw;
+        width: 27vw;
+
+    }
+
+}

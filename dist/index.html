@@ -1,11 +1,8 @@
-<!-- Decimoquinto commit, se revisó con la página de validación html para detectar errores y corregirlos, se eliminaron elementos que no tenían función alguna, se cambiaron los 
-nombres id de algunos html y los for. Se agregó alt a las etiquetas img que no lo ten{ian y a una imagen se le cambio el nombre, se sustituyeron varios de los containers 
-por divs. Se creó un archivo main.js para futuro. Se hicieron varios cambios según lo señalado por el profesor de diseño de sitios web: los cards ya no tienen sombra y sus bordes
-son de color gris, se creó un card-news para los bordes de la sección de noticias manteniéndolos blancos, cambió el icono de lupa por otro. page-description tiene su texto de color gris, 
-pt-5 de page-description en index ya no está, se colocó un mb-0 en el texto arriba de los forms, y se modificaron los paddings y margins de elementos, en user account se agregó una descripción 
-del usuario y debajo un botón log out llamado en buttons.scss btn-logout, en inforecipe el texto que indica los likes se hizo más grande y en login, signup, changepassword y recoverpassword html 
-se insertó un nuevo botón llamado btn-user que se extiende al mismo largo que los forms. Se colocó un padding-bottom para las opciones navbar en su responsive tablet-landscape, en el footer también 
-se modificó su margin-top, en las variables se añadió un nuevo color para las cards. Se corrigió en el mixin de botones el border por un border-color y se acomodó mejor las clases de typography.-->
+<!-- Decimosexto commit, se agregó nuevamente categories.html y todas las clases que tenía anteriormente, se revisó por medio de una página de validación y se
+corrigieron sus errores, sustituyendo sections por div y dando el mismo footer y header que otros html. El navbar de todos los html reemplazó about us por 
+categories y categories.html se hizo responsive, se creó nuevamente cetegories.scss con la clase category-img y su responsive definiendo su ancho y alto
+y se agregó btn-categories, con un responsive para teléfono, definiendo su altura y cambiando el tamaño del texto del botón. aria-current se eliminó en 
+unos html y en otros se reubicó.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -74,7 +71,7 @@ se modificó su margin-top, en las variables se añadió un nuevo color para las
                                     <a class="top-nav-select mt-2" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="top-nav-item">
-                                    <a class="top-nav-link mt-2" href="#">About us</a>
+                                    <a class="top-nav-link mt-2" href="categories.html">Categories</a>
                                 </li>
                                 <li class="top-nav-item">
                                     <a class="top-nav-link disabled mt-2" href="usersignup.html">Sign up</a>

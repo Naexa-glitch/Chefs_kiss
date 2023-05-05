@@ -68,6 +68,25 @@
 
 }
 
+.btn-categories{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-mdx, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
+
+    @include mixins.borders(0rem, 0rem, 1rem, 1rem);
+
+    width: 100%;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
+
+        height: 16vw;
+
+    }
+
+
+}
+
 .btn-transparent{
 
     background-color: transparent;
