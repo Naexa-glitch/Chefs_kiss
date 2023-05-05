@@ -13922,6 +13922,11 @@ template {
   margin: auto;
   width: 12%;
 }
+@media only screen and (max-width: 480px) {
+  .btn-logout {
+    width: 30%;
+  }
+}
 
 .btn-green {
   font-family: "Source Sans Pro", sans-serif;

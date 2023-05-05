@@ -60,6 +60,12 @@
     @include mixins.btn(variables.$fw-bold, variables.$fs-xsm, variables.$clr-black, variables.$clr-white, variables.$clr-black);
     width: 12%;
 
+    @include media-queries.respond-to(media-queries.$phone){
+
+        width: 30%;
+
+    }
+
 }
 
 .btn-green{
