@@ -1,5 +1,5 @@
-<!-- Para esta segunda entrega se implementó VUE a categories.html y se crearon los componentes de las cards destinadas a la selección de una categoría y las
-cards de resultados de búsqueda, se comprobó que funcionara adecuadamente. Por otro lado se creó adminlogin.html para el ingreso por parte de los adminisradores-->
+<!-- Para esta tercera entrega se implementó VUE a inforecipe.html, además, se borraron algunos componentes de cards con recetas y se sustituyeron 
+    por RecipesCards, se creó también el componente InfoRecipe que contiene la mayor parte del html de inforecipe.html.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -130,7 +130,7 @@ cards de resultados de búsqueda, se comprobó que funcionara adecuadamente. Por
 
                         <div class="row row-cols-1 row-cols-md-3 gap-4">
 
-                            <featured-cards></featured-cards>
+                            <recipes-cards></recipes-cards>
                                   
                                <!-- <div class=" pt-3 row col"> 
                                     <div class="card ">
@@ -253,7 +253,7 @@ cards de resultados de búsqueda, se comprobó que funcionara adecuadamente. Por
 
                     <div class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
 
-                        <all-recipes-cards></all-recipes-cards>
+                        <recipes-cards></recipes-cards>
                             
                         <!--<div class="mt-4 col row">
                             <div class="card ">
@@ -360,9 +360,8 @@ cards de resultados de búsqueda, se comprobó que funcionara adecuadamente. Por
 
     <script src="./js/components.js"></script>
 
-    <script src="./js/components/FeaturedCards.js"></script>
+    <script src="./js/components/RecipesCards.js"></script>
     <script src="./js/components/Navbar.js"></script>
-    <script src="./js/components/AllRecipesCards.js"></script>
     <script src="./js/components/Footer.js"></script>
 
    <!-- mounted -->
