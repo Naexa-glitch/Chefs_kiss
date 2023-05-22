@@ -21,13 +21,14 @@
         <!--Google Fonts arimo-->
         <!--css-->
         <link rel="stylesheet" href="./css/main.css">
-        <title>Chef's Kiss user login</title>
+        <title>Chef's Kiss Search</title>
     
     </head>
 <body>
-    
+
     <div class="container">
 
+        <div class="container-md">
         <!-- header start -->
 
         <header>
@@ -93,40 +94,72 @@
 
         </header>
 
-        <!-- header end -->
+            <section class="container-md text-center pb-5 pt-5">
+                <h1 class="title">Your results for “recipe”:</h1>
+            </section>
 
-        <!-- Change password -->
+            <div class="row row-cols-1 row-cols-md-3 gap-4 pb-5">
 
-            <div class=" pb-3 container-sm">
-
-                <h1 class="title text-center pb-5">Change password</h1>
-
-                <div >
-
-                        <form>
-                            <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label subtitle-account mb-0">Password</label>
-                            <input type="email" class="form-control form-user-login" id="exampleInputEmail1">
-                            </div>
-                            <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label subtitle-account mb-0">Confirm new password</label>
-                            <input type="password" class="form-control form-user-login" id="exampleInputPassword1">
-                            </div>
-                        </form>
-
+                <div class="pt-3 row col">
+                    <div class="card ">
+                    <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <div class="card-body"> 
+                        <p class="card-title">Sopa Azteca</p>
+                        <p class="card-detail mb-0">Soup</p>
+                        <p class="card-detail">Total time: 1h</p>
+                        <button class="btn btn-danger ps-2">View more</button>
+                    </div>
+                    </div>
+                </div>   
+                <div class=" pt-3 row col"> 
+                    <div class="card ">
+                    <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="card-title ">Fetuccini</p>
+                        <p class="card-detail mb-0">Lunch</p>
+                        <p class="card-detail">Total time: 1h 30 min</p>
+                        <button class="btn btn-danger ps-2">View more</button>
+                    </div>
+                    </div>
                 </div> 
-                
-                
-                <div class="text-center pb-5">
-
-                    <button class="btn btn-user mt-5">Send</button>
-
+                <div class=" pt-3 row col">  
+                    <div class="card ">
+                    <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="card-title">Omelette</p>
+                        <p class="card-detail mb-0">Breakfast</p>
+                        <p class="card-detail">Total time: 1h</p>
+                        <button class="btn btn-danger ps-2">View more</button>
+                    </div>
+                    </div>
                 </div>
+                <div class="pt-4 row col">
+                    <div class="card ">
+                    <img src="./imgs/breakfast.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <div class="card-body"> 
+                        <p class="card-title">Banana pancakes</p>
+                        <p class="card-detail mb-0">Breakfast</p>
+                        <p class="card-detail">Total time: 1h</p>
+                        <button class="btn btn-danger ps-2">View more</button>
+                    </div>
+                    </div>
+                </div>    
+                <div class="pt-4 row col"> 
+                    <div class="card ">
+                    <img src="./imgs/Beef-in-Mushroom-Gravy_EXPS_HSCBZ19_7967_E07_12_5b-1.jpg" class="card-img-top rounded mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="card-title ">Beef in Mushroom </p>
+                        <p class="card-detail mb-0">Lunch</p>
+                        <p class="card-detail">Total time: 1h 30 min</p>
+                        <button class="btn btn-danger ps-2">View more</button>
+                    </div>
+                    </div>
+                </div> 
 
-            </div>
+            </div>    
 
-            <!-- Change password -->
-
+        </div> 
+        
         <!-- FOOTER START -->
         <footer class=" text-center footer mt-5">
             <div class=" justify-content-center pt-3">
@@ -162,30 +195,7 @@
         </footer>
         <!-- END OF FOOTER -->
 
-    </div>
-
-        <!-- responsive navbar-->
-        <script>
-            document.addEventListener("DOMContentLoaded", function(){
+    </div>    
     
-                AOS.init();
-    
-                document.querySelector('.mobile-icon').addEventListener('click', function(event){
-                    console.log('click');
-                    document.getElementById('main-nav').classList.add('show-nav');
-                });
-    
-                document.querySelector('.btn-close').addEventListener('click', function(event){
-                    console.log('click');
-                    document.getElementById('main-nav').classList.remove('show-nav');
-                });
-            });
-        </script>
-        <!-- responsive navbar-->
-    
-        <!-- AOS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- AOS -->
-
 </body>
 </html>

@@ -63,20 +63,20 @@
 
 }
 
-.page-ingredients{
+.list-ingredients{
 
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-mdx);
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-mdx, variables.$clr-gray);
     
 
-    line-height: 2.875rem;
+    line-height: 3.975rem;
 
 }
 
-.page-steps{
+.list-steps{
 
-    @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx);
+    @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx, variables.$clr-gray);
 
-    line-height: 4.875rem;
+    line-height: 5.875rem;
 
     text-align: justify;
 
@@ -90,7 +90,13 @@
 
 .recipe-info-title{
 
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);   
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm, variables.$clr-white);   
+
+}
+
+.recipe-info-details{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm, variables.$clr-black);   
 
 }
 
@@ -143,5 +149,23 @@
 .detail-text-gray{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm, variables.$clr-gray);
+
+}
+
+.detail-text-green{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm, variables.$clr-green);
+
+}
+
+.user-detail{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm, variables.$clr-gray);
+
+}
+
+.rights-reserved{
+
+    @include mixins.set-font(variables.$ff-arimo, variables.$fw-regular, variables.$fs-xxxsm, variables.$clr-white);
 
 }

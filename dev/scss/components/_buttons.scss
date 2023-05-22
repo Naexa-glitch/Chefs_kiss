@@ -68,17 +68,45 @@
 
 }
 
+.btn-information{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-green, variables.$clr-green);
+    padding-left: 9%;
+    padding-right: 9%;
+
+}
+
+.green-btn-create{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-green, variables.$clr-green);
+   
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+
+}
+
 .btn-green{
 
     @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-green, variables.$clr-green);
+  
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    padding-left: 3%;
+    padding-right: 3%;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        padding-top: 3%;
+        padding-bottom: 3%;
+        width: 100%;
+
+    }
 
 }
 
 .btn-categories{
 
-    @include mixins.btn(variables.$fw-semibold, variables.$fs-mdx, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
-
-    @include mixins.borders(0rem, 0rem, 1rem, 1rem);
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
 
     width: 100%;
 
@@ -102,7 +130,7 @@
 
 .btn-edit{
 
-    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-seablue, variables.$clr-seablue);
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-seablue, variables.$clr-green);
 
     width: 62%;
 
@@ -122,6 +150,7 @@
     @include media-queries.respond-to(media-queries.$phone){
 
         margin-left: 5%;
+        
     
     }
 

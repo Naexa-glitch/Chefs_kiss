@@ -37,3 +37,55 @@
     height: auto;
 
 }
+
+.bg-sections{
+
+    width: 100%;
+    background-color: variables.$clr-orange-light;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    margin: auto;
+
+}
+
+.count-created{
+
+     padding-left: 71%;
+
+}
+
+.count-registered{
+
+    padding-right: 71%;
+
+}
+
+.row-cols-md-5{
+
+    width: 100%;
+
+}
+
+.padding-left-nav{
+
+    padding-left: 3rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        padding-left: 0rem;
+        
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        padding-left: 0rem;
+
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        padding-left: 0rem;
+
+    }
+
+}

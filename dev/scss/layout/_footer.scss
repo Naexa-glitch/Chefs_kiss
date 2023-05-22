@@ -1,5 +1,6 @@
 @use 'abstracts/variables';
 @use 'components/media-queries';
+@use 'abstracts/mixins';
     
     /*FOOTER*/
 
@@ -25,5 +26,14 @@
     .img-footer{
 
         width: 2rem;
+
+    }
+
+    
+    .footer-options{
+
+        @include mixins.set-font(variables.$ff-arimo, variables.$fw-regular, variables.$fs-xsm, variables.$clr-white);
+
+
 
     }

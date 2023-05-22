@@ -13762,29 +13762,36 @@ template {
   }
 }
 
-.page-ingredients {
+.list-ingredients {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
-  color: hsl(0deg, 0%, 0%);
-  line-height: 2.875rem;
+  color: hsl(0deg, 0%, 45%);
+  line-height: 3.975rem;
 }
 
-.page-steps {
+.list-steps {
   font-family: "Source Serif Pro", serif;
   font-weight: 400;
   font-size: 1.8rem;
-  color: hsl(0deg, 0%, 0%);
-  line-height: 4.875rem;
+  color: hsl(0deg, 0%, 45%);
+  line-height: 5.875rem;
   text-align: justify;
 }
 @media only screen and (max-width: 480px) {
-  .page-steps {
+  .list-steps {
     line-height: 4.105rem;
   }
 }
 
 .recipe-info-title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.recipe-info-details {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 1.05rem;
@@ -13845,6 +13852,27 @@ template {
   font-weight: 400;
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 45%);
+}
+
+.detail-text-green {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: hsl(166deg, 29%, 50%);
+}
+
+.user-detail {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 45%);
+}
+
+.rights-reserved {
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+  font-size: 0.48rem;
+  color: hsl(0deg, 0%, 100%);
 }
 
 .btn-danger {
@@ -13928,6 +13956,32 @@ template {
   }
 }
 
+.btn-information {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(166deg, 29%, 50%);
+  border-color: hsl(166deg, 29%, 50%);
+  display: block;
+  margin: auto;
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+.green-btn-create {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(166deg, 29%, 50%);
+  border-color: hsl(166deg, 29%, 50%);
+  display: block;
+  margin: auto;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
 .btn-green {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -13937,21 +13991,28 @@ template {
   border-color: hsl(166deg, 29%, 50%);
   display: block;
   margin: auto;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+@media only screen and (max-width: 480px) {
+  .btn-green {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+  }
 }
 
 .btn-categories {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(28deg, 96%, 56%);
   border-color: hsl(28deg, 96%, 56%);
   display: block;
   margin: auto;
-  border-top-left-radius: 0rem;
-  border-top-right-radius: 0rem;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
   width: 100%;
 }
 @media only screen and (max-width: 480px) {
@@ -13978,7 +14039,7 @@ template {
   font-weight: 600;
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
-  background-color: hsl(192deg, 67%, 57%);
+  background-color: hsl(166deg, 29%, 50%);
   border-color: hsl(192deg, 67%, 57%);
   display: block;
   margin: auto;
@@ -14134,6 +14195,45 @@ template {
   height: auto;
 }
 
+.bg-sections {
+  width: 100%;
+  background-color: hsla(28deg, 96%, 56%, 0.2);
+  padding-top: 3%;
+  padding-bottom: 4%;
+  margin: auto;
+}
+
+.count-created {
+  padding-left: 71%;
+}
+
+.count-registered {
+  padding-right: 71%;
+}
+
+.row-cols-md-5 {
+  width: 100%;
+}
+
+.padding-left-nav {
+  padding-left: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .padding-left-nav {
+    padding-left: 0rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .padding-left-nav {
+    padding-left: 0rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .padding-left-nav {
+    padding-left: 0rem;
+  }
+}
+
 /*FOOTER*/
 .footer {
   background-color: hsl(192deg, 67%, 57%);
@@ -14152,6 +14252,13 @@ template {
 
 .img-footer {
   width: 2rem;
+}
+
+.footer-options {
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
 }
 
 .form-create-recipe-sm {
@@ -14187,7 +14294,7 @@ template {
 }
 
 .form-control-nav {
-  width: 60%;
+  width: 82%;
   height: 80%;
   padding-right: 0%;
   border-width: 2px;
@@ -14203,41 +14310,52 @@ template {
 }
 @media only screen and (max-width: 480px) {
   .form-control-nav {
-    margin-left: 16%;
-    width: 49%;
+    margin-left: 5%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .form-control-nav {
     margin-left: 16%;
-    width: 49%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .form-control-nav {
     margin-left: 31%;
-    width: 30%;
+    width: 100%;
   }
 }
 
 .place-style::-webkit-input-placeholder {
   color: hsl(192deg, 67%, 57%);
+  padding-left: 2%;
 }
 
 .place-style::-moz-placeholder {
   color: hsl(192deg, 67%, 57%);
+  padding-left: 2%;
 }
 
 .place-style:-ms-input-placeholder {
   color: hsl(192deg, 67%, 57%);
+  padding-left: 2%;
 }
 
 .place-style::-ms-input-placeholder {
   color: hsl(192deg, 67%, 57%);
+  padding-left: 2%;
 }
 
 .place-style::placeholder {
   color: hsl(192deg, 67%, 57%);
+  padding-left: 2%;
+}
+
+@media only screen and (max-width: 480px) {
+  .responsive-space {
+    padding-top: 20%;
+  }
 }
 
 .top-nav-item {
@@ -14248,10 +14366,17 @@ template {
   display: block;
   text-decoration: none;
   list-style-type: none;
+  margin-top: 0.5rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .top-nav-item {
     font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .top-nav-item {
+    padding-bottom: 0%;
+    margin-top: 0rem;
   }
 }
 
@@ -14313,6 +14438,19 @@ template {
   .top-nav-select {
     padding-bottom: 10%;
   }
+}
+
+.gap-nav {
+  gap: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .gap-nav {
+    gap: 1rem;
+  }
+}
+
+.nav-line {
+  color: hsla(0deg, 0%, 45%, 0.2);
 }
 
 @media only screen and (max-width: 480px) {
@@ -14405,7 +14543,7 @@ template {
 @media only screen and (max-width: 480px) {
   .offcanvas-header {
     display: block;
-    margin-top: 5%;
+    padding-top: 5%;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
@@ -14540,6 +14678,12 @@ template {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .responsive-img {
+    padding-top: 38%;
+  }
+}
+
 .category-img {
   height: 15vw;
   -o-object-fit: cover;
@@ -14555,6 +14699,10 @@ template {
     height: 18vw;
     width: 27vw;
   }
+}
+
+.img-place-holder {
+  padding-left: 18%;
 }
 
 .img-info-recipe {
@@ -14639,8 +14787,8 @@ template {
 }
 
 .list-group {
-  padding-left: 20%;
-  width: 100%;
+  padding-right: 0%;
+  padding-left: 15%;
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .list-group {

@@ -4,8 +4,9 @@
 
 .form-control-nav{
 
-    width: 60%;
+    width: 82%;
     height: 80%;
+
 
     padding-right: 0%;
 
@@ -17,9 +18,10 @@
 
     @include media-queries.respond-to(media-queries.$phone){
 
-        margin-left: 16%;
+        margin-left: 5%;
 
-        width: 49%;
+        width: 100%;
+        
 
     }
 
@@ -27,7 +29,7 @@
 
         margin-left: 16%;
 
-        width: 49%;
+        width: 100%;
 
     }
 
@@ -35,7 +37,7 @@
 
         margin-left: 31%;
 
-        width: 30%;
+        width: 100%;
 
     }
 
@@ -44,12 +46,32 @@
 .place-style::placeholder{
 
     color: variables.$clr-seablue;
+    padding-left: 2%
+
+}
+
+.responsive-space{
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        padding-top: 20% 
+
+    }
 
 }
 
 .top-nav-item{
     
     @include mixins.set-nav-font();
+
+    margin-top: 0.5rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        padding-bottom: 0%;
+        margin-top: 0rem;
+
+    }
     
 }
 
@@ -86,6 +108,24 @@
         padding-bottom: 10%;
 
     }
+}
+
+.gap-nav{
+
+    gap: 3rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        gap: 1rem;
+
+    }
+
+}
+
+.nav-line{
+
+    color:variables.$clr-light-gray
+
 }
 
 .img-logo{
@@ -204,7 +244,9 @@
     @include media-queries.respond-to(media-queries.$phone){
 
             display: block;
-            margin-top: 5%;
+
+            padding-top: 5%;
+            
 
     }  
     
@@ -347,3 +389,13 @@
     }
 
 } 
+
+.responsive-img{
+
+    @include media-queries.respond-to(media-queries.$phone){
+        
+        padding-top: 38%;
+    
+    }
+
+}
