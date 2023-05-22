@@ -1,10 +1,4 @@
 app.component('recipes-cards',{
-    
-    props:{
-
-        
-
-    },
 
     data() {
         return {
@@ -32,7 +26,7 @@ app.component('recipes-cards',{
                     </div>
                 </div>     
         
-    `
+        `
     
 
 })
