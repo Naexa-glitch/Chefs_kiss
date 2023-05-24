@@ -11,7 +11,7 @@ app.component('info-recipe',{
     /*html*/
 
     `
-  
+
     <!-- Recipe introduction -->
     <div class="text-center pt-5">
 
@@ -96,6 +96,20 @@ app.component('info-recipe',{
 
 </div> 
 <!-- Recipe steps -->
+
+<!-- Similar recipes -->
+<div class="pt-5 pb-5 row">
+
+    <h4 class="subtitle-green">Like this? We have similar recipes</h4>
+
+    <div class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
+
+        <recipes-cards></recipes-cards>
+        
+    </div>
+    
+</div>
+<!-- Similar recipes -->
     
     `
 
