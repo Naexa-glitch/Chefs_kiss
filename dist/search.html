@@ -26,7 +26,7 @@
     </head>
 <body>
 
-    <div class="container">
+    <div id="app" class="container">
 
         <div class="container-md">
         <!-- header start -->
@@ -35,167 +35,78 @@
 
             <div class="container-md navbar mt-5">
 
-                <div>
-
-                    <div class="row">
-                        <div class="col">
-                            <img class="img-logo navbar-brand" src="./imgs/logo.webp" alt="Logo">
-                        </div>
-                        <div class="mobile-bar col">
-                            <img src="imgs/bars.svg" alt="mobile bar" class="mobile-icon">
-                        </div>
-                      </div>
-
-
-                </div>
-
-                <nav id="main-nav" class="mobile-offcanvas navbar-expand-lg ">
-
-                    <div class="offcanvas-header">
-
-                        <button class="btn-close"></button>
-
-                    </div>
-
-                    <div class="container-fluid">
+                <navbar></navbar>
                 
-                        <div class=" navbar-collapse pt-3">
-                            <ul class="navbar-nav me-auto gap-nav mb-2 mb-lg-0">
-                                <li class="top-nav-item">
-                                    <a class="top-nav-link responsive-space" aria-current="page" href="index.html">Home</a>
-                                    <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
-                                </li>
-                                <li class="top-nav-item">
-                                    <a class="top-nav-link" href="categories.html">Categories</a>
-                                    <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
-                                </li>
-                                <li class="top-nav-item">
-                                    <a class="top-nav-link disabled" href="usersignup.html">Sign up</a>
-                                    <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
-                                </li>
-                                <li class="top-nav-item">
-                                    <a class="top-nav-link" href="userlogin.html">Login</a>
-                                    <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
-                                </li> 
-                            </ul>
-
-                            <form class="d-flex padding-left-nav pt-3" role="search">
-                                <input class="form-control form-control-nav place-style" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn-transparent"><img class="img-fluid mb-1" src="./imgs/lupa.png" alt=""></button>
-                            </form>
-                        </div>
-
-                        <img class="img-fluid responsive-img offcanvas-header" src="./imgs/responsive-img.webp" alt="">
-
-                    </div>
-                </nav>
             </div>
             
 
         </header>
 
+        
             <section class="container-md text-center pb-5 pt-5">
-                <h1 class="title">Your results for “recipe”:</h1>
+                <h1 class="title">Your results for this recipe:</h1>
             </section>
 
-            <div class="row row-cols-1 row-cols-md-3 gap-4 pb-5">
+            <div class="row">
 
-                <div class="pt-3 row col">
-                    <div class="card ">
-                    <img src="./imgs/SOUP-pumpkin-soup.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body"> 
-                        <p class="card-title">Sopa Azteca</p>
-                        <p class="card-detail mb-0">Soup</p>
-                        <p class="card-detail">Total time: 1h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>   
-                <div class=" pt-3 row col"> 
-                    <div class="card ">
-                    <img src="./imgs/fetuccine.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title ">Fetuccini</p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 1h 30 min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div> 
-                <div class=" pt-3 row col">  
-                    <div class="card ">
-                    <img src="./imgs/omelette.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Omelette</p>
-                        <p class="card-detail mb-0">Breakfast</p>
-                        <p class="card-detail">Total time: 1h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
+                <div class="row row-cols-1 row-cols-md-3 gap-4 pb-5">
+
+                      <recipes-cards></recipes-cards>
+
                 </div>
-                <div class="pt-4 row col">
-                    <div class="card ">
-                    <img src="./imgs/breakfast.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body"> 
-                        <p class="card-title">Banana pancakes</p>
-                        <p class="card-detail mb-0">Breakfast</p>
-                        <p class="card-detail">Total time: 1h</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div>    
-                <div class="pt-4 row col"> 
-                    <div class="card ">
-                    <img src="./imgs/Beef-in-Mushroom-Gravy_EXPS_HSCBZ19_7967_E07_12_5b-1.jpg" class="card-img-top rounded mt-2" alt="...">
-                    <div class="card-body">
-                        <p class="card-title ">Beef in Mushroom </p>
-                        <p class="card-detail mb-0">Lunch</p>
-                        <p class="card-detail">Total time: 1h 30 min</p>
-                        <button class="btn btn-danger ps-2">View more</button>
-                    </div>
-                    </div>
-                </div> 
-
-            </div>    
+            
+            </div>
 
         </div> 
         
         <!-- FOOTER START -->
         <footer class=" text-center footer mt-5">
-            <div class=" justify-content-center pt-3">
-                <div>
-
-                    <ul class="nav justify-content-center pt-3 pb-4">
-                        <li class="nav-item">
-                          <a class="nav-link active footer-options" aria-current="page" href="#">About us</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link footer-options" href="#">Terms and Conditions</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link footer-options" href="#">About your privacity</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link footer-options" href="#">Contact us</a>
-                        </li>
-                    </ul>
-                        
-                    <ul class="nav justify-content-center pt-3 pb-4 gap-4">
-                        <li><img class="img-footer" src="./imgs/facebook.png" alt="..."></li>
-                        <li><img class="img-footer" src="./imgs/insta-logo.png" alt="..."></li>
-                        <li><img class="img-footer" src="./imgs/youtube.png" alt="..."></li>
-                    </ul>
-
-                    <p class="rights-reserved mt-4 mb-0 pb-3">©2023 Chef’s Kiss. All rights reserved.</p>
-
-                </div>    
-
-            </div>
+            
+            <footer-navigation></footer-navigation>
                 
         </footer>
         <!-- END OF FOOTER -->
 
-    </div>    
+    </div> 
+    
+    <!-- responsive navbar-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            AOS.init();
+
+            document.querySelector('.mobile-icon').addEventListener('click', function(event){
+                console.log('click');
+                document.getElementById('main-nav').classList.add('show-nav');
+            });
+
+            document.querySelector('.btn-close').addEventListener('click', function(event){
+                console.log('click');
+                document.getElementById('main-nav').classList.remove('show-nav');
+            });
+        });
+    </script>
+    <!-- responsive navbar-->
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS -->
+
+    <!-- VueJS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./js/components.js"></script>
+
+    <script src="./js/components/RecipesCards.js"></script>
+    <script src="./js/components/Navbar.js"></script>
+    <script src="./js/components/Footer.js"></script>
+
+    <!-- mounted -->
+    <script>
+
+        const mountedApp = app.mount("#app");
+    
+    </script>
     
 </body>
 </html>
