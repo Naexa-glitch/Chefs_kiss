@@ -27,6 +27,7 @@ app.component('categories-cards',{
         onClickCategoryButton(){
 
             console.log("Category Button");
+            this.$emit('categorybutton', this.name);
 
         }
 

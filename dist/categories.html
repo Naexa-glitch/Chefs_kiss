@@ -42,6 +42,8 @@
 
         </header>
 
+        <info-recipe :image="recipe.image"></info-recipe>
+
             <section class="container-md text-center pb-5 pt-5">
                 <h1 class="title">Categories</h1>
             </section>
@@ -58,7 +60,7 @@
 
                                 <div v-for="(category, index) in categories" class="pt-3 row col">
             
-                                    <categories-cards :name="category.name" :image="category.image" ></categories-cards>
+                                    <categories-cards :name="category.name" v-on:categorybutton="onClickCategoryButton"></categories-cards>
 
                                 </div>
                                 
@@ -111,7 +113,7 @@
                         <div class="row row-cols-1 row-cols-md-3 mb-4 gap-4">
                             <div  v-for="(item, index) in recipes"  class="mt-4 col row">
 
-                                <recipes-cards :image="item.image" :category="item.category" :name="item.name" :time="item.time"></recipes-cards>
+                                <recipes-cards :image="item.image" :category="item.category" :name="item.name" :time="item.time" :index="item.id" v-on:viewmore="onClickViewMore"></recipes-cards>
 
                             </div>
                         </div>
@@ -158,12 +160,16 @@
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+    <!-- Custom events - components-->
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
+
      <!-- Axios - API recipes -->
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- main script -->
     <script src="./js/components.js"></script>
 
+    <script src="./js/components/InfoRecipe.js"></script>
     <script src="./js/components/CategoriesCards.js"></script>
     <script src="./js/components/RecipesCards.js"></script>
     <script src="./js/components/Navbar.js"></script>
@@ -175,6 +181,8 @@
        const mountedApp = app.mount("#app");
  
    </script>
+
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
     
 </body>
 </html>

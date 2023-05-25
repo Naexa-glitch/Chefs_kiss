@@ -15,7 +15,8 @@ const app = Vue.createApp({
 
             ],
 
-            all_recipes:[]
+            all_recipes:[],
+            recipe:{}
             
         }
     },
@@ -35,12 +36,11 @@ const app = Vue.createApp({
         .then(
             (response) => {
                 //console.log(response.data.meals);
-                //this.categories = response.data.meals;
                 let items = response.data.meals;
                 items.forEach( (element, index) => {
                     this.categories.push({id: index, name: element.strCategory});
                 });
-                //console.log(this.categories)
+
 
             }
         )
@@ -48,7 +48,7 @@ const app = Vue.createApp({
             error => console.log(error)
         );
 
-        //conexión a API para colocar información a cards egun su categoria Side
+        //conexión a API para colocar información a cards según su categoria Side
         axios({
 
             method: 'get',
@@ -62,7 +62,6 @@ const app = Vue.createApp({
 
                     let items = response.data.meals;
                     this.recipes = [];
-                    if(items.length > 0) this.loading = false;
                     items.forEach (element => {
                     this.recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: 'Side dish', time: "20 mins", level: "Easy", likes: 18, ingredients: "NA", instructions: "NA"});
                     });
@@ -80,13 +79,65 @@ const app = Vue.createApp({
 
     methods:{
 
-        onClickCategoryButton(){
+        onClickViewMore(index){
 
+            console.log("Id " + index);
 
+            axios({
+
+                methods: 'get',
+                url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i='+index
+    
+            })
+            .then(
+                (response) => {
+                   
+                    //console.log(response.data.meals);
+
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
+        onClickCategoryButton(category){
+
+            
+
+            axios({
+
+                methods: 'get',
+                url:'https://www.themealdb.com/api/json/v1/1/filter.php?c='+category
+    
+            })
+            .then(
+                (response) => {
+                    //console.log(response.data.meals);
+
+                    this.recipes = [];
+
+                    let items = response.data.meals;
+                    items.forEach (element => {
+                        this.recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: category, time: "50 mins", level: "Easy", likes: 1, ingredients: "NA", instructions: "NA"});
+                    });
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
 
         }
 
     }
 
 })
+
+//init custom events for components
+
+const emitter = mitt();
+//global property for custom events
+app.config.globalProperties.$test = emitter;
 
