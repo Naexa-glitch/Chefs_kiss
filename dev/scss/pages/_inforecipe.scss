@@ -2,9 +2,46 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
+.modal-dialog {
+    max-width: var(--bs-modal-width);
+     margin-right: 0;
+     margin-left: 3.2%; 
+}
+
+.modal-content{
+
+    width: 256%;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        width: 97%;
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        width: 101.5%;
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        width: 154%;
+        
+    
+    }
+
+}
+
+.modal-footer{
+
+    justify-content: start;
+
+}
+
 .img-info-recipe{
 
-    width: 92%;
+    width: 78%;
 
     @include mixins.borders(1.5rem, 1.5rem, 1.5rem, 1.5rem);
 
@@ -33,28 +70,32 @@
 .img-like{ 
 
     position: absolute;
-    top: 11%;
-    left: 12%;
+    top: 8%;
+    left: 18%;
     transform:translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     opacity: 75%;
-    width: 12%;
+    width: 10%;
 
     @include media-queries.respond-to(media-queries.$phone){
 
-        margin-left: 1%;
+        margin-left: -5%;
+        width: 14%;
     
     }
 
     @include media-queries.respond-to(media-queries.$tablet-portrait){
 
-        margin-left: 2%;
+        margin-left: -4%;
+        width: 13%;
     
     }
 
     @include media-queries.respond-to(media-queries.$tablet-landscape){
 
-        margin-left: 2%;
+        margin-left: -3%;
+        margin-top: 1%;
+        width: 15%;
     
     }
 

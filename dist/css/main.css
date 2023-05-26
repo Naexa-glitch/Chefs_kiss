@@ -14705,8 +14705,39 @@ template {
   padding-left: 18%;
 }
 
+.modal-dialog {
+  max-width: var(--bs-modal-width);
+  margin-right: 0;
+  margin-left: 3.2%;
+}
+
+.modal-content {
+  width: 256%;
+}
+@media only screen and (max-width: 480px) {
+  .modal-content {
+    width: 97%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .modal-content {
+    width: 101.5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .modal-content {
+    width: 154%;
+  }
+}
+
+.modal-footer {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
 .img-info-recipe {
-  width: 92%;
+  width: 78%;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
@@ -14732,27 +14763,31 @@ template {
 
 .img-like {
   position: absolute;
-  top: 11%;
-  left: 12%;
+  top: 8%;
+  left: 18%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   opacity: 75%;
-  width: 12%;
+  width: 10%;
 }
 @media only screen and (max-width: 480px) {
   .img-like {
-    margin-left: 1%;
+    margin-left: -5%;
+    width: 14%;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .img-like {
-    margin-left: 2%;
+    margin-left: -4%;
+    width: 13%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .img-like {
-    margin-left: 2%;
+    margin-left: -3%;
+    margin-top: 1%;
+    width: 15%;
   }
 }
 

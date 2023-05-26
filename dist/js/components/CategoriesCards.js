@@ -38,8 +38,8 @@ app.component('categories-cards',{
     /*html*/
 
     `
-            <div class="card ">
-                <img v-bind:src="image" class="card-img-top rounded mt-3" alt="...">
+            <div class="card">
+                <img src="./imgs/BEVERAGES.jpg" class="card-img-top rounded mt-3" alt="...">
                 <div class="card-body"> 
                     <button class="btn btn-categories ps-2" v-on:click="onClickCategoryButton">{{ name }}</button>
                 </div>

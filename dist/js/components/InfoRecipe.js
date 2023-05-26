@@ -25,19 +25,19 @@ app.component('info-recipe',{
             default:"default description"
 
         },
-        prepTime:{
+        preptime:{
 
             type:String,
             default:"default preparation time"
 
         },
-        cookTime:{
+        cooktime:{
 
             type:String,
             default:"default cook time"
 
         },
-        totalTime:{
+        totaltime:{
 
             type:String,
             default:"default total time"
@@ -49,7 +49,7 @@ app.component('info-recipe',{
             default:"default portions"
 
         },
-        skillLevel:{
+        skilllevel:{
 
             type:String,
             default:"default skill level"
@@ -88,6 +88,18 @@ app.component('info-recipe',{
 
     },
 
+    
+    methods: {
+        
+        onClickHeart(){
+
+            //console.log("heart");
+            this.$emit('heartclick', this.index);
+
+        }
+
+    },
+
     template:
 
     /*html*/
@@ -97,8 +109,10 @@ app.component('info-recipe',{
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-      <button type="button" class="btn-close mt-3 ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-header">
+            <button type="button" class="btn-close ms-1" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
         
             <!-- Recipe introduction -->
             <div class="text-center pt-5">
@@ -109,9 +123,9 @@ app.component('info-recipe',{
 
                     <div class="container-img-category pb-3">
 
-                        <img class="img-info-recipe" v-bind:src="image" alt="">
+                        <img class="img-info-recipe" v-bind:src="image" alt="info image">
 
-                        <button type="button" class="btn-transparent"><img class="img-like" src="./imgs/favorite-heart-icon-png-23.png" alt=""></button>
+                        <button type="button" class="btn-transparent" v-on:click="onClickHeart()"><img class="img-like" src="./imgs/favorite-heart-icon-png-23.png" alt=""></button>
 
                     </div>
 
@@ -122,22 +136,19 @@ app.component('info-recipe',{
                 </div>
 
             </div>  
-            <!-- Recipe introduction -->  
-        </div>   
+            <!-- Recipe introduction -->   
         
-        
-        <div class="modal-body">
             <!-- Recipe information -->   
             <div class="pt-5 pb-5">
 
                 <div class=" container-fluid">
 
                     <ul class="list-group list-group-horizontal row row-cols-1 row-cols-md-5 gap-2">
-                        <li class="list-group-item list-group-item-danger"><span class="recipe-info-details"> Preparation time: </span><br><span class="detail-text">{{ prepTime }}</span><br></li>
-                        <li class="list-group-item list-group-item-danger"><span class="recipe-info-details">Cook time: </span><br> {{ cookTime }} <br></li>
-                        <li class="list-group-item list-group-item-danger"><span class="recipe-info-details">Total time: </span><br> {{ totalTime }} <br></li>
+                        <li class="list-group-item list-group-item-danger"><span class="recipe-info-details"> Preparation time: </span><br><span class="detail-text">{{ preptime }}</span><br></li>
+                        <li class="list-group-item list-group-item-danger"><span class="recipe-info-details">Cook time: </span><br> {{ cooktime }} <br></li>
+                        <li class="list-group-item list-group-item-danger"><span class="recipe-info-details">Total time: </span><br> {{ totaltime }} <br></li>
                         <li class="list-group-item list-group-item-danger round-details-recipe-right"><span class="recipe-info-details">Portions: </span><br> {{ portions }} <br></li>
-                        <li class="list-group-item list-group-item-danger round-details-recipe-left"><span class="recipe-info-details">Skill level: </span><br> {{ skillLevel }} <br></li>
+                        <li class="list-group-item list-group-item-danger round-details-recipe-left"><span class="recipe-info-details">Skill level: </span><br> {{ skilllevel }} <br></li>
                         <li class="list-group-item list-group-item-danger"><span class="recipe-info-details">Category: </span><br> {{ category }} <br></li>
                         <li class="list-group-item list-group-item-danger"><span class="recipe-info-details">Occasion:</span><br> {{ occasion }} <br></li>
                         <li class="list-group-item list-group-item-danger"><span class="recipe-info-details">Featured:</span><br> {{ featured }} <br></li>
@@ -155,9 +166,9 @@ app.component('info-recipe',{
 
                 <div class="row justify-content-around pt-3 ps-4 ">
 
-                    <ul>
+                    
                     {{ ingredients }}
-                    </ul>
+        
 
                 </div>    
 

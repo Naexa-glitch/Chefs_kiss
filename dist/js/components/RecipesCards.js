@@ -44,7 +44,7 @@ app.component('recipes-cards',{
         onClickViewMore(){
 
             console.log("View More");
-            this.$emit('viewmore', this.index)
+            this.$emit('viewmore', this.index);
 
         }
 
