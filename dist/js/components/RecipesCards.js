@@ -43,7 +43,7 @@ app.component('recipes-cards',{
         
         onClickViewMore(){
 
-            console.log("View More");
+            //console.log("View More");
             this.$emit('viewmore', this.index);
 
         }

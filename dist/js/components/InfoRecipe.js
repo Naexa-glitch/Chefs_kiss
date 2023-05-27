@@ -84,6 +84,11 @@ app.component('info-recipe',{
             type:String,
             default:"default steps"
 
+        },
+        index:{
+
+            type: String
+
         }
 
     },
@@ -95,6 +100,12 @@ app.component('info-recipe',{
 
             //console.log("heart");
             this.$emit('heartclick', this.index);
+
+        },
+        onClickSaveRecipe(){
+
+            console.log("saved");
+            this.$emit('saverecipe', this.index);
 
         }
 
@@ -166,8 +177,9 @@ app.component('info-recipe',{
 
                 <div class="row justify-content-around pt-3 ps-4 ">
 
-                    
-                    {{ ingredients }}
+                    <ul>
+                        <li class="list-ingredients">{{ ingredients }}</li>
+                    </ul>
         
 
                 </div>    
@@ -184,7 +196,7 @@ app.component('info-recipe',{
 
             <p class="list-steps ">{{ steps }}</p>
 
-            <button class="btn btn-green mt-5 mb-5">Save recipe</button>
+            <button class="btn btn-green mt-5 mb-5" v-on:click="onClickSaveRecipe()">Save recipe</button>
 
             </div> 
             <!-- Recipe steps -->

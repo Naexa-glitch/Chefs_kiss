@@ -44,6 +44,8 @@
         </header>
             <!-- header end -->
 
+            <info-recipe :index="recipe.id" :image="recipe.image" :name="recipe.name" :category="recipe.category" :likes="recipe.likes" :description="recipe.description" :preptime="recipe.preparationTime" :cooktime="recipe.cookTime" :totaltime="recipe.totalTime" :portions="recipe.portions" :skilllevel="recipe.skillLevel" :occasion="recipe.occasion" :featured="recipe.featured" :ingredients="recipe.ingredients" :steps="recipe.instructions" v-on:heartclick="onClickHeart"  v-on:saverecipe="onClickSaveRecipe"></info-recipe>
+
             <!-- user info -->   
                 <user-information></user-information>  
             <!-- user info -->
@@ -59,7 +61,11 @@
 
                         <div class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
 
-                            <recipes-cards></recipes-cards>
+                            <div  v-for="(item, index) in save_recipes"  class="mt-4 col row">
+
+                                <recipes-cards :image="item.image" :category="item.category" :name="item.name" :time="item.time" :index="item.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+
+                            </div>
                             
                         </div>
                     </div>
@@ -76,7 +82,11 @@
 
                     <div class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
 
-                        <recipes-cards></recipes-cards>
+                        <div  v-for="(item, index) in recipes"  class="mt-4 col row">
+
+                            <recipes-cards :image="item.image" :category="item.category" :name="item.name" :time="item.time" :index="item.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+
+                        </div>
                         
                     </div>
 
@@ -120,8 +130,15 @@
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+    <!-- Custom events - components-->
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
+
+     <!-- Axios - API recipes -->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <script src="./js/components.js"></script>
 
+    <script src="./js/components/InfoRecipe.js"></script>
     <script src="./js/components/RecipesCards.js"></script>
     <script src="./js/components/UserInformation.js"></script>
     <script src="./js/components/Navbar.js"></script>

@@ -5,17 +5,13 @@ const app = Vue.createApp({
 
             selectedIndex: 0,
 
-            recipes:[
+            recipes:[],
 
-
-            ],
-
-            categories:[
-                
-
-            ],
+            categories:[],
 
             all_recipes:[],
+
+            save_recipes:[],
 
             recipe:{}
             
@@ -64,10 +60,10 @@ const app = Vue.createApp({
                     let items = response.data.meals;
                     this.recipes = [];
                     items.forEach (element => {
-                    this.recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: 'Side dish', time: "20 mins", level: "Easy", likes: 1});
+                    this.recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: 'Side dish', time: "50 min"});
                     });
                     
-
+                    //console.log(this.recipes);
 
             }
             
@@ -85,10 +81,41 @@ const app = Vue.createApp({
             this.recipe.likes +=1;
 
         },
+        onClickSaveRecipe(index){
 
+            //console.log("Id " + index);
+
+            axios({
+
+                method: 'get',
+                url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i='+index
+    
+            })
+            .then(
+                (response) => { 
+                    let item = response.data.meals;
+                    //console.log(item);
+
+                    
+    
+                    item.forEach (element => {
+                        this.save_recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: element.strCategory, time: "50 min"});
+                    });
+
+                    //console.log(this.save_recipes);
+    
+                }
+                
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+
+        },
         onClickViewMore(index){
 
-            console.log("Id " + index);
+            //console.log("Id " + index);
 
             axios({
 
@@ -120,10 +147,33 @@ const app = Vue.createApp({
                     this.recipe.occasion = "All";
                     this.recipe.featured = "No";
                     
-                    
+                    let ingredients = "";
+
+                    ingredients += item[0].strMeasure1 +  item[0].strIngredient1 + "\n";
+                    ingredients += item[0].strMeasure2 +  item[0].strIngredient2 + "\n";
+                    ingredients += item[0].strMeasure3 +  item[0].strIngredient3 + "\n";
+                    ingredients += item[0].strMeasure4 +  item[0].strIngredient4 + "\n";
+                    ingredients += item[0].strMeasure5 +  item[0].strIngredient5 + "\n"; 
+                    ingredients += item[0].strMeasure6 +  item[0].strIngredient6 + "\n";
+                    ingredients += item[0].strMeasure7 +  item[0].strIngredient7 + "\n";
+                    ingredients += item[0].strMeasure8 +  item[0].strIngredient8 + "\n";
+                    ingredients += item[0].strMeasure9 +  item[0].strIngredient9 + "\n";
+                    ingredients += item[0].strMeasure10 +  item[0].strIngredient10 + "\n";
+                    ingredients += item[0].strMeasure11 +  item[0].strIngredient11 + "\n";
+                    ingredients += item[0].strMeasure12 +  item[0].strIngredient12 + "\n";
+                    ingredients += item[0].strMeasure13 +  item[0].strIngredient13 + "\n";
+                    ingredients += item[0].strMeasure14 +  item[0].strIngredient14 + "\n";
+                    ingredients += item[0].strMeasure15 +  item[0].strIngredient15 + "\n";
+                    ingredients += item[0].strMeasure16 +  item[0].strIngredient16 + "\n";
+                    ingredients += item[0].strMeasure17 +  item[0].strIngredient17 + "\n";
+                    ingredients += item[0].strMeasure18 +  item[0].strIngredient18 + "\n";
+                    ingredients += item[0].strMeasure19 +  item[0].strIngredient19 + "\n";
+                    ingredients += item[0].strMeasure20 +  item[0].strIngredient20 + "\n";
+
+                    this.recipe.ingredients = ingredients;
                     
 
-                    //console.log(this.recipe.name);
+                    //console.log(this.recipe.ingredients);
     
                 }
             )

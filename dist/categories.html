@@ -42,7 +42,7 @@
 
         </header>
 
-        <info-recipe :index="recipe.id" :image="recipe.image" :name="recipe.name" :category="recipe.category" :likes="recipe.likes" :description="recipe.description" :preptime="recipe.preparationTime" :cooktime="recipe.cookTime" :totaltime="recipe.totalTime" :portions="recipe.portions" :skilllevel="recipe.skillLevel" :occasion="recipe.occasion" :featured="recipe.featured" :steps="recipe.instructions" v-on:heartclick="onClickHeart"></info-recipe>
+        <info-recipe :index="recipe.id" :image="recipe.image" :name="recipe.name" :category="recipe.category" :likes="recipe.likes" :description="recipe.description" :preptime="recipe.preparationTime" :cooktime="recipe.cookTime" :totaltime="recipe.totalTime" :portions="recipe.portions" :skilllevel="recipe.skillLevel" :occasion="recipe.occasion" :featured="recipe.featured" :ingredients="recipe.ingredients" :steps="recipe.instructions" v-on:heartclick="onClickHeart"  v-on:saverecipe="onClickSaveRecipe"></info-recipe>
 
             <section class="container-md text-center pb-5 pt-5">
                 <h1 class="title">Categories</h1>
