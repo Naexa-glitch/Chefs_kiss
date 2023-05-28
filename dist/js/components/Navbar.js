@@ -1,10 +1,26 @@
 app.component('navbar',{
 
-    data() {
-        return {
-            
+    props:{
+
+        index:{
+
+            type: String
+
         }
+
     },
+
+    methods: {
+        
+        onClickSearch(){
+
+            //console.log("search");
+            this.$emit('searchclick', this.searchField);
+
+        }
+
+    },
+
 
     template:
 
@@ -12,7 +28,7 @@ app.component('navbar',{
 
     `
 
-    <div>
+<div>
 
     <div class="row">
         <div class="col">
@@ -21,7 +37,7 @@ app.component('navbar',{
         <div class="mobile-bar col">
             <img src="imgs/bars.svg" alt="mobile bar" class="mobile-icon">
         </div>
-      </div>
+    </div>
 
 
 </div>
@@ -47,7 +63,7 @@ app.component('navbar',{
                     <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
                 </li>
                 <li class="top-nav-item">
-                    <a class="top-nav-link disabled" href="usersignup.html">Sign up</a>
+                    <a class="top-nav-link" href="usersignup.html">Sign up</a>
                     <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
                 </li>
                 <li class="top-nav-item">
@@ -56,9 +72,9 @@ app.component('navbar',{
                 </li> 
             </ul>
 
-            <form class="d-flex padding-left-nav pt-3" role="search">
-                <input class="form-control form-control-nav place-style" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn-transparent"><img class="img-fluid mb-1" src="./imgs/lupa.png" alt=""></button>
+            <form id="searchRecipes" class="d-flex padding-left-nav pt-3" role="search">
+                <input id="searchField" class="form-control form-control-nav place-style" type="text" placeholder="Search" aria-label="Search" v-model="searchField">
+                <button type="button" class=" btn btn-transparent" v-on:click="onClickSearch()" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><img class="img-fluid mb-1" src="./imgs/lupa.png" alt="..."></button>             
             </form>
         </div>
 

@@ -9,9 +9,13 @@ const app = Vue.createApp({
 
             categories:[],
 
+            recipes_category:[],
+
             all_recipes:[],
 
             save_recipes:[],
+
+            results_recipes:[],
 
             recipe:{}
             
@@ -76,6 +80,41 @@ const app = Vue.createApp({
 
     methods:{
 
+        onClickSearch(searchField){
+
+            this.searchField=searchField;
+
+            axios({
+
+                method: 'get',
+                url:'https://www.themealdb.com/api/json/v1/1/search.php?s='+searchField
+    
+            })
+            .then(
+                (response) => { 
+                    
+                    //console.log(response.data.meals);
+                    
+                    let items = response.data.meals;
+
+                    //console.log(items);
+
+                    this.results_recipes= [];
+
+                    items.forEach(element  => {
+                        this.results_recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: element.strCategory, time: "50 mins"});
+                    });
+
+                    console.log(this.results_recipes);
+    
+                }
+                
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
         onClickHeart(){
 
             this.recipe.likes +=1;
@@ -196,11 +235,11 @@ const app = Vue.createApp({
                 (response) => {
                     //console.log(response.data.meals);
 
-                    this.recipes = [];
+                    this.recipes_category = [];
 
                     let items = response.data.meals;
                     items.forEach (element => {
-                        this.recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: category, time: "50 mins", level: "Easy", likes: 1});
+                        this.recipes_category.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: category, time: "50 mins", level: "Easy", likes: 1});
                     });
     
                 }

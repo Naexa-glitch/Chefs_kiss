@@ -1,8 +1,9 @@
-<!-- Para esta duodécima entrega se logró la funcionalidad del botón para guardar recetas, este funciona solamente si el botón de salvado y el listado de cards guardadas están
-en la misma página, en useraccount.html se enviaron los datos del API a sus respectivos componentes de cards, además, se implementó en components un nuevo array para las recetas guardadas. En
-InfoRecipe se creó otro prop llamado index para lograr tomar los datos de una receta usando el index y así colocarlos en el array save_recipes. En el modal de la información de
-recetas ya se despliegan los ingredientes, para lograrlo en components se creó una variable que almacena cada ingrediente y su medida, información que luego
-this.recipe.ingredients almacena.
+<!-- Para esta decimatercera entrega se logró la funcionalidad del botón de búsqueda de recetas por nombre. Se crearon dos nuevos array en components.js, uno
+    para guardar los datos de recetas según la categoría que se seleccione y otro para guardar los datos de las recetas relacionadas con la búsqueda que realizó 
+    el usuario. En el navbar.js se creó un v-model que toma lo escrito por el usuario, y se envió por medio de un emit para que se logre usar en el componente principal,
+    en el componente principal se creó una variable que lo almacena y luego se añadió al link del API de búsqueda para que busque según lo que ingresa en la variable.
+    Se creó un nuevo modal en todos los htmls para mostrar los resultados de las recetas y a todos se les añadió el componente de información de recetas y bootstrap js
+    para el correcto funcionamiento. También se añadió Axios y mitt. Seguidamente, inforecipe.html y search.html fueron eliminados ya que pasaron a ser componentes.
 -->
 
 <!DOCTYPE html>
@@ -45,14 +46,44 @@ this.recipe.ingredients almacena.
 
             <div class="container-md navbar mt-5">
 
-                <navbar></navbar>
+                <navbar v-on:searchclick="onClickSearch"></navbar>
                 
             </div>
             
 
-        </header>
+        </header>    
 
-        <!-- header start -->
+        <!-- header end -->
+
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close ms-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+        
+                    <h1 class="title text-center mb-5">Your results for this recipe:</h1>
+        
+                    <div class="row">
+        
+                        <div class="row row-cols-1 row-cols-md-3 gap-4 pb-5">
+        
+                            <div v-for="(items, index) in results_recipes" class="pt-3 row col">
+        
+                                <recipes-cards :image="items.image" :category="items.category" :name="items.name" :time="items.time" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+        
+                            </div>  
+        
+                        </div>
+            
+                    </div>
+                </div>
+              </div> 
+            </div> 
+        </div> 
+
+        <info-recipe :index="recipe.id" :image="recipe.image" :name="recipe.name" :category="recipe.category" :likes="recipe.likes" :description="recipe.description" :preptime="recipe.preparationTime" :cooktime="recipe.cookTime" :totaltime="recipe.totalTime" :portions="recipe.portions" :skilllevel="recipe.skillLevel" :occasion="recipe.occasion" :featured="recipe.featured" :ingredients="recipe.ingredients" :steps="recipe.instructions" v-on:heartclick="onClickHeart"  v-on:saverecipe="onClickSaveRecipe"></info-recipe>
 
         <!-- img-start -->
 
@@ -362,8 +393,15 @@ this.recipe.ingredients almacena.
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+    <!-- Custom events - components-->
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
+
+     <!-- Axios - API recipes -->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <script src="./js/components.js"></script>
 
+    <script src="./js/components/InfoRecipe.js"></script>
     <script src="./js/components/RecipesCards.js"></script>
     <script src="./js/components/Navbar.js"></script>
     <script src="./js/components/Footer.js"></script>
