@@ -1,5 +1,7 @@
 app.component('login-user',{
 
+    //Componente con los forms para hacer login de usuario
+
     data() {
         return {
             
@@ -46,7 +48,7 @@ app.component('login-user',{
 
             <div class="text-center pb-5">
 
-                <button class="btn btn-user mt-5">Login</button>
+                <button type="button" class="btn btn-user mt-5">Login</button>
                 <div id="emailHelp" class="form-text mt-3 detail-text">Dont have an account? <a class="link-account" href="usersignup.html">Sign in</a></div>
 
             </div>

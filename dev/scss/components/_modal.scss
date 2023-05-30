@@ -1,0 +1,46 @@
+@use 'components/media-queries';
+
+.modal-dialog {
+     margin-right: 0;
+     margin-left: 3.2%; 
+}
+
+.modal-content{
+
+    width: 256%;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        width: 97%;
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+
+        width: 96.5%;
+    
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+
+        width: 154%;
+        
+    
+    }
+
+}
+
+.modal-body{
+
+    padding-left: 9%;
+    padding-right: 9%;
+
+}
+
+.modal-footer{
+
+    padding-left: 8%;
+    padding-right: 8%;
+    justify-content: start;
+
+}

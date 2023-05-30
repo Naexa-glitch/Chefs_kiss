@@ -1,5 +1,7 @@
 app.component('create-recipe',{
 
+    //componente con el form para crear una receta
+
     data() {
         return {
             
@@ -75,8 +77,8 @@ app.component('create-recipe',{
 
 <div class="row pb-5 pt-4">
 
-    <button class="btn btn-save mt-5">Upload</button>
-    <button class="btn btn-dark mt-5">Cancel</button>
+    <button type="button" class="btn btn-save mt-5">Upload</button>
+    <button type="button" class="btn btn-dark mt-5">Cancel</button>
 
 </div>
         

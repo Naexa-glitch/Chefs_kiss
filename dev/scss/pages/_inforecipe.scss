@@ -2,105 +2,30 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
-.modal-dialog {
-    max-width: var(--bs-modal-width);
-     margin-right: 0;
-     margin-left: 3.2%; 
-}
-
-.modal-content{
-
-    width: 256%;
-
-    @include media-queries.respond-to(media-queries.$phone){
-
-        width: 97%;
-    
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-portrait){
-
-        width: 101.5%;
-    
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-landscape){
-
-        width: 154%;
-        
-    
-    }
-
-}
-
-.modal-footer{
-
-    justify-content: start;
-
-}
-
+//imagen de la receta detallada
 .img-info-recipe{
 
-    width: 78%;
+    width: 100%;
 
     @include mixins.borders(1.5rem, 1.5rem, 1.5rem, 1.5rem);
 
-    @include media-queries.respond-to(media-queries.$phone){
-
-        width: 96%;
-    
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-portrait){
-
-        width: 91%;
-        margin-left: 4%;
-    
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-landscape){
-
-        width: 91%;
-        margin-left: 3%;
-    
-    }
-
 }
 
+//Imagen para mostrar el botón me gusta
 .img-like{ 
 
     position: absolute;
-    top: 8%;
-    left: 18%;
+    top: 7%;
+    left: 9%;
     transform:translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     opacity: 75%;
-    width: 10%;
+    width: 12%;
 
-    @include media-queries.respond-to(media-queries.$phone){
-
-        margin-left: -5%;
-        width: 14%;
-    
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-portrait){
-
-        margin-left: -4%;
-        width: 13%;
-    
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-landscape){
-
-        margin-left: -3%;
-        margin-top: 1%;
-        width: 15%;
-    
-    }
 
 }
 
+//Fondo de color para las recetas
 .bg-ingredients{
 
     width: 100%;
@@ -120,6 +45,7 @@
 
 }
 
+//Curvas para los cuadros de la lista agrupada
 .round-details-recipe-left{
 
     @include mixins.borders(0.3rem, 0rem, 0.3rem, 0rem);
@@ -132,6 +58,7 @@
 
 }
 
+//Clase para centrar la lista de especificaciones
 .list-group{
 
     padding-right: 0%;

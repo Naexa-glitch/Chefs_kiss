@@ -4,6 +4,7 @@
     
     /*FOOTER*/
 
+    //Clase para crear un fondo para el footer y dar distanciamiento de otros elementos
     .footer { 
 
         background-color: variables.$clr-seablue;
@@ -23,17 +24,22 @@
  
     }
 
+    //Clase para el tamaño de las imágenes del footer
     .img-footer{
 
         width: 2rem;
 
     }
 
-    
+    //clase para estilizar el texto de las opciones en el footer
     .footer-options{
 
         @include mixins.set-font(variables.$ff-arimo, variables.$fw-regular, variables.$fs-xsm, variables.$clr-white);
 
+        @include media-queries.respond-to(media-queries.$phone){
 
+            @include mixins.set-font(variables.$ff-arimo, variables.$fw-regular, variables.$fs-xxxsm, variables.$clr-white);
+        
+        }
 
     }

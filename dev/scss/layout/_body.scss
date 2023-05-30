@@ -21,6 +21,12 @@
 .container-md {
 
     max-width: 1140px;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        max-width: 334px;
+        
+    }
     
 }
 
@@ -38,6 +44,7 @@
 
 }
 
+//Fondo para algunas secciones de las páginas
 .bg-sections{
 
     width: 100%;
@@ -48,6 +55,7 @@
 
 }
 
+//Clases encargadas de dar distancia entre los elementos de información del usuario
 .count-created{
 
      padding-left: 71%;
@@ -66,6 +74,7 @@
 
 }
 
+//Padding para dar distancia entre los links y el form
 .padding-left-nav{
 
     padding-left: 3rem;

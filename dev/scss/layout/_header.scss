@@ -2,6 +2,7 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
+//Clase para estilizar el input del form
 .form-control-nav{
 
     width: 82%;
@@ -43,6 +44,7 @@
 
 }
 
+//Clase que estiliza el placeholder
 .place-style::placeholder{
 
     color: variables.$clr-seablue;
@@ -50,6 +52,7 @@
 
 }
 
+//Espaciado que se aplica para dar distancia al link de navbar home de manera responsive
 .responsive-space{
 
     @include media-queries.respond-to(media-queries.$phone){
@@ -60,6 +63,7 @@
 
 }
 
+//Estilización de los links de navegación
 .top-nav-item{
     
     @include mixins.set-nav-font();
@@ -110,6 +114,7 @@
     }
 }
 
+//Distancia entre los links del navbar
 .gap-nav{
 
     gap: 3rem;
@@ -122,12 +127,14 @@
 
 }
 
+//Pone color a las líneas subdivisoras del navbar responsive
 .nav-line{
 
-    color:variables.$clr-light-gray
+    color: variables.$clr-light-gray;
 
 }
 
+//Clase para modificar el logo de la página
 .img-logo{
 
     @include media-queries.respond-to(media-queries.$phone){
@@ -140,7 +147,7 @@
     @include media-queries.respond-to(media-queries.$tablet-portrait){
 
         width: 90%;
-        padding-left: 1rem;
+        padding-left: 2rem;
 
     }
 
@@ -155,6 +162,7 @@
     
 }
 
+//Clases encargadas de estilizar el navegador en responsive y hacerlo funcional
 .navbar{
 
     width: 100%;
@@ -394,7 +402,7 @@
 
     @include media-queries.respond-to(media-queries.$phone){
         
-        padding-top: 38%;
+        padding-top: 68%;
     
     }
 

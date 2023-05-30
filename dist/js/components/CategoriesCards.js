@@ -1,5 +1,7 @@
 app.component('categories-cards',{
 
+    //Componente con los cards seleccionables para elegir por categoría recetas
+
     props:{
 
         name:{
@@ -24,9 +26,10 @@ app.component('categories-cards',{
 
     methods: {
         
+        //Botón encargado de dar acción para que se muestren recetas por categoría seleccionada
         onClickCategoryButton(){
 
-            console.log("Category Button");
+            //console.log("Category Button");
             this.$emit('categorybutton', this.name);
 
         }
@@ -41,7 +44,7 @@ app.component('categories-cards',{
             <div class="card">
                 <img src="./imgs/BEVERAGES.jpg" class="card-img-top rounded mt-3" alt="...">
                 <div class="card-body"> 
-                    <button class="btn btn-categories ps-2" v-on:click="onClickCategoryButton">{{ name }}</button>
+                    <button type="button" class="btn btn-categories ps-2" v-on:click="onClickCategoryButton">{{ name }}</button>
                 </div>
             </div>
 

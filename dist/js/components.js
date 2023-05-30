@@ -15,6 +15,8 @@ const app = Vue.createApp({
 
             save_recipes:[],
 
+            trending_recipes:[],
+
             results_recipes:[],
 
             recipe:{}
@@ -25,6 +27,10 @@ const app = Vue.createApp({
     mounted:function(){
 
         this.all_recipes = this.recipes;
+
+        //almacena array en un JSON, en este caso, almacena las recetas guardadas
+        this.save_recipes = JSON.parse(localStorage.getItem('save_recipes'));
+        
 
         //Conexión a API para categorias
         
@@ -76,10 +82,40 @@ const app = Vue.createApp({
             error => console.log(error)
         );
 
+        //conexión a API para colocar información a cards destacados
+        axios({
+
+            method: 'get',
+            url:'https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken'
+
+        })
+        .then(
+            (response) => {
+                
+                //console.log(response.data.meals);
+
+                    let items = response.data.meals;
+                    this.trending_recipes = [];
+
+                    items.forEach (element => {
+                    if(this.trending_recipes.length <= 9){
+                    this.trending_recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: 'Chicken', time: "50 min"});
+                    }
+                    });
+                    //console.log(this.recipes);
+
+            }
+            
+        )
+        .catch(
+            error => console.log(error)
+        );
+
     },
 
     methods:{
 
+        //Búsqueda de recetas según las palabras puestas en el input que entra por parámetro
         onClickSearch(searchField){
 
             this.searchField=searchField;
@@ -105,7 +141,7 @@ const app = Vue.createApp({
                         this.results_recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: element.strCategory, time: "50 mins"});
                     });
 
-                    console.log(this.results_recipes);
+                    //console.log(this.results_recipes);
     
                 }
                 
@@ -115,11 +151,13 @@ const app = Vue.createApp({
             );
 
         },
+        //Botón que suma la cantidad de me gusta
         onClickHeart(){
 
             this.recipe.likes +=1;
 
         },
+        //Botón encargado de guardar recetas
         onClickSaveRecipe(index){
 
             //console.log("Id " + index);
@@ -133,15 +171,14 @@ const app = Vue.createApp({
             .then(
                 (response) => { 
                     let item = response.data.meals;
-                    //console.log(item);
-
-                    
+                    //console.log(item);         
     
-                    item.forEach (element => {
-                        this.save_recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: element.strCategory, time: "50 min"});
-                    });
+                   
+                        this.save_recipes.push({id: item[0].idMeal, image: item[0].strMealThumb, name: item[0].strMeal, category: item[0].strCategory, time: "50 min"});
 
-                    //console.log(this.save_recipes);
+                    localStorage.setItem('save_recipes', JSON.stringify(this.save_recipes));
+
+                    //console.log(localStorage.getItem('save_recipes'));
     
                 }
                 
@@ -152,6 +189,7 @@ const app = Vue.createApp({
 
 
         },
+        //Botón que muestra los detalles de la receta
         onClickViewMore(index){
 
             //console.log("Id " + index);
@@ -168,7 +206,7 @@ const app = Vue.createApp({
                     //console.log(response.data.meals);
 
                     let item = response.data.meals;
-                    console.log(item);
+                    //console.log(item);
 
                     this.recipe.id = index;
                     this.recipe.name = item[0].strMeal;
@@ -186,6 +224,7 @@ const app = Vue.createApp({
                     this.recipe.occasion = "All";
                     this.recipe.featured = "No";
                     
+                    //almacenamiento de los ingredientes y sus medidas
                     let ingredients = "";
 
                     ingredients += item[0].strMeasure1 +  item[0].strIngredient1 + "\n";
@@ -221,6 +260,7 @@ const app = Vue.createApp({
             );
 
         },
+        //Botón que muestra recetas según su categoría
         onClickCategoryButton(category){
 
             

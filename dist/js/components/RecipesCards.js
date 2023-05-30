@@ -1,5 +1,7 @@
 app.component('recipes-cards',{
 
+    //componente de las cards de recetas
+
     props:{
 
         image:{
@@ -41,6 +43,7 @@ app.component('recipes-cards',{
 
     methods: {
         
+        //Botón encargado de dar acción para que se muestre la receta
         onClickViewMore(){
 
             //console.log("View More");
@@ -62,7 +65,7 @@ app.component('recipes-cards',{
                 <p class="card-title">{{ name }}</p>
                 <p class="card-detail mb-0">{{ category }}</p>
                 <p class="card-detail">{{ time }}</p>
-                <button class="btn btn-danger ps-2" v-on:click="onClickViewMore()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View more</button>
+                <button type="button" class="btn btn-danger ps-2" v-on:click="onClickViewMore()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View more</button>
             </div>
     </div>    
         

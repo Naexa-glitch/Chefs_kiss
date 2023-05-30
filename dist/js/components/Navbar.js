@@ -1,8 +1,15 @@
 app.component('navbar',{
 
+    //Componente con todo el navbar
+
     props:{
 
         index:{
+
+            type: String
+
+        },
+        selected:{
 
             type: String
 
@@ -12,10 +19,65 @@ app.component('navbar',{
 
     methods: {
         
+        //Botón encargado de dar acción para que se búsquen recetas
         onClickSearch(){
 
             //console.log("search");
             this.$emit('searchclick', this.searchField);
+
+        },
+        //Métodos para dar funcionalidad de estilo a los links del navbar
+        colorLogin(){
+
+            if(this.selected === "login"){
+
+                return "top-nav-select";
+
+            }else{
+
+                return "top-nav-link";
+
+            }
+
+        },
+        colorSign(){
+
+            if(this.selected === "sign"){
+
+                return "top-nav-select";
+
+            }else{
+
+                return "top-nav-link";
+
+            }
+
+        },
+        colorCategories(){
+
+            if(this.selected === "categories"){
+
+                return "top-nav-select";
+
+            }else{
+
+                return "top-nav-link";
+
+            }
+
+        },
+        colorMenu(){
+
+            if(this.selected === "menu"){
+
+                return "top-nav-select";
+
+            }else{
+
+                return "top-nav-link";
+
+            }
+
 
         }
 
@@ -55,19 +117,19 @@ app.component('navbar',{
         <div class=" navbar-collapse pt-3">
             <ul class="navbar-nav me-auto gap-nav mb-2 mb-lg-0">
                 <li class="top-nav-item">
-                    <a class="top-nav-select responsive-space" aria-current="page" href="index.html">Home</a>
+                    <a class="responsive-space" v-bind:class="colorMenu()" aria-current="page" href="index.html">Home</a>
                     <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
                 </li>
                 <li class="top-nav-item">
-                    <a class="top-nav-link" href="categories.html">Categories</a>
+                    <a v-bind:class="colorCategories()" href="categories.html">Categories</a>
                     <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
                 </li>
                 <li class="top-nav-item">
-                    <a class="top-nav-link" href="usersignup.html">Sign up</a>
+                    <a v-bind:class="colorSign()" href="usersignup.html">Sign up</a>
                     <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
                 </li>
                 <li class="top-nav-item">
-                    <a class="top-nav-link" href="userlogin.html">Login</a>
+                    <a v-bind:class="colorLogin()" href="userlogin.html">Login</a>
                     <p class="offcanvas-header nav-line mb-0 mt-0">________________________</p>
                 </li> 
             </ul>

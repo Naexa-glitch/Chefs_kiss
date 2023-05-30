@@ -2,7 +2,7 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
-
+//Botones rojos
 .btn-danger{
 
     @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-red, variables.$clr-red);
@@ -45,6 +45,16 @@
 
 }
 
+.btn-delete{
+
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-red, variables.$clr-red);
+
+    padding-left: 13%;
+    width: 70%;
+    
+}
+
+//Botón negro
 .btn-dark{
 
     @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-black, variables.$clr-black);
@@ -55,19 +65,7 @@
 
 }
 
-.btn-logout{
-
-    @include mixins.btn(variables.$fw-bold, variables.$fs-xsm, variables.$clr-black, variables.$clr-white, variables.$clr-black);
-    width: 12%;
-
-    @include media-queries.respond-to(media-queries.$phone){
-
-        width: 30%;
-
-    }
-
-}
-
+//Botones verdes
 .btn-information{
 
     @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-green, variables.$clr-green);
@@ -104,27 +102,22 @@
 
 }
 
-.btn-categories{
+.btn-logout{
 
-    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
-
-    width: 100%;
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-green, variables.$clr-green);
+  
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    padding-left: 3%;
+    padding-right: 3%;
 
     @include media-queries.respond-to(media-queries.$phone){
 
-        @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
-
-        height: 16vw;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        width: 85%;
 
     }
-
-
-}
-
-.btn-transparent{
-
-    background-color: transparent;
-    border-color: transparent;
 
 }
 
@@ -136,15 +129,33 @@
 
 }
 
-.btn-delete{
+//Botón naranja
+.btn-categories{
 
-    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-red, variables.$clr-red);
+    @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
 
-    padding-left: 7%;
-    width: 70%;
-    
+    width: 100%;
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        @include mixins.btn(variables.$fw-semibold, variables.$fs-xsm, variables.$clr-orange, variables.$clr-orange, variables.$clr-white);
+
+        
+
+    }
+
+
 }
 
+//Botón transparente
+.btn-transparent{
+
+    background-color: transparent;
+    border-color: transparent;
+
+}
+
+//Botón de cierre
 .btn-close{
 
     @include media-queries.respond-to(media-queries.$phone){

@@ -2,6 +2,7 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
+//Titles
 .title{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-bold, variables.$fs-xlg, variables.$clr-orange);
@@ -23,6 +24,13 @@
 
 }
 
+.recipe-info-title{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm, variables.$clr-white);   
+
+}
+
+//Subtitles
 .subtitle-orange{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-mdxl, variables.$clr-orange);
@@ -43,6 +51,7 @@
 
 }
 
+//Page description
 .page-description{
 
     @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-mdx, variables.$clr-gray);
@@ -63,6 +72,7 @@
 
 }
 
+//Lists
 .list-ingredients{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-mdx, variables.$clr-gray);
@@ -88,12 +98,7 @@
 
 }
 
-.recipe-info-title{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm, variables.$clr-white);   
-
-}
-
+//Details
 .recipe-info-details{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm, variables.$clr-black);   
@@ -113,6 +118,37 @@
 
 }
 
+.detail-text{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm);
+
+}
+
+.detail-text-gray{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm, variables.$clr-gray);
+
+}
+
+.detail-text-green{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm, variables.$clr-green);
+
+    @include media-queries.respond-to(media-queries.$phone){
+
+        @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xxsm, variables.$clr-green);
+    
+    }
+
+}
+
+.user-detail{
+
+    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm, variables.$clr-gray);
+
+}
+
+//Cards
 .card-title{
 
     @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm);
@@ -131,39 +167,22 @@
 
 }
 
+//Link sign up - login
 .link-account{
 
     @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-xsm, variables.$clr-green);
     font-style: italic;
+    text-decoration: none;
 
+    @include media-queries.respond-to(media-queries.$phone){
 
-
-}
-
-.detail-text{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm);
-
-}
-
-.detail-text-gray{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm, variables.$clr-gray);
+        @include mixins.set-font(variables.$ff-serif, variables.$fw-regular, variables.$fs-xxsm, variables.$clr-green);
+    
+    }
 
 }
 
-.detail-text-green{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-regular, variables.$fs-xsm, variables.$clr-green);
-
-}
-
-.user-detail{
-
-    @include mixins.set-font(variables.$ff-sans, variables.$fw-semibold, variables.$fs-xsm, variables.$clr-gray);
-
-}
-
+//Foter copyright
 .rights-reserved{
 
     @include mixins.set-font(variables.$ff-arimo, variables.$fw-regular, variables.$fs-xxxsm, variables.$clr-white);

@@ -1,5 +1,7 @@
 app.component('list-recipes',{
 
+    // Componente que muestra la lista de recetas
+
     data() {
         return {
             
@@ -32,7 +34,7 @@ app.component('list-recipes',{
                 <td class="detail-text">20 min</td>
                 <td class="detail-text">1 h</td>
                 <td class="detail-text">1h 20min</td>
-                <td><button class="btn btn-edit mb-3">Edit</button><button  class="row btn btn-delete">Delete</button></td>
+                <td><button type="button" class="btn btn-edit mb-3">Edit</button><button type="button" class="row btn btn-delete">Delete</button></td>
                 
                 
             </tr>

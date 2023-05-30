@@ -13720,6 +13720,13 @@ template {
   color: hsl(166deg, 29%, 50%);
 }
 
+.recipe-info-title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
 .subtitle-orange {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -13784,13 +13791,6 @@ template {
   }
 }
 
-.recipe-info-title {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 100%);
-}
-
 .recipe-info-details {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -13809,6 +13809,42 @@ template {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.detail-text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 0%);
+}
+
+.detail-text-gray {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 45%);
+}
+
+.detail-text-green {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: hsl(166deg, 29%, 50%);
+}
+@media only screen and (max-width: 480px) {
+  .detail-text-green {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: hsl(166deg, 29%, 50%);
+  }
+}
+
+.user-detail {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 45%);
 }
 
 .card-title {
@@ -13838,34 +13874,15 @@ template {
   font-size: 1.05rem;
   color: hsl(166deg, 29%, 50%);
   font-style: italic;
+  text-decoration: none;
 }
-
-.detail-text {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 0%);
-}
-
-.detail-text-gray {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 45%);
-}
-
-.detail-text-green {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  font-size: 1.05rem;
-  color: hsl(166deg, 29%, 50%);
-}
-
-.user-detail {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 45%);
+@media only screen and (max-width: 480px) {
+  .link-account {
+    font-family: "Source Serif Pro", serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: hsl(166deg, 29%, 50%);
+  }
 }
 
 .rights-reserved {
@@ -13925,6 +13942,19 @@ template {
   padding-bottom: 2.5%;
 }
 
+.btn-delete {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 97%, 66%);
+  border-color: hsl(0deg, 97%, 66%);
+  display: block;
+  margin: auto;
+  padding-left: 13%;
+  width: 70%;
+}
+
 .btn-dark {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -13937,23 +13967,6 @@ template {
   width: 20%;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
-}
-
-.btn-logout {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 0%);
-  background-color: hsl(0deg, 0%, 100%);
-  border-color: hsl(0deg, 0%, 0%);
-  display: block;
-  margin: auto;
-  width: 12%;
-}
-@media only screen and (max-width: 480px) {
-  .btn-logout {
-    width: 30%;
-  }
 }
 
 .btn-information {
@@ -14004,6 +14017,40 @@ template {
   }
 }
 
+.btn-logout {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(166deg, 29%, 50%);
+  border-color: hsl(166deg, 29%, 50%);
+  display: block;
+  margin: auto;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+@media only screen and (max-width: 480px) {
+  .btn-logout {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 85%;
+  }
+}
+
+.btn-edit {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(166deg, 29%, 50%);
+  border-color: hsl(192deg, 67%, 57%);
+  display: block;
+  margin: auto;
+  width: 62%;
+}
+
 .btn-categories {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -14025,38 +14072,12 @@ template {
     border-color: hsl(28deg, 96%, 56%);
     display: block;
     margin: auto;
-    height: 16vw;
   }
 }
 
 .btn-transparent {
   background-color: transparent;
   border-color: transparent;
-}
-
-.btn-edit {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(166deg, 29%, 50%);
-  border-color: hsl(192deg, 67%, 57%);
-  display: block;
-  margin: auto;
-  width: 62%;
-}
-
-.btn-delete {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(0deg, 97%, 66%);
-  border-color: hsl(0deg, 97%, 66%);
-  display: block;
-  margin: auto;
-  padding-left: 7%;
-  width: 70%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -14080,7 +14101,7 @@ template {
 }
 @media only screen and (max-width: 480px) {
   .card {
-    margin-left: 7%;
+    margin-left: 8%;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
@@ -14128,13 +14149,14 @@ template {
 }
 @media only screen and (max-width: 480px) {
   .rounded-circle {
-    height: 65vw;
+    height: 68vw;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .rounded-circle {
-    width: 54%;
-    height: 45vw;
+    width: 95%;
+    height: 29vw;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -14148,6 +14170,43 @@ template {
 .card-body {
   padding-left: 0.1rem;
   padding-right: 0.1rem;
+}
+
+.modal-dialog {
+  margin-right: 0;
+  margin-left: 3.2%;
+}
+
+.modal-content {
+  width: 256%;
+}
+@media only screen and (max-width: 480px) {
+  .modal-content {
+    width: 97%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .modal-content {
+    width: 96.5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .modal-content {
+    width: 154%;
+  }
+}
+
+.modal-body {
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+.modal-footer {
+  padding-left: 8%;
+  padding-right: 8%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .size-img-table {
@@ -14183,6 +14242,11 @@ template {
 
 .container-md {
   max-width: 1140px;
+}
+@media only screen and (max-width: 480px) {
+  .container-md {
+    max-width: 334px;
+  }
 }
 
 .container-sm {
@@ -14259,6 +14323,14 @@ template {
   font-weight: 400;
   font-size: 1.05rem;
   color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (max-width: 480px) {
+  .footer-options {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+    font-size: 0.48rem;
+    color: hsl(0deg, 0%, 100%);
+  }
 }
 
 .form-create-recipe-sm {
@@ -14462,7 +14534,7 @@ template {
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .img-logo {
     width: 90%;
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -14680,7 +14752,7 @@ template {
 
 @media only screen and (max-width: 480px) {
   .responsive-img {
-    padding-top: 38%;
+    padding-top: 68%;
   }
 }
 
@@ -14705,90 +14777,23 @@ template {
   padding-left: 18%;
 }
 
-.modal-dialog {
-  max-width: var(--bs-modal-width);
-  margin-right: 0;
-  margin-left: 3.2%;
-}
-
-.modal-content {
-  width: 256%;
-}
-@media only screen and (max-width: 480px) {
-  .modal-content {
-    width: 97%;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  .modal-content {
-    width: 101.5%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .modal-content {
-    width: 154%;
-  }
-}
-
-.modal-footer {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
 .img-info-recipe {
-  width: 78%;
+  width: 100%;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }
-@media only screen and (max-width: 480px) {
-  .img-info-recipe {
-    width: 96%;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  .img-info-recipe {
-    width: 91%;
-    margin-left: 4%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .img-info-recipe {
-    width: 91%;
-    margin-left: 3%;
-  }
-}
 
 .img-like {
   position: absolute;
-  top: 8%;
-  left: 18%;
+  top: 7%;
+  left: 9%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   opacity: 75%;
-  width: 10%;
-}
-@media only screen and (max-width: 480px) {
-  .img-like {
-    margin-left: -5%;
-    width: 14%;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  .img-like {
-    margin-left: -4%;
-    width: 13%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .img-like {
-    margin-left: -3%;
-    margin-top: 1%;
-    width: 15%;
-  }
+  width: 12%;
 }
 
 .bg-ingredients {
@@ -14852,6 +14857,6 @@ template {
 }
 @media only screen and (max-width: 480px) {
   .space-link-account {
-    padding-left: 0;
+    padding-left: 1.5rem;
   }
 }

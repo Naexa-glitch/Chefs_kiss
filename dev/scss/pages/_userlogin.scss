@@ -2,13 +2,15 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
+//Espaciado para forgot password? 
+
 .space-link-account{
 
     padding-left: 3.5rem;
 
     @include media-queries.respond-to(media-queries.$phone){
 
-        padding-left: 0;
+        padding-left: 1.5rem;
     
     }
 

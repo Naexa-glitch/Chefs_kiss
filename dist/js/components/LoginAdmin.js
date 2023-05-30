@@ -1,5 +1,7 @@
 app.component('login-admin',{
 
+    //Componente con los forms para el login de un administrador
+
     data() {
         return {
             
@@ -35,7 +37,7 @@ app.component('login-admin',{
 
             <div class="text-center pb-5">
 
-                <button class="btn btn-user mt-5">Login</button>
+                <button type="button" class="btn btn-user mt-5">Login</button>
 
             </div>
         

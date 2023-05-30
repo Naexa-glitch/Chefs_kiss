@@ -8,14 +8,15 @@
 @use './components/buttons';
 @use './components/cards';
 @use './components/media-queries';
+@use './components/modal';
 @use './components/tables';
 
 @use './layout/body';
 @use './layout/footer';
 @use './layout/forms';
 @use './layout/header';
-@use './layout/categories';
 
+@use './pages/categories';
 @use './pages/createrecipe';
 @use './pages/inforecipe';
 @use './pages/useraccount';

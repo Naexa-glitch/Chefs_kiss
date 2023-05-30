@@ -1,5 +1,7 @@
 app.component('user-information',{
 
+    //Componente de la información del usuario
+
     data() {
         return {
             
@@ -22,7 +24,7 @@ app.component('user-information',{
 
             <p class="user-detail">Saved recipes: 3</p>
 
-            <button class="btn btn-green mt-5">Log out</button>
+            <button type="button" class="btn btn-logout mt-5">Log out</button>
 
         </div>
 

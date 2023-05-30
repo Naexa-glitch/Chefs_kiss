@@ -1,6 +1,7 @@
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
 
+//forms para crear nueva receta
 .form-create-recipe-sm{
 
     border-width:2px;
@@ -18,12 +19,14 @@
 
 }
 
+//Clase para el recuadro de remember me
 .form-check .form-check-input {
 
     float: none;
 
 }
 
+//Clase para forms de login
 .form-user-login{
 
     margin: auto;

@@ -1,5 +1,7 @@
 app.component('list-users',{
 
+    // Componente que muestra la lista de usuarios
+
     data() {
         return {
             

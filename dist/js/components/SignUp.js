@@ -1,5 +1,7 @@
 app.component('sign-up',{
 
+    //Componente de los forms de sign up
+
     data() {
         return {
             
@@ -49,7 +51,7 @@ app.component('sign-up',{
 
                     <div class="text-center pb-5">
 
-                        <button class="btn btn-user mt-5">Create account</button>
+                        <button type="button" class="btn btn-user mt-5">Create account</button>
                         <div id="linkLogin" class="form-text mt-3 detail-text">Already have an account? <a class="link-account" href="userlogin.html">Login</a></div>
                         <p class="form-text mt-3 detail-text pt-4">By clicking create account you're agreeing to our terms and conditions</p>
         

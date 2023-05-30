@@ -1,5 +1,7 @@
 app.component('change-password',{
 
+    //Componente con form para cambiar contraseña
+
     data() {
         return {
             
@@ -34,7 +36,7 @@ app.component('change-password',{
     
     <div class="text-center pb-5">
 
-        <button class="btn btn-user mt-5">Send</button>
+        <button type="button" class="btn btn-user mt-5">Send</button>
 
     </div>
 

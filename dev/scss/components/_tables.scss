@@ -2,6 +2,7 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
+//Clase para ajustar las imágenes de recetas registradas en la tabla
 .size-img-table{
 
     width: 57%;
@@ -10,6 +11,7 @@
 
 }
 
+//Clase que estiliza las tablas del administrador con recetas y usuarios registrados
 .table > thead > tr > th{
 
     background-color: variables.$clr-orange;

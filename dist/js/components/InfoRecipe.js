@@ -1,5 +1,7 @@
 app.component('info-recipe',{
 
+    // Componente que muestra los detalles de la receta seleccionada
+
     props:{
 
         name:{
@@ -90,21 +92,22 @@ app.component('info-recipe',{
             type: String
 
         }
-
     },
 
     
     methods: {
         
+        //Botón encargado de dar acción para que incremente la cantidad de me gusta
         onClickHeart(){
 
             //console.log("heart");
             this.$emit('heartclick', this.index);
 
         },
+        //Botón encargado de dar acción para que se guarden recetas
         onClickSaveRecipe(){
 
-            console.log("saved");
+            //console.log("saved");
             this.$emit('saverecipe', this.index);
 
         }
@@ -192,30 +195,63 @@ app.component('info-recipe',{
             <!-- Recipe steps -->
             <div class="pt-5">
 
-            <h3 class="subtitle-orange"> Let's see the steps</h3>
+                <h3 class="subtitle-orange"> Let's see the steps</h3>
 
-            <p class="list-steps ">{{ steps }}</p>
+                <p class="list-steps ">{{ steps }}</p>
 
-            <button class="btn btn-green mt-5 mb-5" v-on:click="onClickSaveRecipe()">Save recipe</button>
+                <button type="button" class="btn btn-green mt-5 mb-5" v-on:click="onClickSaveRecipe()">Save recipe</button>
 
             </div> 
             <!-- Recipe steps -->
         </div>
             <!-- Similar recipes -->
-            <div class="modal-footer">
+            <div class="modal-footer row">
                 <div class="pt-5 pb-5 row">
 
                     <h4 class="subtitle-green">Like this? We have similar recipes</h4>
 
                     <div class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
 
-                        <recipes-cards></recipes-cards>
-                        
-                    </div>
+                        <div class="mt-4 col row">
+                            <div class="card ">
+                                <img src="./imgs/fried-chicken1.jpg" class="card-img-top rounded mt-2" alt="...">
+                                <div class="card-body">
+                                    <p class="card-title">Fried chicken</p>
+                                    <p class="card-detail mb-0">Side dish</p>
+                                    <p class="card-detail">Total time: 45min</p>
+                                    <button class="btn btn-danger ps-2">View more</button>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="mt-4 col row">
+                            <div class="card ">
+                            <img src="./imgs/LUNCH-salmon.jpeg" class="card-img-top rounded mt-2" alt="...">
+                            <div class="card-body">
+                                <p class="card-title">Salmon</p>
+                                <p class="card-detail mb-0">Side dish</p>
+                                <p class="card-detail">Total time: 1h 20min</p>
+                                <button class="btn btn-danger ps-2">View more</button>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 col row">   
+                            <div class="card ">
+                                <img src="./imgs/steak-meat.jpg" class="card-img-top rounded mt-2" alt="...">
+                                <div class="card-body">
+                                    <p class="card-title">Steak meat</p>
+                                    <p class="card-detail mb-0">Side dish</p>
+                                    <p class="card-detail">Total time: 1h</p>
+                                    <button class="btn btn-danger ps-2">View more</button>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                        
                 </div>
-                <!-- Similar recipes -->
-            </div>    
+
+            </div>
+                <!-- Similar recipes -->  
       </div>
     </div>
 </div>

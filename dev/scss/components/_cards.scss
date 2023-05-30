@@ -2,13 +2,14 @@
 @use 'abstracts/mixins';
 @use 'components/media-queries';
 
+//Clase de cards
 .card{
 
     border-color: variables.$clr-light-gray;
 
     @include media-queries.respond-to(media-queries.$phone){
 
-        margin-left: 7%;
+        margin-left: 8%;
     
     }
 
@@ -32,12 +33,14 @@
 
 }
 
+//Cards de noticias
 .card-news{
 
     border-color: variables.$clr-white;
 
 }
 
+//Imagenes de cards comunes
 .card-img-top{
     
     height: 15vw;
@@ -57,6 +60,7 @@
 
 }
 
+//Imagenes de cards de noticias
 .rounded-circle{
 
     width: 80%;
@@ -69,15 +73,15 @@
 
     @include media-queries.respond-to(media-queries.$phone){
 
-        height: 65vw;
+        height: 68vw;
+        width: 100%;
     
     }
 
     @include media-queries.respond-to(media-queries.$tablet-portrait){
 
-        width: 54%;
-        height: 45vw;
-    
+        width: 95%;
+        height: 29vw;
     }
 
     @include media-queries.respond-to(media-queries.$tablet-landscape){
@@ -90,6 +94,7 @@
 
 }
 
+//Card body
 .card-body{
 
     padding-left: 0.1rem;

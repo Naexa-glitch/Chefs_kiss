@@ -48,6 +48,7 @@
 
             <!-- Header end-->
 
+            <!--searched recipes-->
             <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -75,8 +76,11 @@
                   </div> 
                 </div> 
             </div> 
+            <!--searched recipes-->
 
+            <!-- recipe details-->
             <info-recipe :index="recipe.id" :image="recipe.image" :name="recipe.name" :category="recipe.category" :likes="recipe.likes" :description="recipe.description" :preptime="recipe.preparationTime" :cooktime="recipe.cookTime" :totaltime="recipe.totalTime" :portions="recipe.portions" :skilllevel="recipe.skillLevel" :occasion="recipe.occasion" :featured="recipe.featured" :ingredients="recipe.ingredients" :steps="recipe.instructions" v-on:heartclick="onClickHeart"  v-on:saverecipe="onClickSaveRecipe"></info-recipe>
+            <!-- recipe details-->
 
             <!-- Title page-->
 

@@ -1,5 +1,7 @@
 app.component('footer-navigation',{
 
+    //Componente del footer
+
     data() {
         return {
             
