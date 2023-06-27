@@ -21,15 +21,14 @@ app.component('recipes-cards',{
             default: "default category"
 
         },
-        time:{
+        likes:{
 
-            type: String,
-            default: "default time"
+            type: Number
 
         },
         index:{
 
-            type: String
+            type: Number
 
         }
 
@@ -64,7 +63,7 @@ app.component('recipes-cards',{
             <div class="card-body">
                 <p class="card-title">{{ name }}</p>
                 <p class="card-detail mb-0">{{ category }}</p>
-                <p class="card-detail">{{ time }}</p>
+                <p class="card-detail">{{ likes }}</p>
                 <button type="button" class="btn btn-danger ps-2" v-on:click="onClickViewMore()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View more</button>
             </div>
     </div>    

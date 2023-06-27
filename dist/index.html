@@ -1,8 +1,6 @@
-<!-- Para esta decimacuarta entrega se logró almacenar las recetas guardadas por el usuario desde otra página por aparte, también se logró el cambio de color
-    de los links del navbar según la página en la que se encuentre el usuario, se documentó todo el proyecto, a todos los botones se les puso un "type="button". Se modificó
-    el botón logout, ahora es verde, y se implementó en los account con sus respectivos botones log out. Se creó un scss en components llamado modal.scss que contiene las clases de los modales y se trasladó
-    categories.scss al folder pages. Se hicieron unos ajustes en el diseño responsive, el container-md ahora tiene responsive para celulares. En responsive también se cambió el
-    tamaño de las opciones en el footer. Se generó en index.html la simulación de las 10 recetas más votadas.
+<!-- Para esta primer entrega, del avance final del proyecto, se aplicó el API de laravel en components.js. Se aplicó el listado de datos de todas
+    las recetas y el de las recetas destacadas. Se comprobó también que los datos se vean en las cards respectivas. En el componente RecipesCards se 
+    sustituyó el tiempo total de la receta por el número de likes que tiene.
 -->
 
 <!DOCTYPE html>
@@ -170,7 +168,7 @@
 
                             <div  v-for="(item, index) in trending_recipes"  class="mt-4 col row">
 
-                                <recipes-cards :image="item.image" :category="item.category" :name="item.name" :time="item.time" :index="item.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+                                <recipes-cards :image="item.image" :category="item.category" :name="item.name" :likes="item.likes" :index="item.id" v-on:viewmore="onClickViewMore"></recipes-cards>
     
                             </div>
 
@@ -197,7 +195,7 @@
 
                         <div  v-for="(item, index) in recipes"  class="mt-4 col row">
 
-                            <recipes-cards :image="item.image" :category="item.category" :name="item.name" :time="item.time" :index="item.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+                            <recipes-cards :image="item.image" :category="item.category" :name="item.name" :likes="item.likes" :index="item.id" v-on:viewmore="onClickViewMore"></recipes-cards>
 
                         </div>
                         

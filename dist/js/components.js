@@ -59,18 +59,30 @@ const app = Vue.createApp({
         axios({
 
             method: 'get',
-            url:'https://www.themealdb.com/api/json/v1/1/filter.php?c=Side'
+            url:'http://localhost/proyecto/public/api/recipes/all'
 
         })
         .then(
             (response) => {
                 
-                //console.log(response.data.meals);
+                //console.log(response.data);
 
-                    let items = response.data.meals;
+                    let items = response.data;
+
+                    //console.log(items);
+
                     this.recipes = [];
+
                     items.forEach (element => {
-                    this.recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: 'Side dish', time: "50 min"});
+                        this.recipes.push({
+
+                            id: element.id, 
+                            image: "http://localhost/proyecto/public/storage/imgs/"+element.image, 
+                            name: element.name, 
+                            category: element.category, 
+                            likes: element.likes
+
+                        });
                     });
                     
                     //console.log(this.recipes);
@@ -86,20 +98,28 @@ const app = Vue.createApp({
         axios({
 
             method: 'get',
-            url:'https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken'
+            url:'http://localhost/proyecto/public/api/recipes/top10'
 
         })
         .then(
             (response) => {
                 
-                //console.log(response.data.meals);
+                console.log(response.data);
 
-                    let items = response.data.meals;
+                    let items = response.data;
                     this.trending_recipes = [];
 
                     items.forEach (element => {
                     if(this.trending_recipes.length <= 9){
-                    this.trending_recipes.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: 'Chicken', time: "50 min"});
+                        this.trending_recipes.push({
+
+                            id: element.id, 
+                            image: "http://localhost/proyecto/public/storage/imgs/"+element.image, 
+                            name: element.name, 
+                            category: element.category, 
+                            likes: element.likes
+                            
+                        });
                     }
                     });
                     //console.log(this.recipes);
