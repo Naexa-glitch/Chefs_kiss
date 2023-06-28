@@ -29,26 +29,22 @@ app.component('info-recipe',{
         },
         preptime:{
 
-            type:String,
-            default:"default preparation time"
+            type:Number
 
         },
         cooktime:{
 
-            type:String,
-            default:"default cook time"
+            type:Number
 
         },
         totaltime:{
 
-            type:String,
-            default:"default total time"
+            type:Number
 
         },
         portions:{
 
-            type:String,
-            default:"default portions"
+            type:Number
 
         },
         skilllevel:{
@@ -89,7 +85,7 @@ app.component('info-recipe',{
         },
         index:{
 
-            type: String
+            type: Number
 
         }
     },
