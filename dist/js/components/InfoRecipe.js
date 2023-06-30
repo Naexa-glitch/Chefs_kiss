@@ -120,7 +120,7 @@ app.component('info-recipe',{
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-            <button type="button" class="btn-close ms-1" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close ms-1" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#staticBackdrop3"></button>
         </div>
         <div class="modal-body">
         
@@ -200,54 +200,6 @@ app.component('info-recipe',{
             </div> 
             <!-- Recipe steps -->
         </div>
-            <!-- Similar recipes -->
-            <div class="modal-footer row">
-                <div class="pt-5 pb-5 row">
-
-                    <h4 class="subtitle-green">Like this? We have similar recipes</h4>
-
-                    <div class="row row-cols-1 row-cols-md-3 mb-4 gap-4"> 
-
-                        <div class="mt-4 col row">
-                            <div class="card ">
-                                <img src="./imgs/fried-chicken1.jpg" class="card-img-top rounded mt-2" alt="...">
-                                <div class="card-body">
-                                    <p class="card-title">Fried chicken</p>
-                                    <p class="card-detail mb-0">Side dish</p>
-                                    <p class="card-detail">Total time: 45min</p>
-                                    <button class="btn btn-danger ps-2">View more</button>
-                                </div>
-                            </div>
-                        </div>    
-                        <div class="mt-4 col row">
-                            <div class="card ">
-                            <img src="./imgs/LUNCH-salmon.jpeg" class="card-img-top rounded mt-2" alt="...">
-                            <div class="card-body">
-                                <p class="card-title">Salmon</p>
-                                <p class="card-detail mb-0">Side dish</p>
-                                <p class="card-detail">Total time: 1h 20min</p>
-                                <button class="btn btn-danger ps-2">View more</button>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="mt-4 col row">   
-                            <div class="card ">
-                                <img src="./imgs/steak-meat.jpg" class="card-img-top rounded mt-2" alt="...">
-                                <div class="card-body">
-                                    <p class="card-title">Steak meat</p>
-                                    <p class="card-detail mb-0">Side dish</p>
-                                    <p class="card-detail">Total time: 1h</p>
-                                    <button class="btn btn-danger ps-2">View more</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                        
-                </div>
-
-            </div>
-                <!-- Similar recipes -->  
       </div>
     </div>
 </div>

@@ -8,6 +8,15 @@ app.component('user-information',{
         }
     },
 
+    methods: {
+        onClickLogOut(){
+
+            console.log("log out");
+            this.$emit('logout');
+
+        }
+    },
+
     template:
 
     /*html*/
@@ -24,7 +33,7 @@ app.component('user-information',{
 
             <p class="user-detail">Saved recipes: 3</p>
 
-            <button type="button" class="btn btn-logout mt-5">Log out</button>
+            <button type="button" class="btn btn-logout mt-5" v-on:click="onClickLogOut()">Log out</button>
 
         </div>
 

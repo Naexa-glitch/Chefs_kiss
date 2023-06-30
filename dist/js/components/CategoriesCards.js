@@ -42,7 +42,7 @@ app.component('categories-cards',{
 
     `
             <div class="card">
-                <img src="./imgs/BEVERAGES.jpg" class="card-img-top rounded mt-3" alt="...">
+                <img src="./imgs/KitchenUtensils.jpeg" class="card-img-top rounded mt-3" alt="...">
                 <div class="card-body"> 
                     <button type="button" class="btn btn-categories ps-2" v-on:click="onClickCategoryButton">{{ name }}</button>
                 </div>

@@ -24,27 +24,26 @@ app.component('sign-up',{
 
                         <form>
                             <div class="mb-3">
-                                <label for="insertFullName" class="form-label subtitle-account mb-0">Full name</label>
-                                <input type="email" class="form-control form-user-login" id="insertFullName">
+                                <label for="insertName" class="form-label subtitle-account mb-0">Name</label>
+                                <input type="email" class="form-control form-user-login" id="insertName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="insertLastName" class="form-label subtitle-account mb-0">Last name</label>
+                                <input type="email" class="form-control form-user-login" id="insertLastName">
                                 <div id="emailHelp" class="form-text detail-text-gray">We dont share your full name with anyone.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="insertCountry" class="form-label subtitle-account mb-0">Country</label>
+                                <input type="password" class="form-control form-user-login" id="insertCountry">
                             </div>
                             <div class="mb-3">
                                 <label for="insertEmail" class="form-label subtitle-account mb-0">Email</label>
                                 <input type="password" class="form-control form-user-login" id="insertEmail">
                             </div>
                             <div class="mb-3">
-                                <label for="insertUserName" class="form-label subtitle-account mb-0">Username</label>
-                                <input type="email" class="form-control form-user-login" id="insertUserName">
-                            </div>
-                            <div class="mb-3">
                                 <label for="insertPassword" class="form-label subtitle-account mb-0">Password</label>
                                 <input type="password" class="form-control form-user-login" id="insertPassword">
                             </div>
-                            <div class="mb-3">
-                                <label for="confirmPassword" class="form-label subtitle-account mb-0">Confirm password</label>
-                                <input type="password" class="form-control form-user-login" id="confirmPassword">
-                            </div>
-                            
                         </form>
 
                     </div>  

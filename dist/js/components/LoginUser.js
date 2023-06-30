@@ -8,6 +8,19 @@ app.component('login-user',{
         }
     },
 
+    methods: {
+        
+        onClickLogin(){
+
+            //console.log("login");
+            //console.log(this.email);
+            //console.log(this.password);
+            this.$emit('loginuser', this.email, this.password);
+
+        }
+
+    },
+
     template:
 
     /*html*/
@@ -24,12 +37,12 @@ app.component('login-user',{
 
                 <form>
                     <div class="mb-3">
-                    <label for="username" class="form-label subtitle-account mb-0">Username</label>
-                    <input type="email" class="form-control form-user-login" id="username" aria-describedby="emailHelp">
+                    <label for="email" class="form-label subtitle-account mb-0">Email</label>
+                    <input id="email" type="email" class="form-control form-user-login" aria-describedby="emailHelp" v-model="email">
                     </div>
-                    <div class="">
+                    <div>
                     <label for="password" class="form-label subtitle-account mb-0">Password</label>
-                    <input type="password" class="form-control form-user-login" id="password">
+                    <input id="password" type="password" class="form-control form-user-login" v-model="password">
                     </div>
                     <div class="form-check">
                     <div class="row">
@@ -48,7 +61,7 @@ app.component('login-user',{
 
             <div class="text-center pb-5">
 
-                <button type="button" class="btn btn-user mt-5">Login</button>
+                <button type="button" class="btn btn-user mt-5" v-on:click="onClickLogin()">Login</button>
                 <div id="emailHelp" class="form-text mt-3 detail-text">Dont have an account? <a class="link-account" href="usersignup.html">Sign in</a></div>
 
             </div>

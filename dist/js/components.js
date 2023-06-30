@@ -9,6 +9,10 @@ const app = Vue.createApp({
 
             categories:[],
 
+            occasions:[],
+
+            levels:[],
+
             recipes_category:[],
 
             all_recipes:[],
@@ -18,6 +22,8 @@ const app = Vue.createApp({
             trending_recipes:[],
 
             results_recipes:[],
+
+            similar_recipes:[],
 
             recipe:{}
             
@@ -37,15 +43,15 @@ const app = Vue.createApp({
         axios({
 
             method: 'get',
-            url:'https://www.themealdb.com/api/json/v1/1/list.php?c=list'
+            url:'http://localhost/proyecto/public/api/recipes/categories'
 
         })
         .then(
             (response) => {
-                //console.log(response.data.meals);
-                let items = response.data.meals;
+                //console.log(response.data);
+                let items = response.data;
                 items.forEach( (element, index) => {
-                    this.categories.push({id: index, name: element.strCategory});
+                    this.categories.push({id: element.id, name: element.category});
                 });
 
 
@@ -54,6 +60,53 @@ const app = Vue.createApp({
         .catch(
             error => console.log(error)
         );
+
+        //Conexión a API para ocasiones
+        
+        axios({
+
+            method: 'get',
+            url:'http://localhost/proyecto/public/api/recipes/occasions'
+
+        })
+        .then(
+            (response) => {
+                //console.log(response.data);
+                let items = response.data;
+                items.forEach( (element, index) => {
+                    this.occasions.push({id: element.id, name: element.occasion});
+                });
+
+
+            }
+        )
+        .catch(
+            error => console.log(error)
+        );
+
+        //Conexión a API para niveles
+        
+        axios({
+
+            method: 'get',
+            url:'http://localhost/proyecto/public/api/recipes/levels'
+
+        })
+        .then(
+            (response) => {
+                //console.log(response.data);
+                let items = response.data;
+                items.forEach( (element, index) => {
+                    this.levels.push({id: element.id, name: element.level});
+                });
+
+
+            }
+        )
+        .catch(
+            error => console.log(error)
+        );
+       
 
         //conexión a API para colocar información a cards de todas las recetas
         axios({
@@ -149,7 +202,7 @@ const app = Vue.createApp({
             .then(
                 (response) => { 
                     
-                    console.log(response.data);
+                    //console.log(response.data);
                     
                     let items = response.data;
 
@@ -193,15 +246,14 @@ const app = Vue.createApp({
             axios({
 
                 method: 'get',
-                url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i='+index
+                url:'http://localhost/proyecto/public/api/users/saverecipe/'+id+'/'+index
     
             })
             .then(
                 (response) => { 
-                    let item = response.data.meals;
+                    let item = response.data;
                     //console.log(item);         
     
-                   
                         this.save_recipes.push({id: item[0].idMeal, image: item[0].strMealThumb, name: item[0].strMeal, category: item[0].strCategory, time: "50 min"});
 
                     localStorage.setItem('save_recipes', JSON.stringify(this.save_recipes));
@@ -231,7 +283,7 @@ const app = Vue.createApp({
             .then(
                 (response) => {
                    
-                    console.log(response.data);
+                    //console.log(response.data);
 
                     let item = response.data; 
                     //console.log(item);
@@ -264,6 +316,25 @@ const app = Vue.createApp({
                     //console.log(ingredients);
 
                     //console.log(this.recipe.ingredients);
+
+                    this.similar_recipes = [];
+
+                    let items = response.data[2];
+
+                    items.forEach (element => {
+                        if(this.similar_recipes.length <= 2){
+                            this.similar_recipes.push({
+
+                                id: element.id, 
+                                image: "http://localhost/proyecto/public/storage/imgs/"+element.image, 
+                                name: element.name, 
+                                category: element.category, 
+                                likes: element.likes
+                            
+                            });
+                        }
+
+                    });
     
                 }
             )
@@ -273,9 +344,7 @@ const app = Vue.createApp({
 
         },
         //Botón que muestra recetas según su categoría
-        onClickCategoryButton(category){
-
-            
+        onClickCategoryButton(category){        
 
             axios({
 
@@ -293,6 +362,59 @@ const app = Vue.createApp({
                     items.forEach (element => {
                         this.recipes_category.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: category, time: "50 mins", level: "Easy", likes: 1});
                     });
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
+
+        onClickLogin(email, password){
+
+            this.email = email;
+            this.password = password;
+
+            //console.log(email);
+
+            axios({
+
+                method: 'post',
+                url:'http://localhost/proyecto/public/api/users/login?email='+email+'&password='+password
+    
+            })
+            .then(
+                (response) => {
+                    
+                    console.log(response.data); 
+
+                    //let item = response.data.user;
+
+                    window.location.href = 'useraccount.html';
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
+
+        onClickLogOut(){
+
+            axios({
+
+                methods: 'get',
+                url:'http://localhost/proyecto/public/api/users/logout'
+    
+            })
+            .then(
+                (response) => {
+                    
+                    console.log(response.data); 
+
+                    window.location.href = 'index.html';
     
                 }
             )
