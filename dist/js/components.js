@@ -19,13 +19,17 @@ const app = Vue.createApp({
 
             save_recipes:[],
 
+            saved_recipes:[],
+
             trending_recipes:[],
 
             results_recipes:[],
 
             similar_recipes:[],
 
-            recipe:{}
+            recipe:{},
+
+            user:[]
             
         }
     },
@@ -35,7 +39,9 @@ const app = Vue.createApp({
         this.all_recipes = this.recipes;
 
         //almacena array en un JSON, en este caso, almacena las recetas guardadas
-        this.save_recipes = JSON.parse(localStorage.getItem('save_recipes'));
+        //this.save_recipes = JSON.parse(localStorage.getItem('save_recipes'));
+
+        let id = localStorage.getItem('id');
         
 
         //Conexión a API para categorias
@@ -184,6 +190,43 @@ const app = Vue.createApp({
             error => console.log(error)
         );
 
+        //conexión a API para colocar información de recetas guardadas
+        axios({
+
+            method: 'get',
+            url:'http://localhost/proyecto/public/api/users/savedrecipes/'+id
+
+        })
+        .then(
+            (response) => {
+                
+                //console.log(response.data);
+
+                    let items = response.data;
+
+                    this.saved_recipes = [];
+
+                    items.forEach (element => {
+                        this.saved_recipes.push({
+
+                            id: element.id, 
+                            image: "http://localhost/proyecto/public/storage/imgs/"+element.image, 
+                            name: element.name, 
+                            category: element.category, 
+                            likes: element.likes
+                            
+                        });
+                    });
+                    
+                    console.log(this.saved_recipes);
+
+            }
+            
+        )
+        .catch(
+            error => console.log(error)
+        );
+
     },
 
     methods:{
@@ -233,15 +276,36 @@ const app = Vue.createApp({
 
         },
         //Botón que suma la cantidad de me gusta
-        onClickHeart(){
+        onClickHeart(index){
 
-            this.recipe.likes +=1;
+            let id = localStorage.getItem('id');
+
+            axios({
+
+                method: 'get',
+                url:'http://localhost/proyecto/public/api/users/likes/'+id+'/'+index
+    
+            })
+            .then(
+                (response) => { 
+                    
+                    console.log(response.data)
+
+                    //let item = response.data;
+    
+                }
+                
+            )
+            .catch(
+                error => console.log(error)
+            );
 
         },
         //Botón encargado de guardar recetas
         onClickSaveRecipe(index){
 
             //console.log("Id " + index);
+            let id = localStorage.getItem('id');
 
             axios({
 
@@ -251,12 +315,10 @@ const app = Vue.createApp({
             })
             .then(
                 (response) => { 
-                    let item = response.data;
-                    //console.log(item);         
-    
-                        this.save_recipes.push({id: item[0].idMeal, image: item[0].strMealThumb, name: item[0].strMeal, category: item[0].strCategory, time: "50 min"});
 
-                    localStorage.setItem('save_recipes', JSON.stringify(this.save_recipes));
+                    console.log(response.data);
+
+                    //localStorage.setItem('save_recipes', JSON.stringify(this.save_recipes));
 
                     //console.log(localStorage.getItem('save_recipes'));
     
@@ -266,7 +328,6 @@ const app = Vue.createApp({
             .catch(
                 error => console.log(error)
             );
-
 
         },
         //Botón que muestra los detalles de la receta
@@ -387,11 +448,32 @@ const app = Vue.createApp({
             .then(
                 (response) => {
                     
-                    console.log(response.data); 
+                    //console.log(response.data); 
 
-                    //let item = response.data.user;
+                    let item = response.data;
+
+                    let token = item.accessToken;
+
+                    localStorage.setItem('token', token);
+
+                    //console.log(localStorage.getItem('token'));
+
+                    let items = response.data.user;
+
+                    
+
+                    id = items.id;
+
+                    localStorage.setItem('id', id);
+
+                    //console.log(this.user)
 
                     window.location.href = 'useraccount.html';
+
+                    let users = JSON.parse(localStorage.getItem('user'));
+
+                    console.log(users);
+
     
                 }
             )
@@ -403,10 +485,18 @@ const app = Vue.createApp({
 
         onClickLogOut(){
 
+            let token = localStorage.getItem('token');
+
             axios({
 
                 methods: 'get',
-                url:'http://localhost/proyecto/public/api/users/logout'
+                url:'http://localhost/proyecto/public/api/users/logout',
+
+                headers: {
+
+                    'Authorization': `Bearer ${token}`
+
+                }
     
             })
             .then(
@@ -414,7 +504,43 @@ const app = Vue.createApp({
                     
                     console.log(response.data); 
 
+                    localStorage.removeItem('id');
+                    localStorage.removeItem('token');
+
                     window.location.href = 'index.html';
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
+
+        onClickSignUp(userName, lastName, country, email, password){
+
+            this.userName = userName;
+            this.lastName = lastName;
+            this.country = country;
+            this.email = email;
+            this.password = password;
+
+            //console.log(email);
+
+            axios({
+
+                method: 'post',
+                url:'http://localhost/proyecto/public/api/users/register?name='+userName+'&last_name='+lastName+'&country='+country+'&email='+email+'&password='+password
+    
+            })
+            .then(
+                (response) => {
+                    
+                    console.log(response.data); 
+
+                    //let item = response.data.user;
+
+                    window.location.href = 'userlogin.html';
     
                 }
             )

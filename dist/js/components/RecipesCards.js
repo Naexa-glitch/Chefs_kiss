@@ -63,7 +63,7 @@ app.component('recipes-cards',{
             <div class="card-body">
                 <p class="card-title">{{ name }}</p>
                 <p class="card-detail mb-0">{{ category }}</p>
-                <p class="card-detail">{{ likes }}</p>
+                <p class="card-detail">Total likes: {{ likes }}</p>
                 <button type="button" class="btn btn-danger ps-2" v-on:click="onClickViewMore()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View more</button>
             </div>
     </div>    

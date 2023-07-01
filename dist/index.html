@@ -1,10 +1,12 @@
-<!-- Para esta tercera entrega, del avance final del proyecto, se aplicó el API de laravel en components.js, el botón de login ya tiene
-    función desde components.js y la página se redirige a useraccount.html. La información que se escribe en los input de loginUser.js se pasa
-    por parámetros al método onClickLogin que está en components.js y se envía por la url del API para que verifique si el email y contraseña son correctos. También se muestran las recetas relacionadas
-    a la receta que se seleccionó para ver detalle, para esto se hizo un modal, que se despliega después de dar click al botón cerrar del
-    componente InfoRecipe.js. Muestra, por medio de cards las recetas relacionadas, esta información fue guardada en un array creado en components.js
-    específicamente en el método onClickViewMore, que luego se envía a los props del componente RecipesCards que está dentro del modal de recetas similares,
-    para que enseñe recetas relacionadas según la categoría.
+<!-- Para esta cuarta entrega, del avance final del proyecto, se aplicó el API de laravel en components.js, ya se puede registrar un
+    nuevo usuario, lo escrito en los input se envía al método onClickSignUp y se envían los datos con un metodo post por la url. También se
+    hizo la funcionalidad del logout, en el login se tomó la información del token que se despliega en el array del response y se almacenó
+    con un localStorage, también se almacenó el id de usuario en un localStorage, luego se llamó al localStorage con el token e id en el método
+    onClickLogOut. Se valida el token para el request del API y se genera la acción de cerrar sesión, en el 
+    response se borra la id y el token que estaban almacenados en el local storage. Se hizo la función de me gusta y guardar receta, donde
+    se llama al local storage con el id de usuario y se almacena en una variable que luego será puesta en la url del api, asi como el index de la
+    receta por la que se votó o guardó. Igualmente, en el perfil de usuario se pueden ver las recetas guardadas por el usuario, enviando el id
+    en la url para identificar las recetas del usuario que hizo login.
 -->
 
 <!DOCTYPE html>
@@ -73,7 +75,7 @@
         
                             <div v-for="(items, index) in results_recipes" class="pt-3 row col">
         
-                                <recipes-cards :image="items.image" :category="items.category" :name="items.name" :time="items.time" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+                                <recipes-cards :image="items.image" :category="items.category" :name="items.name" :likes="items.likes" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
         
                             </div>  
         
@@ -99,7 +101,7 @@
                             <div class="row row-cols-1 row-cols-md-3 gap-4 pb-5">
                                 <div v-for="(items, index) in similar_recipes" class="pt-3 row col">
             
-                                    <recipes-cards :image="items.image" :category="items.category" :name="items.name" :time="items.time" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+                                    <recipes-cards :image="items.image" :category="items.category" :name="items.name" :likes="items.likes" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
             
                                 </div>  
                             </div>

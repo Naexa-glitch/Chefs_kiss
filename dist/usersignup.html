@@ -62,7 +62,7 @@
             
                                 <div v-for="(items, index) in results_recipes" class="pt-3 row col">
             
-                                    <recipes-cards :image="items.image" :category="items.category" :name="items.name" :time="items.time" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+                                    <recipes-cards :image="items.image" :category="items.category" :name="items.name" :likes="items.likes" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
             
                                 </div>  
             
@@ -89,7 +89,7 @@
                                 <div class="row row-cols-1 row-cols-md-3 gap-4 pb-5">
                                     <div v-for="(items, index) in similar_recipes" class="pt-3 row col">
                 
-                                        <recipes-cards :image="items.image" :category="items.category" :name="items.name" :time="items.time" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+                                        <recipes-cards :image="items.image" :category="items.category" :name="items.name" :likes="items.likes" :index="items.id" v-on:viewmore="onClickViewMore"></recipes-cards>
                 
                                     </div>  
                                 </div>
@@ -105,7 +105,7 @@
             <!-- recipe details-->
 
             <!-- Ready to sign  -->
-            <sign-up></sign-up>
+            <sign-up v-on:signup="onClickSignUp"></sign-up>
             <!-- Ready to sign  -->
 
 

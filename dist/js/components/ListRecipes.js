@@ -23,7 +23,7 @@ app.component('list-recipes',{
                 <th class="col recipe-info-title">Preparation time</th>
                 <th class="col recipe-info-title">Cook time</th>
                 <th class="col recipe-info-title">Total time</th>
-                <th class="col "></th>
+                <th class="col"></th>
             </tr>
         </thead>
         <tbody>
