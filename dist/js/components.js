@@ -29,7 +29,9 @@ const app = Vue.createApp({
 
             recipe:{},
 
-            user:[]
+            user:{},
+
+            password:{}
             
         }
     },
@@ -37,12 +39,14 @@ const app = Vue.createApp({
     mounted:function(){
 
         this.all_recipes = this.recipes;
-
-        //almacena array en un JSON, en este caso, almacena las recetas guardadas
-        //this.save_recipes = JSON.parse(localStorage.getItem('save_recipes'));
-
+        
+        //Obtener id de usuario desde localStorage para utilizarlo en la url de recetas guardadas por el usuario
         let id = localStorage.getItem('id');
         
+        //Obtener nombre de usuario para introducirlo en el perfil del usuario
+        let nameUser = localStorage.getItem('name');
+
+        this.user.name = nameUser;
 
         //Conexión a API para categorias
         
@@ -217,8 +221,8 @@ const app = Vue.createApp({
                             
                         });
                     });
-                    
-                    console.log(this.saved_recipes);
+
+                    //console.log(this.saved_recipes);
 
             }
             
@@ -304,7 +308,7 @@ const app = Vue.createApp({
         //Botón encargado de guardar recetas
         onClickSaveRecipe(index){
 
-            //console.log("Id " + index);
+            //console.log("id receta " + index);
             let id = localStorage.getItem('id');
 
             axios({
@@ -317,10 +321,6 @@ const app = Vue.createApp({
                 (response) => { 
 
                     console.log(response.data);
-
-                    //localStorage.setItem('save_recipes', JSON.stringify(this.save_recipes));
-
-                    //console.log(localStorage.getItem('save_recipes'));
     
                 }
                 
@@ -332,8 +332,6 @@ const app = Vue.createApp({
         },
         //Botón que muestra los detalles de la receta
         onClickViewMore(index){
-
-            //console.log("Id " + index);
 
             axios({
 
@@ -404,24 +402,35 @@ const app = Vue.createApp({
             );
 
         },
-        //Botón que muestra recetas según su categoría
-        onClickCategoryButton(category){        
+        //Botón que muestra recetas según su categoría (by type)
+        onClickCategoryButton(id){  
+            
+            //console.log(id);
 
             axios({
 
                 methods: 'get',
-                url:'https://www.themealdb.com/api/json/v1/1/filter.php?c='+category
+                url:'http://localhost/proyecto/public/api/recipes/filterby/category/'+id
     
             })
             .then(
                 (response) => {
-                    //console.log(response.data.meals);
+                    //console.log(response.data);
 
                     this.recipes_category = [];
 
-                    let items = response.data.meals;
-                    items.forEach (element => {
-                        this.recipes_category.push({id: element.idMeal, image: element.strMealThumb, name: element.strMeal, category: category, time: "50 mins", level: "Easy", likes: 1});
+                    let items = response.data;
+
+                    items.forEach(element  => {
+                        this.recipes_category.push({
+
+                            id: element.id, 
+                            image: "http://localhost/proyecto/public/storage/imgs/"+element.image, 
+                            name: element.name, 
+                            category: element.category, 
+                            likes: element.likes
+
+                        });
                     });
     
                 }
@@ -431,7 +440,83 @@ const app = Vue.createApp({
             );
 
         },
+        //Botón que muestra recetas según su nivel (complexity)
+        onClickLevelButton(id){  
+            
+            //console.log(id);
 
+            axios({
+
+                methods: 'get',
+                url:'http://localhost/proyecto/public/api/recipes/filterby/level/'+id
+    
+            })
+            .then(
+                (response) => {
+                    //console.log(response.data);
+
+                    this.recipes_category = [];
+
+                    let items = response.data;
+
+                    items.forEach(element  => {
+                        this.recipes_category.push({
+
+                            id: element.id, 
+                            image: "http://localhost/proyecto/public/storage/imgs/"+element.image, 
+                            name: element.name, 
+                            category: element.category, 
+                            likes: element.likes
+
+                        });
+                    });
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
+        //Botón que muestra recetas según su ocasión (by occasion)
+        onClickOccasionButton(id){  
+            
+            //console.log(id);
+
+            axios({
+
+                methods: 'get',
+                url:'http://localhost/proyecto/public/api/recipes/filterby/occasion/'+id
+    
+            })
+            .then(
+                (response) => {
+                    //console.log(response.data);
+
+                    this.recipes_category = [];
+
+                    let items = response.data;
+
+                    items.forEach(element  => {
+                        this.recipes_category.push({
+
+                            id: element.id, 
+                            image: "http://localhost/proyecto/public/storage/imgs/"+element.image, 
+                            name: element.name, 
+                            category: element.category, 
+                            likes: element.likes
+
+                        });
+                    });
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
+        //Botón que ejecuta la función del inicio de sesión
         onClickLogin(email, password){
 
             this.email = email;
@@ -448,7 +533,7 @@ const app = Vue.createApp({
             .then(
                 (response) => {
                     
-                    //console.log(response.data); 
+                    console.log(response.data); 
 
                     let item = response.data;
 
@@ -460,20 +545,15 @@ const app = Vue.createApp({
 
                     let items = response.data.user;
 
-                    
-
                     id = items.id;
 
                     localStorage.setItem('id', id);
 
-                    //console.log(this.user)
+                    nameUser = items.name;
+
+                    localStorage.setItem('name', nameUser);
 
                     window.location.href = 'useraccount.html';
-
-                    let users = JSON.parse(localStorage.getItem('user'));
-
-                    console.log(users);
-
     
                 }
             )
@@ -482,7 +562,7 @@ const app = Vue.createApp({
             );
 
         },
-
+        //Botón que ejecuta la función del cierre de sesión
         onClickLogOut(){
 
             let token = localStorage.getItem('token');
@@ -504,8 +584,7 @@ const app = Vue.createApp({
                     
                     console.log(response.data); 
 
-                    localStorage.removeItem('id');
-                    localStorage.removeItem('token');
+                    localStorage.clear();
 
                     window.location.href = 'index.html';
     
@@ -516,7 +595,7 @@ const app = Vue.createApp({
             );
 
         },
-
+        //Botón que ejecuta la función de registrar un nuevo usuario
         onClickSignUp(userName, lastName, country, email, password){
 
             this.userName = userName;
@@ -541,6 +620,60 @@ const app = Vue.createApp({
                     //let item = response.data.user;
 
                     window.location.href = 'userlogin.html';
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
+        //Botón que ejecuta la función de recuperar contraseña
+        onClickRecoverPassword(emailRecover){
+
+            this.emailRecover = emailRecover;
+
+            //console.log(email);
+
+            axios({
+
+                method: 'post',
+                url:'http://localhost/proyecto/public/api/users/recoverpassword?email='+emailRecover
+    
+            })
+            .then(
+                (response) => {
+                    
+                    console.log(response.data); 
+
+                    let item = response.data;
+
+                    this.password.password = item.password;
+                    
+                    //console.log(this.password);
+    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+        },
+        //Botón que ejecuta la función de borrar una receta guardada por el usuario
+        onClickDeleteSavedRecipe(index){
+
+            let id = localStorage.getItem('id');
+
+            axios({
+
+                methods: 'get',
+                url:'http://localhost/proyecto/public/api/users/removesavedrecipe/'+id+'/'+index
+    
+            })
+            .then(
+                (response) => {
+                    
+                    console.log(response.data); 
     
                 }
             )

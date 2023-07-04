@@ -4,12 +4,18 @@ app.component('sign-up',{
 
     data() {
         return {
+
+            userName:'',
+            lastName:'',
+            country:'',
+            email:'',
+            password:''
             
         }
     },
 
     methods: {
-
+        //Botón encargado de registrar nuevo usuario a partir de el nombre de usuario, apellido, país, email y contraseña
         onClickSignUp(){
 
             //console.log("sign up");
@@ -54,6 +60,7 @@ app.component('sign-up',{
                             <div class="mb-3">
                                 <label for="insertPassword" class="form-label subtitle-account mb-0">Password</label>
                                 <input id="password" type="password" class="form-control form-user-login"  v-model="password">
+                                <div class="form-text detail-text-gray">Password must have a minimun of 8 characters</div>
                             </div>
                         </form>
 

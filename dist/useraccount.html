@@ -103,7 +103,7 @@
             <!-- recipe details-->
 
             <!-- user info -->  
-                <user-information v-on:logout="onClickLogOut"></user-information>   
+                <user-information :name="user.name" v-on:logout="onClickLogOut"></user-information>   
             <!-- user info -->
 
             <!-- Your saved recipes -->
@@ -119,7 +119,7 @@
 
                             <div  v-for="(item, index) in saved_recipes"  class="mt-4 col row">
 
-                                <recipes-cards :image="item.image" :category="item.category" :name="item.name" :likes="item.likes" :index="item.id" v-on:viewmore="onClickViewMore"></recipes-cards>
+                                <saved-recipes-cards :image="item.image" :category="item.category" :name="item.name" :likes="item.likes" :index="item.id" v-on:viewmore="onClickViewMore" v-on:deletesavedrecipe="onClickDeleteSavedRecipe"></saved-recipes-cards>
 
                             </div>
                             
@@ -200,6 +200,7 @@
 
     <script src="./js/components/InfoRecipe.js"></script>
     <script src="./js/components/RecipesCards.js"></script>
+    <script src="./js/components/SavedRecipesCards.js"></script>
     <script src="./js/components/UserInformation.js"></script>
     <script src="./js/components/Navbar.js"></script>
     <script src="./js/components/Footer.js"></script>

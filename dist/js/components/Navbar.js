@@ -17,6 +17,12 @@ app.component('navbar',{
 
     },
 
+    data() {
+        return {
+            searchField:''
+        }
+    },
+
     methods: {
         
         //Botón encargado de dar acción para que se búsquen recetas

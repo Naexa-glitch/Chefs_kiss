@@ -4,12 +4,13 @@ app.component('login-user',{
 
     data() {
         return {
-            
+            email:'',
+            password:''
         }
     },
 
     methods: {
-        
+        //Botón para iniciar sesión a partir de su correo y contraseña
         onClickLogin(){
 
             //console.log("login");

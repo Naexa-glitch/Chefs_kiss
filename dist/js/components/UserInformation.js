@@ -2,6 +2,17 @@ app.component('user-information',{
 
     //Componente de la información del usuario
 
+    props:{
+
+        name:{
+
+            type: String,
+            default: "default name"
+
+        }
+
+    },
+
     data() {
         return {
             
@@ -9,6 +20,7 @@ app.component('user-information',{
     },
 
     methods: {
+        //Botón encargado de cerrar sesión
         onClickLogOut(){
 
             console.log("log out");
@@ -27,7 +39,7 @@ app.component('user-information',{
 
             <img class="img-fluid img-account" src="./imgs/user-negro.png" alt="">
 
-            <h1 class="title mt-1">Username</h1>
+            <h1 class="title mt-1">{{ name }}</h1>
 
             <p class="detail-text-gray">Here goes a description that the user will write in order to express itself</p>
 

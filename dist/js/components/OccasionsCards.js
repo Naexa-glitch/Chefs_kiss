@@ -1,6 +1,6 @@
-app.component('categories-cards',{
+app.component('occasions-cards',{
 
-    //Componente con los cards seleccionables para elegir por categoría recetas
+    //Componente con los cards seleccionables para elegir por ocasión recetas
 
     props:{
 
@@ -26,11 +26,11 @@ app.component('categories-cards',{
 
     methods: {
         
-        //Botón encargado de dar acción para que se muestren recetas por categoría seleccionada
-        onClickCategoryButton(){
+        //Botón encargado de dar acción para que se muestren recetas por ocasión seleccionada
+        onClickOccasionButton(){
 
             //console.log("Category Button");
-            this.$emit('categorybutton', this.id);
+            this.$emit('occasionbutton', this.id);
 
         }
 
@@ -44,7 +44,7 @@ app.component('categories-cards',{
             <div class="card">
                 <img src="./imgs/KitchenUtensils.jpeg" class="card-img-top rounded mt-3" alt="...">
                 <div class="card-body"> 
-                    <button type="button" class="btn btn-categories ps-2" v-on:click="onClickCategoryButton">{{ name }}</button>
+                    <button type="button" class="btn btn-categories ps-2" v-on:click="onClickOccasionButton">{{ name }}</button>
                 </div>
             </div>
 

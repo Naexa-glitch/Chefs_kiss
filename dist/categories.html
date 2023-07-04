@@ -106,19 +106,20 @@
                 <h1 class="title">Categories</h1>
             </section>
 
+            <!-- Complexity section -->
             <div class="mt-5 pb-5 bg-sections">
 
                 <div class="container-md">
             
                     <div class="row">
 
-                        <h3 class=" subtitle-green">By complexiy</h3>
+                        <h3 class=" subtitle-green">By complexity</h3>
             
                             <div class="row row-cols-1 row-cols-md-3 gap-4">
 
                                 <div v-for="(items, index) in levels" class="pt-3 row col">
             
-                                    <categories-cards :name="items.name" v-on:categorybutton="onClickCategoryButton"></categories-cards>
+                                    <levels-cards :name="items.name" :id="items.id" v-on:levelbutton="onClickLevelButton"></levels-cards>
 
                                 </div>
                                 
@@ -129,6 +130,7 @@
             
             </div>
 
+            <!-- By type section-->
             <div class="mt-5 pb-5">
 
                 <div class="container-md">
@@ -141,7 +143,7 @@
 
                                 <div v-for="(items, index) in categories" class="pt-3 row col">
             
-                                    <categories-cards :name="items.name" v-on:categorybutton="onClickCategoryButton"></categories-cards>
+                                    <categories-cards :name="items.name" :id="items.id" v-on:categorybutton="onClickCategoryButton"></categories-cards>
 
                                 </div>
                                 
@@ -152,6 +154,7 @@
             
             </div>
 
+            <!-- Occasion section-->
             <div class="mt-5 pb-5 bg-sections">
 
                 <div class="container-md">
@@ -164,7 +167,7 @@
 
                                 <div v-for="(items, index) in occasions" class="pt-3 row col">
             
-                                    <categories-cards :name="items.name" v-on:categorybutton="onClickCategoryButton"></categories-cards>
+                                    <occasions-cards :name="items.name" :id="items.id" v-on:occasionbutton="onClickOccasionButton"></occasions-cards>
 
                                 </div>
                                 
@@ -175,6 +178,7 @@
             
             </div>
 
+            <!-- Results section-->
             <div class="container-md">
 
                 
@@ -244,6 +248,8 @@
 
     <script src="./js/components/InfoRecipe.js"></script>
     <script src="./js/components/CategoriesCards.js"></script>
+    <script src="./js/components/LevelsCards.js"></script>
+    <script src="./js/components/OccasionsCards.js"></script>
     <script src="./js/components/RecipesCards.js"></script>
     <script src="./js/components/Navbar.js"></script>
     <script src="./js/components/Footer.js"></script>

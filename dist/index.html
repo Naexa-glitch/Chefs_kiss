@@ -1,12 +1,8 @@
-<!-- Para esta cuarta entrega, del avance final del proyecto, se aplicó el API de laravel en components.js, ya se puede registrar un
-    nuevo usuario, lo escrito en los input se envía al método onClickSignUp y se envían los datos con un metodo post por la url. También se
-    hizo la funcionalidad del logout, en el login se tomó la información del token que se despliega en el array del response y se almacenó
-    con un localStorage, también se almacenó el id de usuario en un localStorage, luego se llamó al localStorage con el token e id en el método
-    onClickLogOut. Se valida el token para el request del API y se genera la acción de cerrar sesión, en el 
-    response se borra la id y el token que estaban almacenados en el local storage. Se hizo la función de me gusta y guardar receta, donde
-    se llama al local storage con el id de usuario y se almacena en una variable que luego será puesta en la url del api, asi como el index de la
-    receta por la que se votó o guardó. Igualmente, en el perfil de usuario se pueden ver las recetas guardadas por el usuario, enviando el id
-    en la url para identificar las recetas del usuario que hizo login.
+<!-- Para esta cuarta entrega, del avance final del proyecto, se aplicó el API de laravel en components.js, se creó un método en components para
+    borrar las recetas guardadas por el usuario, y otro método para recuperar contraseña utilizando el email del usuario. Se creó un nuevo modal
+    que enseña al usuario su nueva contraseña. También, se hizo un componente exclusivamente para las recetas guardadas, su diferencia con RecipeCards.js
+    es que tiene el botón de eliminar receta. Se crearon nuevos componentes para hacer la función de búsqueda por categoría, cada uno es igual,
+    pero almacenan distintos datos. Por último, se hizo la funcionalidad de filtrar por categoría.
 -->
 
 <!DOCTYPE html>
